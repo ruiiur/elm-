@@ -1,0 +1,878 @@
+html {
+  font-size: 16px; }
+
+body {
+  margin: 0;
+  background: #f5f5f5 !important; }
+
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p, th, td, img {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.navbar {
+  display: none; }
+
+.tabbar-labels.toolbar-bottom ~ .page-content {
+  padding-bottom: 3.5rem; }
+
+.navbar-fixed .tabbar-labels.toolbar-bottom ~ .page-content {
+  padding-top: 0;
+  padding-bottom: 3.5rem; }
+
+.page > .toolbar, .view > .navbar, .view > .toolbar, .views > .navbar, .views > .toolbar {
+  position: absolute; }
+
+.toolbar {
+  background: #fff;
+  box-shadow: 0 0.0625rem 1.0625rem rgba(0, 0, 0, 0.1); }
+
+.tabbar-labels a.link, .tabbar-labels a.tab-link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.3125rem; }
+  .tabbar-labels a.link.active span, .tabbar-labels a.tab-link.active span {
+    color: #ff8800; }
+  .tabbar-labels a.link i, .tabbar-labels a.tab-link i {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem; }
+  .tabbar-labels a.link:nth-child(1) i, .tabbar-labels a.tab-link:nth-child(1) i {
+    background: url("../images/common_tab_icon.png") no-repeat -1.5rem top;
+    background-size: 200%; }
+  .tabbar-labels a.link:nth-child(1).active i, .tabbar-labels a.tab-link:nth-child(1).active i {
+    background: url("../images/common_tab_icon.png") no-repeat left top;
+    background-size: 200%; }
+  .tabbar-labels a.link:nth-child(2) i, .tabbar-labels a.tab-link:nth-child(2) i {
+    background: url("../images/common_tab_icon.png") no-repeat -1.5rem -1.5rem;
+    background-size: 200%; }
+  .tabbar-labels a.link:nth-child(2).active i, .tabbar-labels a.tab-link:nth-child(2).active i {
+    background: url("../images/common_tab_icon.png") no-repeat 0 -1.5rem;
+    background-size: 200%; }
+  .tabbar-labels a.link:nth-child(3) i, .tabbar-labels a.tab-link:nth-child(3) i {
+    background: url("../images/common_tab_icon.png") no-repeat -1.5rem -3rem;
+    background-size: 200%; }
+  .tabbar-labels a.link:nth-child(3).active i, .tabbar-labels a.tab-link:nth-child(3).active i {
+    background: url("../images/common_tab_icon.png") no-repeat 0 -3rem;
+    background-size: 200%; }
+
+.navbar a.link:before, .subnavbar a.link:before, .toolbar a.link:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
+.toolbar-inner span {
+  font-size: 0.625rem;
+  color: #666; }
+
+.tabbar-labels {
+  height: 3.5rem; }
+
+.main-header {
+  width: 100%;
+  height: 8.4375rem;
+  background: linear-gradient(to right, #ffa200, #ff8800); }
+  .main-header > div:nth-child(1) > div {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 1.1875rem; }
+    .main-header > div:nth-child(1) > div .location {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 0.625rem;
+      width: 1.5625rem;
+      height: 1.0625rem;
+      background: url("../images/dingwei_icon.png") no-repeat center;
+      background-size: 0.75rem 1.0625rem; }
+    .main-header > div:nth-child(1) > div > span {
+      display: inline-block;
+      max-width: 10.1875rem;
+      font-size: 1.1875rem;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 1.1875rem; }
+    .main-header > div:nth-child(1) > div .down {
+      display: inline-block;
+      vertical-align: top;
+      width: 0.4375rem;
+      height: 0.25rem;
+      margin-top: 0.375rem;
+      background: url("../images/address_jiantou.png") no-repeat left top;
+      background-size: 0.875rem 0.25rem; }
+  .main-header > div:nth-child(1) > aside {
+    display: inline-block;
+    float: right;
+    padding-top: 0.9375rem;
+    padding-right: 1.125rem; }
+    .main-header > div:nth-child(1) > aside > div {
+      display: inline-block;
+      vertical-align: middle; }
+      .main-header > div:nth-child(1) > aside > div > h2 {
+        font-size: 0.9375rem;
+        color: #fff; }
+      .main-header > div:nth-child(1) > aside > div > p {
+        font-size: 0.6875rem;
+        color: #fff;
+        line-height: 0.6875rem; }
+    .main-header > div:nth-child(1) > aside > img {
+      display: inline-block;
+      vertical-align: middle;
+      width: 1.5rem;
+      height: 1.5rem; }
+  .main-header > div:nth-child(2) {
+    height: 2.5rem;
+    margin: 0.75rem 0.9375rem 0.5rem;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-sizing: border-box;
+    text-align: center;
+    color: #666;
+    font-size: 0.8125rem;
+    line-height: 2.5rem; }
+  .main-header > div:nth-child(3) {
+    padding: 0 0.9375rem; }
+    .main-header > div:nth-child(3) a {
+      font-size: 0.6875rem;
+      color: #fff;
+      display: inline-block;
+      margin-right: 1rem; }
+      .main-header > div:nth-child(3) a:last-child {
+        margin-right: 0; }
+
+.swiper-slide {
+  position: relative;
+  z-index: 99; }
+
+.swiper-container {
+  height: 12.1875rem;
+  padding-bottom: 0.625rem;
+  background: #f5f5f5;
+  z-index: auto !important; }
+  .swiper-container .food-type {
+    height: 12.1875rem;
+    background: #fff; }
+    .swiper-container .food-type > a {
+      display: inline-block;
+      width: 25%;
+      float: left;
+      text-align: center;
+      margin-bottom: 0.3125rem; }
+      .swiper-container .food-type > a > div img {
+        width: 3.125rem;
+        height: 3.125rem; }
+      .swiper-container .food-type > a > span {
+        color: #666;
+        font-size: 0.8125rem;
+        line-height: 0.8125rem; }
+  .swiper-container .swiper-pagination {
+    margin-bottom: 0.1875rem; }
+    .swiper-container .swiper-pagination span {
+      width: 0.3125rem;
+      height: 0.3125rem;
+      display: inline-block;
+      border-radius: 100%;
+      background: #ccc;
+      opacity: .2; }
+      .swiper-container .swiper-pagination span.swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #666; }
+
+.stores-content > h2 {
+  color: #333;
+  font-size: 1.0625rem;
+  line-height: 1.9375rem;
+  padding: 0.625rem 0 0.625rem 0.9375rem;
+  font-weight: normal;
+  border: 1px solid #f5f5f5; }
+.stores-content > div {
+  padding: 0 0.6875rem 0 0.6875rem; }
+  .stores-content > div > ul > li {
+    padding-top: 1.25rem;
+    border-bottom: 1px solid #f4f4f4; }
+    .stores-content > div > ul > li > img {
+      width: 4.5rem;
+      height: 4.375rem;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 0.6875rem; }
+    .stores-content > div > ul > li > div {
+      display: inline-block;
+      width: calc(100% - 5.4375rem); }
+      .stores-content > div > ul > li > div > div:nth-child(1) {
+        height: 4.375rem; }
+        .stores-content > div > ul > li > div > div:nth-child(1) > h3 {
+          font-size: 1rem;
+          color: #000;
+          line-height: 1rem; }
+          .stores-content > div > ul > li > div > div:nth-child(1) > h3 > span {
+            display: inline-block !important;
+            font-size: 0.625rem;
+            color: #6f3f15;
+            border-radius: 0.125rem;
+            background: #ffea00;
+            line-height: 0.625rem;
+            width: 1.875rem;
+            padding: 0.1875rem 0;
+            text-align: center;
+            margin-right: 0.5625rem; }
+          .stores-content > div > ul > li > div > div:nth-child(1) > h3 em {
+            float: right;
+            display: inline-block; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > h3 em i {
+              display: inline-block;
+              width: 0.875rem;
+              height: 0.875rem; }
+              .stores-content > div > ul > li > div > div:nth-child(1) > h3 em i:nth-child(2) {
+                background: url("../images/huodong_piao.png") no-repeat;
+                background-size: 0.875rem;
+                margin-left: 0.375rem; }
+              .stores-content > div > ul > li > div > div:nth-child(1) > h3 em i:nth-child(1) {
+                background: url("../images/huodong_fu.png") no-repeat;
+                background-size: 0.875rem; }
+        .stores-content > div > ul > li > div > div:nth-child(1) > h4 {
+          line-height: 0.75rem;
+          margin: 0.5rem 0 0.6875rem 0; }
+          .stores-content > div > ul > li > div > div:nth-child(1) > h4 > em {
+            display: inline-block;
+            position: relative;
+            width: 3.875rem;
+            height: 0.625rem;
+            background: url("../images/pingfen_star_gary.png") no-repeat;
+            background-size: 3.875rem 0.625rem; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > h4 > em > i {
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              width: 3.625rem;
+              height: 0.625rem;
+              background: url("../images/pingfen_star_yellow.png") no-repeat;
+              background-size: 3.875rem 0.625rem; }
+          .stores-content > div > ul > li > div > div:nth-child(1) > h4 > span {
+            color: #666;
+            font-size: 0.75rem; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > h4 > span:nth-child(2) {
+              display: inline-block;
+              margin: 0 0.375rem; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > h4 > span.delivery {
+              display: inline-block;
+              float: right;
+              font-size: 0.625rem;
+              color: #fff;
+              width: 3.125rem;
+              padding: 0.125rem 0;
+              text-align: center;
+              background: #00a8ff;
+              border-radius: 0.125rem; }
+        .stores-content > div > ul > li > div > div:nth-child(1) > div {
+          height: 0.75rem;
+          line-height: 0.75rem; }
+          .stores-content > div > ul > li > div > div:nth-child(1) > div ul {
+            display: inline-block;
+            height: 0.75rem; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > div ul li {
+              display: inline-block;
+              list-style: none;
+              line-height: 0.75rem; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(1) li {
+              color: #666;
+              font-size: 0.75rem; }
+              .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(1) li:nth-child(1) {
+                padding-right: 0.4375rem;
+                border-right: 1px solid #d8d8d8;
+                margin-right: 0.4375rem; }
+            .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) {
+              float: right; }
+              .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) li {
+                color: #999;
+                font-size: 0.6875rem; }
+                .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) li:nth-child(1) {
+                  padding-right: 0.4375rem;
+                  border-right: 1px solid #d8d8d8;
+                  margin-right: 0.4375rem; }
+      .stores-content > div > ul > li > div > div:nth-child(2) {
+        border-top: 1px dashed #ddd;
+        padding-top: 0.625rem; }
+        .stores-content > div > ul > li > div > div:nth-child(2) > ul {
+          display: inline-block;
+          width: 12.5rem; }
+          .stores-content > div > ul > li > div > div:nth-child(2) > ul > li {
+            width: 12.5rem;
+            list-style: none;
+            color: #999;
+            font-size: 0.6875rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 0.6875rem;
+            margin-bottom: 0.6875rem; }
+            .stores-content > div > ul > li > div > div:nth-child(2) > ul > li > img {
+              width: 0.875rem;
+              height: 0.875rem;
+              display: inline-block;
+              vertical-align: sub;
+              margin-right: 0.125rem; }
+        .stores-content > div > ul > li > div > div:nth-child(2) .all-activity {
+          float: right;
+          color: #999;
+          font-size: 0.6875rem; }
+          .stores-content > div > ul > li > div > div:nth-child(2) .all-activity > i {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.3125rem;
+            width: 0.375rem;
+            height: 0.25rem;
+            background: url("../images/youhui_jiantou.png") no-repeat left top;
+            background-size: 0.75rem 0.25rem; }
+      .stores-content > div > ul > li > div > div:nth-child(3) {
+        border-top: 1px solid #f4f4f4;
+        padding: 0.8125rem 0 0.875rem 0;
+        height: 0.6875rem;
+        line-height: 0.6875rem; }
+        .stores-content > div > ul > li > div > div:nth-child(3) > i {
+          display: inline-block;
+          width: 0.75rem;
+          height: 0.6875rem;
+          margin-right: 0.4375rem;
+          background: url("../images/nearby_store_icon.png");
+          background-size: 0.75rem 0.6875rem; }
+        .stores-content > div > ul > li > div > div:nth-child(3) > span {
+          color: #666;
+          font-size: 0.6875rem;
+          line-height: 0.6875rem; }
+        .stores-content > div > ul > li > div > div:nth-child(3) > em {
+          position: relative;
+          display: inline-block;
+          margin-top: 0.1875rem;
+          float: right;
+          width: 0.375rem;
+          height: 0.25rem;
+          background: url("../images/nearby_store_jiantou.png");
+          background-size: 0.75rem 0.25rem; }
+          .stores-content > div > ul > li > div > div:nth-child(3) > em > div {
+            display: none;
+            background: #fff;
+            position: absolute;
+            z-index: 10000;
+            width: 25.25rem;
+            right: -0.375rem;
+            bottom: 0.9375rem;
+            padding: 0 1.25rem;
+            box-sizing: border-box;
+            border-radius: 0.125rem; }
+            .stores-content > div > ul > li > div > div:nth-child(3) > em > div > a {
+              font-style: normal;
+              display: inline-block;
+              width: 100%;
+              color: #333;
+              font-size: 0.9375rem;
+              padding: 0.8125rem 0 1.125rem 0;
+              border-bottom: 1px solid #f4f4f4; }
+              .stores-content > div > ul > li > div > div:nth-child(3) > em > div > a > span {
+                float: right;
+                color: #999;
+                font-size: 0.6875rem;
+                line-height: 0.6875rem; }
+                .stores-content > div > ul > li > div > div:nth-child(3) > em > div > a > span > em {
+                  font-style: normal;
+                  color: #ff6414;
+                  font-size: 0.6875rem; }
+          .stores-content > div > ul > li > div > div:nth-child(3) > em > i {
+            position: absolute;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid #fff;
+            width: 0;
+            height: 0;
+            right: 0;
+            bottom: 0.5rem;
+            z-index: 10000; }
+
+.order-content {
+  background: #f5f5f5; }
+  .order-content .more {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: #666;
+    line-height: 0.75rem;
+    padding: 1rem 0;
+    text-align: center;
+    width: calc(100% + 0.9375rem);
+    margin-left: -0.9375rem; }
+    .order-content .more > i {
+      display: inline-block;
+      vertical-align: middle;
+      width: 0.5rem;
+      height: 0.3125rem;
+      background: url("../images/order_see_more_arrow.png") no-repeat;
+      background-size: 1rem 0.3125rem;
+      margin-left: 0.375rem; }
+  .order-content .my-order {
+    background: #fff;
+    padding-left: 0.9375rem;
+    margin-bottom: 0.4375rem; }
+    .order-content .my-order > div:nth-child(1) {
+      margin: 1.25rem 0;
+      padding-right: 0.9375rem;
+      line-height: 0.9375rem; }
+      .order-content .my-order > div:nth-child(1) > h2 {
+        display: inline-block;
+        color: #333;
+        font-size: 0.9375rem;
+        vertical-align: bottom;
+        line-height: 0.9375rem; }
+      .order-content .my-order > div:nth-child(1) .all-order {
+        float: right;
+        display: inline-block;
+        font-size: 0.75rem;
+        vertical-align: bottom;
+        line-height: 0.75rem;
+        color: #ff8800;
+        padding-top: 0.3125rem; }
+        .order-content .my-order > div:nth-child(1) .all-order > i {
+          display: inline-block;
+          width: 0.3125rem;
+          height: 0.5rem;
+          background: url("../images/order_all list_arrow.png") no-repeat;
+          background-size: 0.3125rem 0.5rem;
+          margin-left: 0.375rem; }
+    .order-content .my-order > div:nth-child(2) {
+      border-bottom: 1px solid #eee; }
+      .order-content .my-order > div:nth-child(2) > img {
+        display: inline-block;
+        vertical-align: top;
+        width: 2.25rem;
+        height: 2.25rem;
+        margin-right: 0.625rem; }
+      .order-content .my-order > div:nth-child(2) > div {
+        width: calc(100% - 3.1875rem);
+        padding-right: 0.9375rem;
+        display: inline-block;
+        box-sizing: border-box;
+        margin-top: 0.1875rem; }
+        .order-content .my-order > div:nth-child(2) > div > h2 {
+          color: #333;
+          font-size: 1rem;
+          line-height: 1rem; }
+          .order-content .my-order > div:nth-child(2) > div > h2 > i {
+            display: inline-block;
+            width: 0.375rem;
+            height: 0.625rem;
+            background: url("../images/order_store_arrow.png") no-repeat;
+            background-size: 0.375rem 0.625rem;
+            margin-left: 0.5rem; }
+          .order-content .my-order > div:nth-child(2) > div > h2 > span {
+            display: inline-block;
+            float: right;
+            color: #333;
+            font-size: 0.8125rem; }
+        .order-content .my-order > div:nth-child(2) > div .order-time {
+          color: #999;
+          font-size: 0.6875rem;
+          line-height: 0.6875rem;
+          margin: 0.375rem 0 0.6875rem 0; }
+        .order-content .my-order > div:nth-child(2) > div .order-food {
+          color: #666;
+          font-size: 0.875rem;
+          line-height: 0.875rem; }
+        .order-content .my-order > div:nth-child(2) > div .order-money {
+          color: #333;
+          font-size: 0.9375rem;
+          line-height: 0.9375rem;
+          margin: 0.6875rem 0 1.4375rem 0; }
+        .order-content .my-order > div:nth-child(2) > div .again {
+          display: inline-block;
+          float: right;
+          background: #fff;
+          border: 1px solid #ff8800;
+          border-radius: 0.1875rem;
+          width: 4.5625rem;
+          padding: 0.5rem 0;
+          text-align: center;
+          line-height: 0.8125rem;
+          color: #ff8800;
+          font-size: 0.8125rem;
+          margin-bottom: 1.1875rem; }
+  .order-content .nearby {
+    padding: 1.125rem 0 0 0.9375rem;
+    background: #fff; }
+    .order-content .nearby > ul {
+      height: 1.5rem; }
+      .order-content .nearby > ul li {
+        height: 1.375rem;
+        list-style: none;
+        float: left;
+        font-size: 0.9375rem;
+        color: #999;
+        box-sizing: border-box;
+        line-height: 0.9375rem; }
+        .order-content .nearby > ul li.active {
+          color: #333; }
+        .order-content .nearby > ul li:nth-child(1) {
+          margin-right: 2.0625rem; }
+        .order-content .nearby > ul li > i {
+          height: 0.1875rem;
+          background: transparent;
+          width: 100%;
+          display: block;
+          border: 1px solid transparent;
+          border-radius: 0.1875rem;
+          box-sizing: border-box;
+          margin-top: 0.375rem; }
+          .order-content .nearby > ul li > i.active {
+            background: #ff8800;
+            border: 1px solid #ff8800; }
+    .order-content .nearby > div {
+      margin-top: 0.4375rem; }
+      .order-content .nearby > div > a:not(.more) {
+        display: inline-block;
+        width: 100%;
+        padding: 1.125rem 0 1.0625rem 0;
+        border-bottom: 1px solid #eee; }
+        .order-content .nearby > div > a:not(.more) > img {
+          display: inline-block;
+          vertical-align: top;
+          width: 3rem;
+          height: 3rem;
+          margin-right: 0.6875rem; }
+        .order-content .nearby > div > a:not(.more) > div {
+          display: inline-block;
+          width: calc(100% - 3.6875rem);
+          padding-right: 0.9375rem;
+          box-sizing: border-box; }
+          .order-content .nearby > div > a:not(.more) > div > h2 {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1rem;
+            margin-top: 0.3125rem;
+            margin-bottom: 0.375rem; }
+            .order-content .nearby > div > a:not(.more) > div > h2 > span {
+              display: inline-block;
+              float: right;
+              color: #999;
+              font-size: 0.75rem; }
+          .order-content .nearby > div > a:not(.more) > div > p {
+            color: #666;
+            font-size: 0.6875rem; }
+            .order-content .nearby > div > a:not(.more) > div > p > img {
+              display: inline-block;
+              vertical-align: sub;
+              width: 0.875rem;
+              height: 0.875rem;
+              margin-right: 0.3125rem; }
+
+.center-content {
+  background: #f5f5f5;
+  height: 100%; }
+  .center-content > div {
+    background: #fff; }
+    .center-content > div:nth-child(1) {
+      height: 7rem;
+      width: 100%;
+      background: linear-gradient(to right, #ffa200, #ff8800);
+      padding: 0 1.1875rem 0 0.9375rem; }
+      .center-content > div:nth-child(1) > img {
+        display: inline-block;
+        vertical-align: top;
+        width: 3.75rem;
+        height: 3.75rem;
+        margin-top: 1.625rem;
+        margin-right: 0.875rem; }
+      .center-content > div:nth-child(1) > div {
+        display: inline-block;
+        margin-top: 2.0625rem; }
+        .center-content > div:nth-child(1) > div > h2 {
+          font-size: 1.1875rem;
+          color: #fff;
+          line-height: 1.1875rem;
+          margin-bottom: 0.9375rem; }
+        .center-content > div:nth-child(1) > div > p {
+          color: #fff;
+          font-size: 0.8125rem;
+          line-height: 0.8125rem; }
+          .center-content > div:nth-child(1) > div > p i {
+            display: inline-block;
+            width: 0.5rem;
+            height: 0.8125rem;
+            background: url("../images/user_phone_icon.png") no-repeat;
+            background-size: 0.5rem 0.8125rem; }
+      .center-content > div:nth-child(1) > span {
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 3.0625rem;
+        width: 0.5625rem;
+        height: 0.875rem;
+        margin-left: 9.6875rem;
+        background: url("../images/user_arrow_icon.png") no-repeat;
+        background-size: 0.5625rem 0.875rem; }
+    .center-content > div:nth-child(3) > h3 {
+      color: #333;
+      font-size: 0.9375rem;
+      padding: 0.875rem 0 0.875rem 0.9375rem;
+      border-bottom: 1px solid #eee; }
+    .center-content > div:nth-child(3) > div {
+      padding: 1.3125rem 0 0.75rem 0; }
+      .center-content > div:nth-child(3) > div > a {
+        display: inline-block;
+        vertical-align: top;
+        width: 25%;
+        text-align: center; }
+        .center-content > div:nth-child(3) > div > a > i {
+          display: block;
+          width: 1.1875rem;
+          height: 1.1875rem; }
+        .center-content > div:nth-child(3) > div > a > p {
+          font-size: 0.8125rem;
+          color: #333;
+          margin: 0.6875rem 0 0.375rem 0;
+          line-height: 0.8125rem; }
+        .center-content > div:nth-child(3) > div > a > span {
+          color: #999;
+          font-size: 0.625rem;
+          line-height: 0.625rem; }
+      .center-content > div:nth-child(3) > div:nth-child(2) {
+        position: relative; }
+        .center-content > div:nth-child(3) > div:nth-child(2) > a:nth-child(1) {
+          background: url("../images/service_address_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(2) > a:nth-child(2) {
+          background: url("../images/service_collect_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(2) > a:nth-child(3) {
+          background: url("../images/service_recommend_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(2) > a:nth-child(4) {
+          background: url("../images/service_integral_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(2) > span {
+          display: inline-block;
+          margin-left: 0.9375rem;
+          width: calc(100% - 0.9375rem);
+          height: 1px;
+          background: #eee;
+          position: absolute;
+          bottom: 0; }
+      .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(1) {
+        background: url("../images/service_selected_icon.png") no-repeat center top;
+        background-size: 1.1875rem; }
+      .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(2) {
+        background: url("../images/service_freeflow_icon.png") no-repeat center top;
+        background-size: 1.1875rem; }
+      .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(3) {
+        background: url("../images/service_center_icon.png") no-repeat center top;
+        background-size: 1.1875rem; }
+  .center-content ul {
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 0.75rem;
+    background: #fff; }
+    .center-content ul li {
+      text-align: center;
+      list-style: none;
+      float: left;
+      height: 5rem;
+      width: 33.3%; }
+      .center-content ul li > h3 {
+        padding-top: 1.5rem;
+        line-height: 1.25rem;
+        margin-bottom: 0.3125rem; }
+        .center-content ul li > h3 > span {
+          display: inline-block;
+          vertical-align: bottom; }
+          .center-content ul li > h3 > span:nth-child(1) {
+            font-size: 1.5rem;
+            line-height: 1.25rem; }
+          .center-content ul li > h3 > span:nth-child(2) {
+            font-size: 0.625rem;
+            line-height: 0.625rem;
+            margin-bottom: 0.125rem; }
+      .center-content ul li > p {
+        color: #666;
+        font-size: 0.75rem; }
+      .center-content ul li:nth-child(1) > h3 > span {
+        color: #ff9900; }
+      .center-content ul li:nth-child(2) {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        box-sizing: border-box; }
+        .center-content ul li:nth-child(2) > h3 > span {
+          color: #ff5f3e; }
+      .center-content ul li:nth-child(3) > h3 > span {
+        color: #6ac20b; }
+
+.dish-content .shop-content > div {
+  background: #af6560;
+  height: 5.5rem;
+  padding: 0 0.9375rem 0 0.9375rem;
+  margin-bottom: 1.6875rem; }
+  .dish-content .shop-content > div > div:nth-child(1) {
+    display: inline-block; }
+    .dish-content .shop-content > div > div:nth-child(1) > img {
+      display: inline-block;
+      vertical-align: top;
+      width: 5.25rem;
+      height: 5.25rem;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      margin-top: 0.75rem;
+      border-radius: 0.3125rem;
+      margin-right: 0.5rem; }
+    .dish-content .shop-content > div > div:nth-child(1) > div {
+      display: inline-block;
+      width: 14.4375rem;
+      color: #fff; }
+      .dish-content .shop-content > div > div:nth-child(1) > div > h2 {
+        font-size: 1.125rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: 1.25rem 0 0.4375rem 0;
+        line-height: 1.125rem; }
+        .dish-content .shop-content > div > div:nth-child(1) > div > h2 > i {
+          display: inline-block;
+          width: 0.4375rem;
+          height: 0.75rem;
+          background: url("../images/menu_store_details.png") no-repeat;
+          background-size: 0.4375rem 0.75rem; }
+      .dish-content .shop-content > div > div:nth-child(1) > div > h3 {
+        font-size: 0.6875rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 0.75rem;
+        margin-bottom: 0.625rem; }
+      .dish-content .shop-content > div > div:nth-child(1) > div > p {
+        font-size: 0.6875rem;
+        line-height: 0.75rem; }
+  .dish-content .shop-content > div > div:nth-child(2) {
+    display: inline-block;
+    vertical-align: top;
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-top: 0.9375rem;
+    text-align: right; }
+    .dish-content .shop-content > div > div:nth-child(2) > span {
+      display: inline-block;
+      width: 1.375rem;
+      height: 0.3125rem;
+      background: url("../images/common_more.png");
+      background-size: 1.375rem 0.3125rem;
+      margin-top: 0.75rem; }
+.dish-content .shop-content > ul {
+  height: 0.875rem;
+  padding-left: 0.9375rem;
+  display: inline-block;
+  vertical-align: top; }
+  .dish-content .shop-content > ul li {
+    list-style: none;
+    line-height: 0.875rem;
+    color: #666;
+    font-size: 0.6875rem;
+    margin-right: 0.3125rem; }
+    .dish-content .shop-content > ul li > img {
+      display: inline-block;
+      vertical-align: sub;
+      width: 0.875rem;
+      height: 0.875rem; }
+.dish-content .shop-content .all-activity {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 0.9375rem;
+  float: right;
+  color: #999;
+  font-size: 0.6875rem;
+  line-height: 0.875rem; }
+  .dish-content .shop-content .all-activity > i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.3125rem;
+    width: 0.375rem;
+    height: 0.25rem;
+    background: url("../images/menu_huodong_arrow.png") no-repeat left top;
+    background-size: 0.75rem 0.25rem; }
+.dish-content > ul {
+  height: 2.5rem;
+  box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.06);
+  position: relative;
+  z-index: 99; }
+  .dish-content > ul > li {
+    width: 33.3%;
+    text-align: center;
+    float: left;
+    list-style: none;
+    height: 2.5rem; }
+    .dish-content > ul > li > a {
+      display: inline-block;
+      width: 100%;
+      color: #333;
+      padding-top: 0.8125rem;
+      padding-bottom: 0.5625rem;
+      font-size: 0.6875rem;
+      text-align: center;
+      position: relative; }
+      .dish-content > ul > li > a i {
+        position: absolute;
+        display: block;
+        width: 1.8125rem;
+        height: 0.1875rem;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        background: transparent;
+        border-radius: 0.0625rem;
+        bottom: 0;
+        left: 50%;
+        margin-left: -0.9375rem; }
+    .dish-content > ul > li.active > a {
+      color: #ff8800; }
+      .dish-content > ul > li.active > a i {
+        background: #ff8800;
+        border: 1px solid #ff8800; }
+.dish-content .dish-main {
+  height: 100%; }
+  .dish-content .dish-main > ul {
+    width: 5rem;
+    height: 100%;
+    background: #f8f8f8;
+    display: inline-block;
+    vertical-align: top; }
+    .dish-content .dish-main > ul > li {
+      list-style: none;
+      padding: 0 0.875rem;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box; }
+      .dish-content .dish-main > ul > li > a {
+        width: 100%;
+        height: 100%;
+        line-height: 0.9375rem;
+        display: inline-block;
+        padding: 1.3125rem 0;
+        border-bottom: 1px solid #e8e8e8;
+        color: #666;
+        font-size: 0.8125rem; }
+      .dish-content .dish-main > ul > li.active {
+        background: #fff; }
+        .dish-content .dish-main > ul > li.active > a {
+          border-bottom: 1px solid transparent; }
+      .dish-content .dish-main > ul > li:nth-child(1) > a i {
+        display: inline-block;
+        vertical-align: sub;
+        width: 0.9375rem;
+        height: 0.9375rem;
+        margin-right: 0.1875rem;
+        background: url("../images/menue_hotsell_icon.png") no-repeat;
+        background-size: 0.9375rem; }
+      .dish-content .dish-main > ul > li:nth-child(2) > a i {
+        display: inline-block;
+        vertical-align: sub;
+        width: 0.9375rem;
+        height: 0.9375rem;
+        margin-right: 0.1875rem;
+        background: url("../images/menu_youhui_icon.png") no-repeat;
+        background-size: 0.9375rem; }
+  .dish-content .dish-main > div {
+    display: inline-block;
+    width: calc(100% - 80px); }
+
+/*# sourceMappingURL=main.css.map */

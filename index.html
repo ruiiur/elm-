@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>f7-vue</title>
+  <link rel="stylesheet" href="css/framework7.material.min.css">
+  <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+  <link rel="stylesheet" href="css/framework7-icons.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div id="app">
+  <!-- Statusbar -->
+  <!--<f7-statusbar></f7-statusbar>-->
+
+  <!-- Main Views -->
+  <f7-views >
+    <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
+      <!-- Pages -->
+      <f7-pages>
+        <page-dish toolbar-through></page-dish>
+      </f7-pages>
+    </f7-view>
+  </f7-views>
+
+</div>
+
+<!--底部tab-->
+<template id="com-toolbar">
+  <f7-toolbar bottom tabbar labels class="row no-gutter">
+    <f7-link :href="active == 'home'?'#':'/home/'"  class="col-auto" :class="{'active':active=='home'?'active':''}" ignore-cache><i class="home"></i><span>首页</span></f7-link>
+    <f7-link :href="active == 'order'?'#':'/order/'" class="col-auto" :class="{'active':active=='order'?'active':''}" ignore-cache><i class="order"></i><span>订单</span></f7-link>
+    <f7-link :href="active == 'center'?'#':'/center/'" class="col-auto" :class="{'active':active=='center'?'active':''}" ignore-cache><i class="info"></i><span>我的</span></f7-link>
+  </f7-toolbar>
+</template>
+
+<!--订菜页-->
+<template id="page-dish">
+  <f7-page no-navbar name="dish">
+    <div class="dish-content">
+      <div class="shop-content">
+        <div>
+          <div>
+            <img src="images/menu_store_logo.png">
+            <div>
+              <h2>二十五块半（天山西路店）<i></i></h2>
+              <h3>公告：欢迎光临，用餐高峰期请提前下单，谢谢</h3>
+              <p>蜂鸟专送·约20分钟</p>
+            </div>
+          </div>
+          <div>
+            <span></span>
+          </div>
+        </div>
+        <ul>
+          <li>
+            <img src="images/huodong_jian.png">
+            满20减15，满40减20，满60减30，
+          </li>
+        </ul>
+        <a class="all-activity" href="javascript:;">共5个<i></i></a>
+      </div>
+      <ul>
+        <li class="active">
+          <a href="javascript:;">商品<i></i></a>
+        </li>
+        <li>
+          <a href="javascript:;">评价<i></i></a>
+        </li>
+        <li>
+          <a href="javascript:;">商家<i></i></a>
+        </li>
+      </ul>
+      <div class="dish-main">
+        <ul>
+          <li class="active"><a href="javascript:;"><i></i>热销</a></li>
+          <li><a href="javascript:;"><i></i>优惠</a></li>
+          <li><a href="javascript:;"><i></i>经典美食</a></li>
+          <li><a href="javascript:;"><i></i>15-20元超值立减套餐</a></li>
+          <li><a href="javascript:;"><i></i>特价23.9可乐卤蛋套餐</a></li>
+          <li><a href="javascript:;"><i></i>缤纷小食（单点不送）</a></li>
+        </ul><div>
+          <dl>
+            <dt>
+              <strong>热销</strong>
+              <span>大家喜欢吃，才是真的好吃</span>
+            </dt>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <strong>优惠</strong>
+              <span>有优惠，快来抢</span>
+            </dt>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <strong>经典美食</strong>
+              <span>经典才是王道</span>
+            </dt>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <strong>15-20元超值立减套餐</strong>
+              <span>超值快来抢</span>
+            </dt>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <strong>特价23.9可乐卤蛋套餐</strong>
+              <span>特价商品，优惠多多</span>
+            </dt>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+          <dl>
+            <dt>
+              <strong>缤纷小食（单点不送）</strong>
+              <span>大家喜欢吃</span>
+            </dt>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+            <dd>
+              <div>
+                <img>
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <h3>椒香鸡腿，美味可口</h3>
+                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <div>
+                    <strong>8</strong>
+                    <div>
+                      <a href="javascript:;"></a>
+                      <span>1</span>
+                      <a href="javascript:;"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </f7-page>
+</template>
+
+<!--个人中心页-->
+<template id="page-center">
+  <f7-page no-navbar name="center">
+    <div class="center-content">
+      <div>
+        <img src="images/user_icon.png">
+        <div>
+          <h2>进阶的企鹅2014</h2>
+          <p><i></i>18856152571</p>
+        </div>
+        <span></span>
+      </div>
+      <ul>
+        <li>
+          <h3><span>0.00</span> <span>元</span></h3>
+          <p>钱包</p>
+        </li>
+        <li>
+          <h3><span>2</span>  <span>个</span></h3>
+          <p>优惠</p>
+        </li>
+        <li>
+          <h3><span>8029</span> <span>分</span></h3>
+          <p>积分</p>
+        </li>
+      </ul>
+      <div>
+        <h3>我的服务</h3>
+        <div>
+          <a href="javascript:;">
+            <i></i>
+            <p>收货地址</p>
+            <span></span>
+          </a><a href="javascript:;">
+            <i></i>
+            <p>我的收藏</p>
+            <span></span>
+          </a><a href="javascript:;">
+            <i></i>
+            <p>推荐有奖</p>
+            <span>5元现金</span>
+          </a><a href="javascript:;">
+            <i></i>
+            <p>积分商城</p>
+            <span>0元好物在这里</span>
+          </a>
+          <span></span>
+        </div>
+        <div>
+            <a href="javascript:;">
+              <i></i>
+              <p>每日精选</p>
+              <span>1元起秒杀</span>
+            </a><a href="javascript:;">
+              <i></i>
+              <p>免费流量</p>
+              <span>每月最高500M</span>
+            </a><a href="javascript:;">
+              <i></i>
+              <p>服务中心</p>
+              <span></span>
+            </a>
+          </div>
+      </div>
+    </div>
+    <com-toolbar :active="active"></com-toolbar>
+  </f7-page>
+</template>
+
+<!--订单页-->
+<template id="page-order">
+  <f7-page navbar-through  no-navbar name="order">
+    <div class="order-content">
+      <div class="my-order">
+        <div>
+          <h2>我的订单</h2>
+          <a href="javascript:;" class="all-order">全部订单<i></i></a>
+        </div>
+        <div>
+          <img src="images/order_store%20img.png">
+          <div>
+            <h2>二十五块半（天山路店）<i></i><span>订单已完成</span></h2>
+            <p class="order-time">一小时前</p>
+            <p class="order-food">椒香鸡腿-椒香鸡腿 等4件商品</p>
+            <p class="order-money">￥29</p>
+            <a class="again" href="javascript:;">再来一单</a>
+          </div>
+        </div>
+        <a class="more" href="javascript:;">查看更多<i></i></a>
+      </div>
+      <div class="nearby">
+        <ul>
+          <li class="active">附近买过<i class="active"></i></li>
+          <li>附近搜索<i></i></li>
+        </ul>
+        <div>
+          <a href="javascript:;">
+            <img src="images/order_nearstore%20img.png"><div>
+              <h2>段式龙虾（梅川路店）<span>买过1次</span></h2>
+              <p><img src="images/huodong_jian.png">满100减45，满20百减90</p>
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="images/order_nearstore%20img.png"><div>
+              <h2>段式龙虾（梅川路店）<span>买过1次</span></h2>
+              <p><img src="images/huodong_jian.png">满100减45，满20百减90</p>
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="images/order_nearstore%20img.png"><div>
+            <h2>段式龙虾（梅川路店）<span>买过1次</span></h2>
+            <p><img src="images/huodong_jian.png">满100减45，满20百减90</p>
+          </div>
+          </a>
+          <a href="javascript:;">
+            <img src="images/order_nearstore%20img.png"><div>
+            <h2>段式龙虾（梅川路店）<span>买过1次</span></h2>
+            <p><img src="images/huodong_jian.png">满100减45，满20百减90</p>
+          </div>
+          </a>
+          <a href="javascript:;">
+            <img src="images/order_nearstore%20img.png"><div>
+            <h2>段式龙虾（梅川路店）<span>买过1次</span></h2>
+            <p><img src="images/huodong_jian.png">满100减45，满20百减90</p>
+          </div>
+          </a>
+          <a href="javascript:;">
+            <img src="images/order_nearstore%20img.png"><div>
+            <h2>段式龙虾（梅川路店）<span>买过1次</span></h2>
+            <p><img src="images/huodong_jian.png">满100减45，满20百减90</p>
+          </div>
+          </a>
+          <a class="more" href="javascript:;">查看更多<i></i></a>
+        </div>
+      </div>
+    </div>
+    <com-toolbar :active="active"></com-toolbar>
+  </f7-page>
+</template>
+
+<!--首页-->
+<template id="page-home">
+  <f7-page navbar-through  name="home">
+    <div class="main-header">
+      <div>
+        <div><i class="location"></i><span>长宁区临空经济园...</span><i class="down"></i></div>
+        <aside>
+          <div>
+            <h2>35.6°</h2>
+            <p>晴天</p>
+          </div>
+          <img alt="天气预报" src="images/weather_icon.png">
+        </aside>
+      </div>
+      <div>
+        搜索商家、商品
+      </div>
+      <div>
+        <a href="javascript:;">麻辣烫</a>
+        <a href="javascript:;">冒菜</a>
+        <a href="javascript:;">豆腐</a>
+        <a href="javascript:;">0元维维豆奶</a>
+        <a href="javascript:;">健身餐</a>
+        <a href="javascript:;">大红袍</a>
+        <a href="javascript:;">麦当劳</a>
+      </div>
+    </div>
+    <f7-swiper init pagination :params="{ loop:true, speed:2500, spaceBetween: 1}" style="min-height:100px;">
+      <f7-swiper-slide>
+        <div class="food-type">
+          <a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>美食</span>
+          </a><a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>甜品饮品</span>
+          </a><a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>超市便利</span>
+          </a><a class="esp" href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>预定早餐</span>
+          </a><a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>蔬果生鲜</span>
+          </a><a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>新店特惠</span>
+          </a><a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>准时达</span>
+          </a><a class="esp" href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>午餐</span>
+          </a>
+        </div>
+      </f7-swiper-slide>
+      <f7-swiper-slide>
+        <div class="food-type">
+          <a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>超市便利</span>
+          </a>
+          <a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>预定早餐</span>
+          </a>
+          <a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>蔬果生鲜</span>
+          </a>
+          <a class="esp" href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>新店特惠</span>
+          </a>
+          <a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>准时达</span>
+          </a>
+          <a href="javascript:;">
+            <div>
+              <img src="./images/food.jpeg">
+            </div>
+            <span>午餐</span>
+          </a>
+        </div>
+      </f7-swiper-slide>
+    </f7-swiper>
+    <div class="stores-content">
+      <h2>推荐商家</h2>
+      <div>
+        <ul>
+          <li @click="$router.load({url:'/dish/'})">
+            <img src="images/store-logo-1.png">
+            <div>
+              <div>
+                <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                <div>
+                  <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                  <ul><li>1.26km</li><li>21分钟</li></ul>
+                </div>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <img src="images/huodong_te.png">
+                    在线支付满30元减17，满50减20
+                  </li>
+                  <li>
+                    <img src="images/huodong_jian.png">
+                    在线支付满30元减17，满50减20
+                  </li>
+                </ul>
+                <a class="all-activity" href="javascript:;">共5个<i></i></a>
+              </div>
+              <!--<div>-->
+                <!--<i></i>-->
+                <!--<span>附近还有两家老爹锅贴</span>-->
+                <!--<em></em>-->
+              <!--</div>-->
+            </div>
+          </li>
+          <li>
+            <img src="images/store-logo-1.png">
+            <div>
+              <div>
+                <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                <div>
+                  <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                  <ul><li>1.26km</li><li>21分钟</li></ul>
+                </div>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <img src="images/huodong_te.png">
+                    在线支付满30元减17，满50减20
+                  </li>
+                  <li>
+                    <img src="images/huodong_jian.png">
+                    在线支付满30元减17，满50减20
+                  </li>
+                </ul>
+                <a class="all-activity" href="javascript:;">共5个<i></i></a>
+              </div>
+              <div  @click="showStores">
+                <i></i>
+                <span>附近还有两家老爹锅贴</span>
+                <em>
+                  <div>
+                    <a href="javascript:;">老爹锅贴（上海建涛店）<span>420m / <em>35分钟</em></span></a>
+                    <a href="javascript:;">老爹锅贴（上海剑河路店）<span>2.12km / <em>22分钟</em></span></a>
+                  </div>
+                  <i></i>
+                  <em class="box"></em>
+                </em>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <com-toolbar :active="active"></com-toolbar>
+  </f7-page>
+</template>
+
+<script src="js/framework7.min.js"></script>
+<script src="js/vue.min.js"></script>
+<!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->
+<!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+<script src="js/framework7-vue.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/rem.js"></script>
+</body>
+
+</html>
