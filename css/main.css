@@ -834,13 +834,19 @@ h1, h2, h3, h4, h5, h6 {
         background: #ff8800;
         border: 1px solid #ff8800; }
 .dish-content .dish-main {
-  height: 100%; }
+  display: flex;
+  position: absolute;
+  top: 11rem;
+  bottom: 3.3125rem;
+  width: 100%;
+  overflow: hidden; }
   .dish-content .dish-main > ul {
     width: 5rem;
     height: 100%;
     background: #f8f8f8;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    overflow: scroll; }
     .dish-content .dish-main > ul > li {
       list-style: none;
       padding: 0 0.875rem;
@@ -877,6 +883,96 @@ h1, h2, h3, h4, h5, h6 {
         background-size: 0.9375rem; }
   .dish-content .dish-main > div {
     display: inline-block;
-    width: calc(100% - 80px); }
+    width: calc(100% - 80px);
+    overflow: scroll; }
+    .dish-content .dish-main > div > dl > dt {
+      margin-left: 0.75rem;
+      padding: 0.875rem 0.75rem 0.5rem 0;
+      line-height: 0.875rem;
+      border-bottom: 1px solid #eee; }
+      .dish-content .dish-main > div > dl > dt > strong {
+        color: #666;
+        font-size: 0.75rem;
+        line-height: 0.75rem; }
+      .dish-content .dish-main > div > dl > dt > span {
+        color: #999;
+        font-size: 0.625rem; }
+    .dish-content .dish-main > div > dl > dd {
+      margin: 0.75rem 0.75rem 0 0.75rem;
+      padding-bottom: 0.5625rem;
+      border-bottom: 1px solid #eee; }
+      .dish-content .dish-main > div > dl > dd > div > img {
+        display: inline-block;
+        width: 4.75rem;
+        height: 4.75rem;
+        border-radius: 0.1875rem;
+        vertical-align: top;
+        margin-right: 0.625rem; }
+      .dish-content .dish-main > div > dl > dd > div > div {
+        display: inline-block;
+        width: calc(100% - 86px); }
+        .dish-content .dish-main > div > dl > dd > div > div > h2 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 0.875rem;
+          font-weight: bold;
+          margin: 0.25rem 0 0.5rem 0; }
+        .dish-content .dish-main > div > dl > dd > div > div > h3 {
+          color: #999;
+          font-size: 0.625rem;
+          line-height: 0.625rem; }
+        .dish-content .dish-main > div > dl > dd > div > div > h4 {
+          color: #666;
+          font-size: 0.625rem;
+          line-height: 0.625rem;
+          margin: 0.4375rem 0 0.3125rem 0; }
+          .dish-content .dish-main > div > dl > dd > div > div > h4 > span {
+            display: inline-block; }
+            .dish-content .dish-main > div > dl > dd > div > div > h4 > span:nth-child(1) {
+              margin-right: 0.375rem; }
+        .dish-content .dish-main > div > dl > dd > div > div > p {
+          line-height: 1.0625rem;
+          margin: 0.375rem 0; }
+          .dish-content .dish-main > div > dl > dd > div > div > p .recommend {
+            color: #ff5339;
+            font-size: 0.5625rem;
+            border: 1px solid #ff7561;
+            border-radius: 0.0625rem;
+            padding: 0.0625rem 0.1875rem 0 0.1875rem; }
+          .dish-content .dish-main > div > dl > dd > div > div > p .surplus {
+            color: #0089ff;
+            font-size: 0.5625rem;
+            border-radius: 0.0625rem;
+            padding: 0.125rem 0.3125rem 0.0625rem 0.3125rem;
+            background: #dbeaff;
+            margin-left: 0.5625rem; }
+        .dish-content .dish-main > div > dl > dd > div > div > div > strong {
+          color: #f80;
+          font-size: 1rem; }
+        .dish-content .dish-main > div > dl > dd > div > div > div > strong:before {
+          font-weight: 400;
+          content: "\A5";
+          font-size: 0.625rem;
+          display: inline-block; }
+        .dish-content .dish-main > div > dl > dd > div > div > div > div {
+          display: inline-block;
+          float: right; }
+          .dish-content .dish-main > div > dl > dd > div > div > div > div > a {
+            display: inline-block;
+            vertical-align: top;
+            width: 1.375rem;
+            height: 1.375rem; }
+          .dish-content .dish-main > div > dl > dd > div > div > div > div .reduce {
+            background: url("../images/menu_subtract.png") no-repeat;
+            background-size: 1.375rem; }
+          .dish-content .dish-main > div > dl > dd > div > div > div > div .add {
+            background: url("../images/menu_add.png") no-repeat;
+            background-size: 1.375rem; }
+          .dish-content .dish-main > div > dl > dd > div > div > div > div > span {
+            color: #666;
+            font-size: 0.875rem;
+            display: inline-block;
+            line-height: 0.875rem;
+            margin: 0.3125rem 0.625rem 0 0.625rem; }
 
 /*# sourceMappingURL=main.css.map */

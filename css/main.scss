@@ -1097,13 +1097,19 @@ h1, h2, h3, h4, h5, h6{
     }
   }
   .dish-main{
-    height:100%;
+    display: flex;
+    position: absolute;
+    top: toRem(176px);
+    bottom: toRem(53px);
+    width: 100%;
+    overflow: hidden;
     >ul{
       width:toRem(80px);
       height:100%;
       background: #f8f8f8;
       display: inline-block;
       vertical-align: top;
+      overflow: scroll;
       >li{
         list-style: none;
         //height:toRem(54px);
@@ -1161,6 +1167,123 @@ h1, h2, h3, h4, h5, h6{
     >div{
       display: inline-block;
       width: calc(100% - 80px);
+      overflow: scroll;
+      >dl{
+        >dt{
+          margin-left: toRem(12px);
+          padding: toRem(14px) toRem(12px) toRem(8px) 0;
+          line-height: toRem(14px);
+          border-bottom: 1px solid #eee;
+          >strong{
+            color:#666;
+            font-size: toRem(12px);
+            line-height: toRem(12px);
+          }
+          >span{
+            color:#999;
+            font-size: toRem(10px);
+          }
+        }
+        >dd{
+          margin:toRem(12px) toRem(12px) 0 toRem(12px);
+          padding-bottom: toRem(9px);
+          border-bottom: 1px solid #eee;
+          >div{
+            >img{
+              display: inline-block;
+              width:toRem(76px);
+              height:toRem(76px);
+              border-radius: toRem(3px);
+              vertical-align: top;
+              margin-right: toRem(10px);
+            }
+            >div{
+              display: inline-block;
+              width:calc(100% - 86px);
+              >h2{
+                color:#333;
+                font-size: toRem(14px);
+                line-height: toRem(14px);
+                font-weight: bold;
+                margin: toRem(4px) 0 toRem(8px) 0;
+              }
+              >h3{
+                color:#999;
+                font-size: toRem(10px);
+                line-height: toRem(10px);
+              }
+              >h4{
+                color:#666;
+                font-size: toRem(10px);
+                line-height: toRem(10px);
+                margin: toRem(7px) 0 toRem(5px) 0;
+                >span{
+                  display: inline-block;
+                  &:nth-child(1){
+                    margin-right:toRem(6px);
+                  }
+                }
+              }
+              >p{
+                line-height: toRem(17px);
+                margin: toRem(6px) 0;
+                .recommend{
+                  color:#ff5339;
+                  font-size: toRem(9px);
+                  border:1px solid #ff7561;
+                  border-radius: toRem(1px);
+                  padding: toRem(1px) toRem(3px) 0 toRem(3px);
+                }
+                .surplus{
+                  color:#0089ff;
+                  font-size:toRem(9px);
+                  border-radius: toRem(1px);
+                  padding: toRem(2px) toRem(5px) toRem(1px) toRem(5px);
+                  background: #dbeaff;
+                  margin-left: toRem(9px);
+                }
+              }
+              >div{
+                >strong{
+                  color:#f80;
+                  font-size: toRem(16px);
+                }
+                >strong:before{
+                  font-weight: 400;
+                  content: "\A5";
+                  font-size: toRem(10px);
+                  display: inline-block;
+                }
+                >div{
+                  display: inline-block;
+                  float: right;
+                  >a{
+                    display: inline-block;
+                    vertical-align: top;
+                    width:toRem(22px);
+                    height:toRem(22px);
+                  }
+                  .reduce{
+                    background: url('../images/menu_subtract.png') no-repeat;
+                    background-size: toRem(22px);
+                  }
+                  .add{
+                    background: url('../images/menu_add.png') no-repeat;
+                    background-size: toRem(22px);
+                  }
+                  >span{
+                    color:#666;
+                    font-size: toRem(14px);
+                    display: inline-block;
+                    line-height: toRem(14px);
+                    margin:toRem(5px) toRem(10px) 0 toRem(10px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

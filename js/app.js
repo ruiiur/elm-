@@ -45,11 +45,10 @@ Vue.component('page-home', {
 //订菜页
 Vue.component('page-dish', {
     template: '#page-dish'
-    // data: function() {
-    //     return {
-    //         active: 'home'
-    //     };
-    // }
+})
+//订菜页
+Vue.component('page-submit', {
+    template: '#page-submit'
 })
 
 // Init App
@@ -77,6 +76,11 @@ var app = new Vue({
             //订菜页路由
             path: '/dish/',
             component: 'page-dish'
+        },
+        {
+        //    提交订单页
+            path:'/submit/',
+            component:'page-submit'
         }
         ]
     }

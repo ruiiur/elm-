@@ -23,13 +23,12 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-home toolbar-through></page-home>
+        <page-submit toolbar-through></page-submit>
       </f7-pages>
     </f7-view>
   </f7-views>
 
 </div>
-
 <!--底部tab-->
 <template id="com-toolbar">
   <f7-toolbar bottom tabbar labels class="row no-gutter">
@@ -37,6 +36,57 @@
     <f7-link :href="active == 'order'?'#':'/order/'" class="col-auto" :class="{'active':active=='order'?'active':''}" ignore-cache><i class="order"></i><span>订单</span></f7-link>
     <f7-link :href="active == 'center'?'#':'/center/'" class="col-auto" :class="{'active':active=='center'?'active':''}" ignore-cache><i class="info"></i><span>我的</span></f7-link>
   </f7-toolbar>
+</template>
+
+<!--提交订单页-->
+<template id="page-submit">
+  <f7-page no-navbar name="submit">
+    <div class="submit-content">
+      <div>
+        <h2><i></i><span>文洋大厦协和路1033号</span><span>A座5楼</span><i></i></h2>
+        <p>沙积分（男生）<span>15589762345</span></p>
+      </div>
+      <div>
+        <div>
+          <h2>尽快送达（预计10:14）</h2>
+          <p><span>蜂鸟配送</span><em>准时达</em>当前时段下单不享受超时赔付<i></i></p>
+          <i></i>
+        </div>
+        <ul>
+          <li>
+            <h2>二十五块半（天山西路店）<i></i></h2>
+          </li>
+          <li>
+            <h3>椒香鸡腿-椒香鸡腿饭<span>x4</span><span>￥32</span></h3>
+            <p>椒香鸡腿</p>
+          </li>
+          <li>
+            <h3>配送费<span>￥5</span></h3>
+          </li>
+          <li>
+            <h3><img src="">在线支付立减优惠<span>-￥13</span></h3>
+          </li>
+          <li>
+            <h4>红包<em>HEY-GO</em><span>-￥5</span><i></i></h4>
+          </li>
+          <li>
+            <p>优惠说明<i></i></p>
+            <p><span>小计</span>￥27</p>
+          </li>
+        </ul>
+        <div>
+          <h2>成为HEY-GO会员，本单减￥5<i></i></h2>
+          <p>在HEY-GO合作商家消费每单可享8折优惠</p>
+          <i></i>
+        </div>
+        <ul>
+          <li>
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </f7-page>
 </template>
 
 <!--订菜页-->
@@ -92,18 +142,17 @@
             </dt>
             <dd>
               <div>
-                <img>
-                <div>
+                <img src="images/menu_foodimage.png"><div>
                   <h2>椒香鸡腿</h2>
                   <h3>椒香鸡腿，美味可口</h3>
                   <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
+                      <!--<a class="reduce" href="javascript:;"></a>-->
+                      <!--<span>1</span>-->
+                      <a class="add" href="javascript:;"></a>
                     </div>
                   </div>
                 </div>
@@ -111,18 +160,17 @@
             </dd>
             <dd>
               <div>
-                <img>
-                <div>
+                <img src="images/menu_foodimage.png"><div>
                   <h2>椒香鸡腿</h2>
                   <h3>椒香鸡腿，美味可口</h3>
                   <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a href="javascript:;"></a>
+                      <a class="reduce" href="javascript:;"></a>
                       <span>1</span>
-                      <a href="javascript:;"></a>
+                      <a class="add" href="javascript:;"></a>
                     </div>
                   </div>
                 </div>
@@ -130,18 +178,17 @@
             </dd>
             <dd>
               <div>
-                <img>
-                <div>
+                <img src="images/menu_foodimage.png"><div>
                   <h2>椒香鸡腿</h2>
                   <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <!--<h4><span>月售呀130份</span><span>好评率90%</span></h4>-->
+                  <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
+                      <!--<a class="reduce" href="javascript:;"></a>-->
+                      <!--<span>1</span>-->
+                      <a class="add" href="javascript:;"></a>
                     </div>
                   </div>
                 </div>
@@ -149,18 +196,17 @@
             </dd>
             <dd>
               <div>
-                <img>
-                <div>
+                <img src="images/menu_foodimage.png"><div>
                   <h2>椒香鸡腿</h2>
                   <h3>椒香鸡腿，美味可口</h3>
                   <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a href="javascript:;"></a>
+                      <a class="reduce" href="javascript:;"></a>
                       <span>1</span>
-                      <a href="javascript:;"></a>
+                      <a class="add" href="javascript:;"></a>
                     </div>
                   </div>
                 </div>
@@ -170,82 +216,78 @@
           <dl>
             <dt>
               <strong>优惠</strong>
-              <span>有优惠，快来抢</span>
+              <span>优惠多多，快来抢</span>
             </dt>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <!--<h4><span>月售呀130份</span><span>好评率90%</span></h4>-->
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
           </dl>
@@ -256,324 +298,308 @@
             </dt>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <!--<h4><span>月售呀130份</span><span>好评率90%</span></h4>-->
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
           </dl>
           <dl>
             <dt>
               <strong>15-20元超值立减套餐</strong>
-              <span>超值快来抢</span>
+              <span>超值抢购</span>
             </dt>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <!--<h4><span>月售呀130份</span><span>好评率90%</span></h4>-->
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
           </dl>
           <dl>
             <dt>
               <strong>特价23.9可乐卤蛋套餐</strong>
-              <span>特价商品，优惠多多</span>
+              <span>特价奥</span>
             </dt>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <!--<h4><span>月售呀130份</span><span>好评率90%</span></h4>-->
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
           </dl>
           <dl>
             <dt>
               <strong>缤纷小食（单点不送）</strong>
-              <span>大家喜欢吃</span>
+              <span>来点小食吧</span>
             </dt>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <!--<h4><span>月售呀130份</span><span>好评率90%</span></h4>-->
+                <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <!--<a class="reduce" href="javascript:;"></a>-->
+                    <!--<span>1</span>-->
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
             <dd>
               <div>
-                <img>
+                <img src="images/menu_foodimage.png"><div>
+                <h2>椒香鸡腿</h2>
+                <h3>椒香鸡腿，美味可口</h3>
+                <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+                <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
                 <div>
-                  <h2>椒香鸡腿</h2>
-                  <h3>椒香鸡腿，美味可口</h3>
-                  <h4><span>月售呀130份</span><span>好评率90%</span></h4>
-                  <p><span>老板推荐</span><span>剩8份</span></p>
+                  <strong>8</strong>
                   <div>
-                    <strong>8</strong>
-                    <div>
-                      <a href="javascript:;"></a>
-                      <span>1</span>
-                      <a href="javascript:;"></a>
-                    </div>
+                    <a class="reduce" href="javascript:;"></a>
+                    <span>1</span>
+                    <a class="add" href="javascript:;"></a>
                   </div>
                 </div>
+              </div>
               </div>
             </dd>
           </dl>
