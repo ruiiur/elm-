@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            line-height: 0.6875rem;
+            line-height: 0.875rem;
             margin-bottom: 0.6875rem; }
             .stores-content > div > ul > li > div > div:nth-child(2) > ul > li > img {
               width: 0.875rem;
