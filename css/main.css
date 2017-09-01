@@ -160,15 +160,18 @@ h1, h2, h3, h4, h5, h6 {
       width: 25%;
       float: left;
       text-align: center;
-      margin-bottom: 0.3125rem; }
-      .swiper-container .food-type > a > div img {
-        width: 3.125rem;
+      margin-top: 0.625rem; }
+      .swiper-container .food-type > a > div {
         height: 3.125rem; }
+        .swiper-container .food-type > a > div img {
+          width: 3.125rem;
+          height: 3.125rem; }
       .swiper-container .food-type > a > span {
         color: #666;
         font-size: 0.8125rem;
         line-height: 0.8125rem; }
   .swiper-container .swiper-pagination {
+    margin-top: 0.3125rem;
     margin-bottom: 0.1875rem; }
     .swiper-container .swiper-pagination span {
       width: 0.3125rem;
@@ -216,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
             background: #ffea00;
             line-height: 0.625rem;
             width: 1.875rem;
-            padding: 0.1875rem 0;
+            padding: 0.25rem 0 0.1875rem 0;
             text-align: center;
             margin-right: 0.5625rem; }
           .stores-content > div > ul > li > div > div:nth-child(1) > h3 em {
@@ -263,7 +266,8 @@ h1, h2, h3, h4, h5, h6 {
               font-size: 0.625rem;
               color: #fff;
               width: 3.125rem;
-              padding: 0.125rem 0;
+              line-height: 0.625rem;
+              padding: 0.1875rem 0 0.125rem 0;
               text-align: center;
               background: #00a8ff;
               border-radius: 0.125rem; }

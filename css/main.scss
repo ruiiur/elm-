@@ -223,8 +223,9 @@ h1, h2, h3, h4, h5, h6{
       width: 25%;
       float: left;
       text-align: center;
-      margin-bottom: toRem(5px);
+      margin-top: toRem(10px);
       > div {
+        height:toRem(50px);
         img {
           width: toRem(50px);
           height: toRem(50px);
@@ -238,6 +239,7 @@ h1, h2, h3, h4, h5, h6{
     }
   }
   .swiper-pagination {
+    margin-top: toRem(5px);
     margin-bottom: toRem(3px);
     span{
       width: toRem(5px);
@@ -295,7 +297,7 @@ h1, h2, h3, h4, h5, h6{
                   background: #ffea00;
                   line-height: toRem(10px);
                   width:toRem(30px);
-                  padding: toRem(3px) 0;
+                  padding: toRem(4px) 0 toRem(3px) 0;
                   text-align: center;
                   margin-right: toRem(9px);
                 }
@@ -351,8 +353,8 @@ h1, h2, h3, h4, h5, h6{
                     font-size: toRem(10px);
                     color:#fff;
                     width:toRem(50px);
-                    //line-height: toRem(10px);
-                    padding: toRem(2px) 0;
+                    line-height: toRem(10px);
+                    padding: toRem(3px) 0 toRem(2px) 0;
                     text-align: center;
                     background: #00a8ff;
                     border-radius: toRem(2px);
