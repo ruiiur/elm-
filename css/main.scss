@@ -1288,3 +1288,384 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+
+//submit-content
+.submit-content{
+  .user-information{
+    height:toRem(90px);
+    background: #ff8800;
+    color:#fff;
+    text-align: center;
+    padding-top: toRem(27px);
+    box-sizing: border-box;
+    >h2{
+      line-height: toRem(17px);
+      font-size: toRem(17px);
+      margin-bottom:toRem(13px);
+      .address{
+        display: inline-block;
+        vertical-align: top;
+        font-size: toRem(11px);
+        color:#f80;
+        line-height: toRem(15px);
+        width:toRem(30px);
+        padding: toRem(2px) 0 0 0;
+        background: #fff;
+        border-radius: toRem(2px);
+        margin-right: toRem(8px);
+      }
+      >i{
+        display: inline-block;
+        vertical-align: top;
+        width:toRem(8px);
+        height:toRem(13px);
+        margin-top: toRem(2px);
+        background: url('../images/order detail_store_arrow.png') no-repeat right top;
+        background-size: toRem(16px) toRem(13px);
+        margin-left: toRem(12px);
+      }
+    }
+    >p{
+      font-size: toRem(14px);
+      line-height: toRem(14px);
+      >span{
+        margin-left: toRem(9px);
+      }
+    }
+  }
+  .submit-main{
+    background: #f5f5f5;
+    position: absolute;
+    top:toRem(90px);
+    width:100%;
+    bottom:toRem(44px);
+    overflow: scroll;
+    padding:  toRem(8px) toRem(11px) toRem(19px) toRem(11px);
+    box-sizing: border-box;
+    >div{
+      background: #fff;
+      border-bottom: 2px solid #eee;
+      &:nth-child(1){
+        padding: toRem(17px);
+        >div{
+          display: inline-block;
+          width:toRem(275px);
+          >h2{
+            color:#333;
+            font-size: toRem(15px);
+            font-weight: bold;
+            line-height: toRem(15px);
+            margin-bottom: toRem(10px);
+          }
+          >p{
+            color:#999;
+            font-size: toRem(11px);
+            >span{
+              display: inline-block;
+              color:#fefefe;
+              font-size: toRem(11px);
+              line-height: toRem(15px);
+              width:toRem(50px);
+              border-radius: toRem(2px);
+              padding-top: toRem(2px);
+              background: #0089ff;
+            }
+            >em{
+              font-style: normal;
+              color:#999;
+              font-size: toRem(11px);
+              width:toRem(40px);
+              border-radius: toRem(2px);
+              border:1px solid #a8a8a8;
+              padding-top: toRem(1px);
+              margin: 0 toRem(5px);
+            }
+            >i{
+              display: inline-block;
+              vertical-align: top;
+              margin-top: toRem(3px);
+              margin-left: toRem(6px);
+              width:toRem(11px);
+              height:toRem(11px);
+              background: url('../images/Explain_icon.png') no-repeat;
+              background-size: toRem(11px);
+            }
+          }
+        }
+        >i{
+          display: inline-block;
+          float: right;
+          width:toRem(8px);
+          height:toRem(13px);
+          margin-top: toRem(15px);
+          background: url('../images/order detail_store_arrow.png') no-repeat left top;
+          background-size: toRem(16px) toRem(13px);
+        }
+      }
+      &:nth-child(3){
+        padding: toRem(17px);
+        >h2{
+          display: inline-block;
+          color:#333;
+          font-size: toRem(15px);
+          line-height: toRem(15px);
+          >i{
+            display: inline-block;
+            margin-left: toRem(6px);
+            width:toRem(11px);
+            height:toRem(11px);
+            background: url('../images/Explain_icon.png') no-repeat;
+            background-size: toRem(11px);
+          }
+        }
+        >p{
+          display: inline-block;
+          color:#999;
+          font-size: toRem(11px);
+          line-height: toRem(11px);
+        }
+        >i{
+          display: inline-block;
+          vertical-align: top;
+          float: right;
+          width:toRem(8px);
+          height:toRem(13px);
+          margin-top: toRem(-6px);
+          background: url('../images/order detail_store_arrow.png') no-repeat left top;
+          background-size: toRem(16px) toRem(13px);
+        }
+      }
+    }
+    >ul{
+      &:nth-child(2){
+        background: #fff;
+        border-bottom: 2px solid #eee;
+        margin: toRem(8px) 0;
+        padding: toRem(17px);
+        >li{
+          list-style: none;
+          &:nth-child(1){
+            padding-bottom: toRem(17px);
+            border-bottom: 1px solid #eee;
+            >h2{
+              color:#333;
+              font-size: toRem(15px);
+              line-height: toRem(15px);
+              i{
+                display: inline-block;
+                float: right;
+                width:toRem(8px);
+                height:toRem(13px);
+                margin-top: toRem(1px);
+                background: url('../images/order detail_store_arrow.png') no-repeat left top;
+                background-size: toRem(16px) toRem(13px);
+              }
+            }
+          }
+          &:nth-child(2){
+            padding: toRem(13px) 0;
+            border-bottom: 1px dashed #eee;
+            >h3{
+              color:#333;
+              font-size: toRem(13px);
+              line-height: toRem(13px);
+              margin-bottom: toRem(7px);
+              >span{
+                float: right;
+                &:nth-child(2){
+                  margin-right:  toRem(45px);
+                }
+              }
+            }
+            >p{
+              color:#999;
+              font-size: toRem(11px);
+              line-height: toRem(11px);
+            }
+          }
+          &:nth-child(3){
+            padding: toRem(13px) 0;
+            border-bottom: 1px dashed #eee;
+            >h3{
+              color:#333;
+              font-size: toRem(14px);
+              line-height: toRem(14px);
+              >span{
+                display: inline-block;
+                float: right;
+                font-size: toRem(13px);
+                margin-top: toRem(2px);
+                line-height: toRem(13px);
+              }
+            }
+          }
+          &:nth-child(4){
+            padding: toRem(13px) 0;
+            border-bottom: 1px solid #eee;
+            >h3{
+              color:#333;
+              font-size: toRem(14px);
+              line-height: toRem(16px);
+              >img{
+                display: inline-block;
+                vertical-align: middle;
+                width:toRem(16px);
+                height:toRem(16px);
+                margin-right: toRem(6px);
+              }
+              >span{
+                float: right;
+                color:#ff5339;
+                font-size: toRem(13px);
+              }
+              >span:before{
+                font-weight: 400;
+                content: "- \A5";
+                font-size: toRem(10px);
+                display: inline-block;
+              }
+            }
+          }
+          &:nth-child(5){
+            padding: toRem(13px) 0;
+            border-bottom: 1px solid #eee;
+            >h4{
+              color:#333;
+              font-size: toRem(14px);
+              >i,>em,>span{
+                display: inline-block;
+                float: right;
+                margin-top:toRem(2px);
+              }
+              >i{
+                width:toRem(8px);
+                height:toRem(13px);
+                background: url('../images/order detail_store_arrow.png') no-repeat left top;
+                background-size: toRem(16px) toRem(13px);
+                margin-left: toRem(7px);
+                margin-top: toRem(4px);
+              }
+              >span{
+                color:#ff5339;
+                font-size: toRem(13px);
+              }
+              >span:before{
+                font-weight: 400;
+                content: "- \A5";
+                font-size: toRem(10px);
+                display: inline-block;
+              }
+              >em{
+                color:#333;
+                font-size: toRem(10px);
+                width:toRem(56px);
+                line-height: toRem(15px);
+                background: #ffea00;
+                text-align: center;
+                border-radius: toRem(2px);
+                padding-top: toRem(2px);
+                margin-right: toRem(13px);
+              }
+            }
+          }
+          &:nth-child(6){
+            padding-top: toRem(17px);
+            >p{
+              display: inline-block;
+              &:nth-child(1){
+                font-size: toRem(11px);
+                color:#999;
+                line-height: toRem(11px);
+                >i{
+                  display: inline-block;
+                  vertical-align: top;
+                  width:toRem(11px);
+                  height:toRem(11px);
+                  background: url('../images/Explain_icon.png') no-repeat;
+                  background-size: toRem(11px);
+                  margin-left: toRem(6px);
+                }
+              }
+              &:nth-child(2){
+                float: right;
+                color:#333;
+                font-size: toRem(13px);
+                line-height: toRem(21px);
+                >span{
+                  font-size: toRem(21px);
+                }
+                >span:before{
+                  font-weight: 400;
+                  content: "\A5";
+                  font-size: toRem(16px);
+                  display: inline-block;
+                  margin-left: toRem(6px);
+                }
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(4){
+        background: #fff;
+        border-bottom: 2px solid #eee;
+        margin: toRem(8px) 0 0 0;
+        padding: toRem(17px);
+        >li{
+          list-style: none;
+          &:nth-child(1){
+          border-bottom: 1px solid #eee;
+            >h2{
+              color:#333;
+              font-size: toRem(14px);
+              line-height: toRem(14px);
+              padding-bottom: toRem(18px);
+            }
+          }
+          &:nth-child(2){
+            border-bottom: 1px solid #eee;
+            padding: toRem(9px) 0;
+            >h2{
+              display: inline-block;
+              color:#333;
+              font-size: toRem(14px);
+              line-height: toRem(14px);
+              i{
+                display: inline-block;
+                margin-top: toRem(3px);
+                margin-left: toRem(6px);
+                width:toRem(11px);
+                height:toRem(11px);
+                background: url('../images/Explain_icon.png') no-repeat;
+                background-size: toRem(11px);
+              }
+            }
+            >label{
+              display: inline-block;
+              //vertical-align: middle;
+              float:right;
+              //margin-bottom: -7px;
+            }
+          }
+          &:nth-child(3){
+            padding-top: toRem(18px);
+            >h2{
+              font-size: toRem(14px);
+              line-height: toRem(14px);
+              >i{
+                display: inline-block;
+                vertical-align: top;
+                float: right;
+                width:toRem(8px);
+                height:toRem(13px);
+                background: url('../images/order detail_store_arrow.png') no-repeat left top;
+                background-size: toRem(16px) toRem(13px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

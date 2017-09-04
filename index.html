@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="css/framework7.material.min.css">
   <link rel="stylesheet" href="css/framework7.material.colors.min.css">
   <link rel="stylesheet" href="css/framework7-icons.css">
+  <!--<link rel="stylesheet" href="css/framework7.ios.min.css">-->
+  <!--<link rel="stylesheet" href="css/framework7.material.colors.min.css">-->
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -42,14 +44,16 @@
 <template id="page-submit">
   <f7-page no-navbar name="submit">
     <div class="submit-content">
-      <div>
-        <h2><i></i><span>文洋大厦协和路1033号</span><span>A座5楼</span><i></i></h2>
-        <p>沙积分（男生）<span>15589762345</span></p>
+      <div class="user-information">
+        <h2><span class="address">公司</span><span>文洋大厦协和路1033号</span> <span>A座5楼</span><i></i></h2>
+        <p>沙积分（男生)<span>15589762345</span></p>
       </div>
-      <div>
+      <div class="submit-main">
         <div>
-          <h2>尽快送达（预计10:14）</h2>
-          <p><span>蜂鸟配送</span><em>准时达</em>当前时段下单不享受超时赔付<i></i></p>
+          <div>
+            <h2>尽快送达（预计10:14）</h2>
+            <p><span>蜂鸟配送</span><em>准时达</em>当前时段下单不享受超时赔付<i></i></p>
+          </div>
           <i></i>
         </div>
         <ul>
@@ -57,21 +61,21 @@
             <h2>二十五块半（天山西路店）<i></i></h2>
           </li>
           <li>
-            <h3>椒香鸡腿-椒香鸡腿饭<span>x4</span><span>￥32</span></h3>
+            <h3>椒香鸡腿-椒香鸡腿<span>￥32</span><span>x4</span></h3>
             <p>椒香鸡腿</p>
           </li>
           <li>
             <h3>配送费<span>￥5</span></h3>
           </li>
           <li>
-            <h3><img src="">在线支付立减优惠<span>-￥13</span></h3>
+            <h3><img src="images/huodong_jian.png">在线支付立减优惠<span>13</span></h3>
           </li>
           <li>
-            <h4>红包<em>HEY-GO</em><span>-￥5</span><i></i></h4>
+            <h4>红包<i></i><span>5</span><em>HEY-GO</em></h4>
           </li>
           <li>
             <p>优惠说明<i></i></p>
-            <p><span>小计</span>￥27</p>
+            <p>小计<span>27</span></p>
           </li>
         </ul>
         <div>
@@ -81,7 +85,17 @@
         </div>
         <ul>
           <li>
-            
+            <h2>在线支付</h2>
+          </li>
+          <li>
+            <h2>匿名购买<i></i></h2>
+            <label class="label-switch">
+              <span style="white-space:pre">    </span><input checked type="checkbox" />
+              <span style="white-space:pre">    </span><div class="checkbox"></div>
+            </label>
+          </li>
+          <li>
+            <h2>口味偏好/餐具份数<i></i></h2>
           </li>
         </ul>
       </div>
@@ -943,6 +957,7 @@
   </f7-page>
 </template>
 
+<script src="js/jquery.min.js"></script>
 <script src="js/framework7.min.js"></script>
 <script src="js/vue.min.js"></script>
 <!--<script src="https://unpkg.com/vue/dist/vue.js"></script>-->

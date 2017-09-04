@@ -975,4 +975,313 @@ h1, h2, h3, h4, h5, h6 {
             line-height: 0.875rem;
             margin: 0.3125rem 0.625rem 0 0.625rem; }
 
+.submit-content .user-information {
+  height: 5.625rem;
+  background: #ff8800;
+  color: #fff;
+  text-align: center;
+  padding-top: 1.6875rem;
+  box-sizing: border-box; }
+  .submit-content .user-information > h2 {
+    line-height: 1.0625rem;
+    font-size: 1.0625rem;
+    margin-bottom: 0.8125rem; }
+    .submit-content .user-information > h2 .address {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0.6875rem;
+      color: #f80;
+      line-height: 0.9375rem;
+      width: 1.875rem;
+      padding: 0.125rem 0 0 0;
+      background: #fff;
+      border-radius: 0.125rem;
+      margin-right: 0.5rem; }
+    .submit-content .user-information > h2 > i {
+      display: inline-block;
+      vertical-align: top;
+      width: 0.5rem;
+      height: 0.8125rem;
+      margin-top: 0.125rem;
+      background: url("../images/order detail_store_arrow.png") no-repeat right top;
+      background-size: 1rem 0.8125rem;
+      margin-left: 0.75rem; }
+  .submit-content .user-information > p {
+    font-size: 0.875rem;
+    line-height: 0.875rem; }
+    .submit-content .user-information > p > span {
+      margin-left: 0.5625rem; }
+.submit-content .submit-main {
+  background: #f5f5f5;
+  position: absolute;
+  top: 5.625rem;
+  width: 100%;
+  bottom: 2.75rem;
+  overflow: scroll;
+  padding: 0.5rem 0.6875rem 1.1875rem 0.6875rem;
+  box-sizing: border-box; }
+  .submit-content .submit-main > div {
+    background: #fff;
+    border-bottom: 2px solid #eee; }
+    .submit-content .submit-main > div:nth-child(1) {
+      padding: 1.0625rem; }
+      .submit-content .submit-main > div:nth-child(1) > div {
+        display: inline-block;
+        width: 17.1875rem; }
+        .submit-content .submit-main > div:nth-child(1) > div > h2 {
+          color: #333;
+          font-size: 0.9375rem;
+          font-weight: bold;
+          line-height: 0.9375rem;
+          margin-bottom: 0.625rem; }
+        .submit-content .submit-main > div:nth-child(1) > div > p {
+          color: #999;
+          font-size: 0.6875rem; }
+          .submit-content .submit-main > div:nth-child(1) > div > p > span {
+            display: inline-block;
+            color: #fefefe;
+            font-size: 0.6875rem;
+            line-height: 0.9375rem;
+            width: 3.125rem;
+            border-radius: 0.125rem;
+            padding-top: 0.125rem;
+            background: #0089ff; }
+          .submit-content .submit-main > div:nth-child(1) > div > p > em {
+            font-style: normal;
+            color: #999;
+            font-size: 0.6875rem;
+            width: 2.5rem;
+            border-radius: 0.125rem;
+            border: 1px solid #a8a8a8;
+            padding-top: 0.0625rem;
+            margin: 0 0.3125rem; }
+          .submit-content .submit-main > div:nth-child(1) > div > p > i {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0.1875rem;
+            margin-left: 0.375rem;
+            width: 0.6875rem;
+            height: 0.6875rem;
+            background: url("../images/Explain_icon.png") no-repeat;
+            background-size: 0.6875rem; }
+      .submit-content .submit-main > div:nth-child(1) > i {
+        display: inline-block;
+        float: right;
+        width: 0.5rem;
+        height: 0.8125rem;
+        margin-top: 0.9375rem;
+        background: url("../images/order detail_store_arrow.png") no-repeat left top;
+        background-size: 1rem 0.8125rem; }
+    .submit-content .submit-main > div:nth-child(3) {
+      padding: 1.0625rem; }
+      .submit-content .submit-main > div:nth-child(3) > h2 {
+        display: inline-block;
+        color: #333;
+        font-size: 0.9375rem;
+        line-height: 0.9375rem; }
+        .submit-content .submit-main > div:nth-child(3) > h2 > i {
+          display: inline-block;
+          margin-left: 0.375rem;
+          width: 0.6875rem;
+          height: 0.6875rem;
+          background: url("../images/Explain_icon.png") no-repeat;
+          background-size: 0.6875rem; }
+      .submit-content .submit-main > div:nth-child(3) > p {
+        display: inline-block;
+        color: #999;
+        font-size: 0.6875rem;
+        line-height: 0.6875rem; }
+      .submit-content .submit-main > div:nth-child(3) > i {
+        display: inline-block;
+        vertical-align: top;
+        float: right;
+        width: 0.5rem;
+        height: 0.8125rem;
+        margin-top: -0.375rem;
+        background: url("../images/order detail_store_arrow.png") no-repeat left top;
+        background-size: 1rem 0.8125rem; }
+  .submit-content .submit-main > ul:nth-child(2) {
+    background: #fff;
+    border-bottom: 2px solid #eee;
+    margin: 0.5rem 0;
+    padding: 1.0625rem; }
+    .submit-content .submit-main > ul:nth-child(2) > li {
+      list-style: none; }
+      .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) {
+        padding-bottom: 1.0625rem;
+        border-bottom: 1px solid #eee; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) > h2 {
+          color: #333;
+          font-size: 0.9375rem;
+          line-height: 0.9375rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) > h2 i {
+            display: inline-block;
+            float: right;
+            width: 0.5rem;
+            height: 0.8125rem;
+            margin-top: 0.0625rem;
+            background: url("../images/order detail_store_arrow.png") no-repeat left top;
+            background-size: 1rem 0.8125rem; }
+      .submit-content .submit-main > ul:nth-child(2) > li:nth-child(2) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px dashed #eee; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(2) > h3 {
+          color: #333;
+          font-size: 0.8125rem;
+          line-height: 0.8125rem;
+          margin-bottom: 0.4375rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(2) > h3 > span {
+            float: right; }
+            .submit-content .submit-main > ul:nth-child(2) > li:nth-child(2) > h3 > span:nth-child(2) {
+              margin-right: 2.8125rem; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(2) > p {
+          color: #999;
+          font-size: 0.6875rem;
+          line-height: 0.6875rem; }
+      .submit-content .submit-main > ul:nth-child(2) > li:nth-child(3) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px dashed #eee; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(3) > h3 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 0.875rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(3) > h3 > span {
+            display: inline-block;
+            float: right;
+            font-size: 0.8125rem;
+            margin-top: 0.125rem;
+            line-height: 0.8125rem; }
+      .submit-content .submit-main > ul:nth-child(2) > li:nth-child(4) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px solid #eee; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(4) > h3 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 1rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(4) > h3 > img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.375rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(4) > h3 > span {
+            float: right;
+            color: #ff5339;
+            font-size: 0.8125rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(4) > h3 > span:before {
+            font-weight: 400;
+            content: "- \A5";
+            font-size: 0.625rem;
+            display: inline-block; }
+      .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px solid #eee; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 {
+          color: #333;
+          font-size: 0.875rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > i, .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > em, .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > span {
+            display: inline-block;
+            float: right;
+            margin-top: 0.125rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > i {
+            width: 0.5rem;
+            height: 0.8125rem;
+            background: url("../images/order detail_store_arrow.png") no-repeat left top;
+            background-size: 1rem 0.8125rem;
+            margin-left: 0.4375rem;
+            margin-top: 0.25rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > span {
+            color: #ff5339;
+            font-size: 0.8125rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > span:before {
+            font-weight: 400;
+            content: "- \A5";
+            font-size: 0.625rem;
+            display: inline-block; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(5) > h4 > em {
+            color: #333;
+            font-size: 0.625rem;
+            width: 3.5rem;
+            line-height: 0.9375rem;
+            background: #ffea00;
+            text-align: center;
+            border-radius: 0.125rem;
+            padding-top: 0.125rem;
+            margin-right: 0.8125rem; }
+      .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) {
+        padding-top: 1.0625rem; }
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) > p {
+          display: inline-block; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) > p:nth-child(1) {
+            font-size: 0.6875rem;
+            color: #999;
+            line-height: 0.6875rem; }
+            .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) > p:nth-child(1) > i {
+              display: inline-block;
+              vertical-align: top;
+              width: 0.6875rem;
+              height: 0.6875rem;
+              background: url("../images/Explain_icon.png") no-repeat;
+              background-size: 0.6875rem;
+              margin-left: 0.375rem; }
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) > p:nth-child(2) {
+            float: right;
+            color: #333;
+            font-size: 0.8125rem;
+            line-height: 1.3125rem; }
+            .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) > p:nth-child(2) > span {
+              font-size: 1.3125rem; }
+            .submit-content .submit-main > ul:nth-child(2) > li:nth-child(6) > p:nth-child(2) > span:before {
+              font-weight: 400;
+              content: "\A5";
+              font-size: 1rem;
+              display: inline-block;
+              margin-left: 0.375rem; }
+  .submit-content .submit-main > ul:nth-child(4) {
+    background: #fff;
+    border-bottom: 2px solid #eee;
+    margin: 0.5rem 0 0 0;
+    padding: 1.0625rem; }
+    .submit-content .submit-main > ul:nth-child(4) > li {
+      list-style: none; }
+      .submit-content .submit-main > ul:nth-child(4) > li:nth-child(1) {
+        border-bottom: 1px solid #eee; }
+        .submit-content .submit-main > ul:nth-child(4) > li:nth-child(1) > h2 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 0.875rem;
+          padding-bottom: 1.125rem; }
+      .submit-content .submit-main > ul:nth-child(4) > li:nth-child(2) {
+        border-bottom: 1px solid #eee;
+        padding: 0.5625rem 0; }
+        .submit-content .submit-main > ul:nth-child(4) > li:nth-child(2) > h2 {
+          display: inline-block;
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 0.875rem; }
+          .submit-content .submit-main > ul:nth-child(4) > li:nth-child(2) > h2 i {
+            display: inline-block;
+            margin-top: 0.1875rem;
+            margin-left: 0.375rem;
+            width: 0.6875rem;
+            height: 0.6875rem;
+            background: url("../images/Explain_icon.png") no-repeat;
+            background-size: 0.6875rem; }
+        .submit-content .submit-main > ul:nth-child(4) > li:nth-child(2) > label {
+          display: inline-block;
+          float: right; }
+      .submit-content .submit-main > ul:nth-child(4) > li:nth-child(3) {
+        padding-top: 1.125rem; }
+        .submit-content .submit-main > ul:nth-child(4) > li:nth-child(3) > h2 {
+          font-size: 0.875rem;
+          line-height: 0.875rem; }
+          .submit-content .submit-main > ul:nth-child(4) > li:nth-child(3) > h2 > i {
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+            width: 0.5rem;
+            height: 0.8125rem;
+            background: url("../images/order detail_store_arrow.png") no-repeat left top;
+            background-size: 1rem 0.8125rem; }
+
 /*# sourceMappingURL=main.css.map */
