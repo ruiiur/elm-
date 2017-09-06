@@ -25,7 +25,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-submit toolbar-through></page-submit>
+        <page-order-detail toolbar-through></page-order-detail>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -38,6 +38,168 @@
     <f7-link :href="active == 'order'?'#':'/order/'" class="col-auto" :class="{'active':active=='order'?'active':''}" ignore-cache><i class="order"></i><span>订单</span></f7-link>
     <f7-link :href="active == 'center'?'#':'/center/'" class="col-auto" :class="{'active':active=='center'?'active':''}" ignore-cache><i class="info"></i><span>我的</span></f7-link>
   </f7-toolbar>
+</template>
+
+<!--门店首页未完成-->
+<template id="page-stores">
+  <f7-page no-navbar name="stores">
+    <div class="stores-content">
+       <p>这是门店首页</p>
+    </div>
+    <!--<com-toolbar :active="active"></com-toolbar>-->
+  </f7-page>
+</template>
+
+
+<!--订单详情页-->
+<template id="page-order-detail">
+  <f7-page no-navbar name="order-detail">
+    <div class="order-detail-content">
+      <div>
+        <h2>订单已完成 <i></i></h2>
+        <p>感谢你对点银宝的信任，期待再次光临</p>
+        <a href="javascript:;">再来一单</a>
+      </div>
+      <ul>
+        <li>
+          <h2><img src="images/order%20detail_storeimg.png"><span>二十五块半（天山西路店）</span><i></i></h2>
+        </li>
+        <li>
+          <h3>椒香鸡腿-椒香鸡腿<span>￥32</span><span>x4</span></h3>
+          <p>椒香鸡腿</p>
+        </li>
+        <li>
+          <h3>配送费<span>￥5</span></h3>
+        </li>
+        <li>
+          <h3><img src="images/huodong_jian.png">在线支付立减优惠<span>13</span></h3>
+        </li>
+        <li>
+          <h3>HEY-GO会员专享优惠<span>5</span></h3>
+        </li>
+        <li>
+          <p><i></i>联系商家</p>
+          <p>小计<span>17</span></p>
+        </li>
+      </ul>
+      <ul>
+        <li>配送信息</li>
+        <li>送达时间<span>11:00-11:15</span></li>
+        <li>
+          <h2>收货地址<span>文洋大厦协和路1033号A座5楼</span></h2>
+          <p>沙积分（男士）<span>16678952341</span></p>
+        </li>
+        <li>配送方式<span>蜂鸟专送</span></li>
+      </ul>
+      <ul>
+        <li>订单信息</li>
+        <li>订单号<i>复制</i><span>3010 9473 3254 2562 356</span></li>
+        <li>支付方式<span>在线支付</span></li>
+        <li>下单时间<span>2017-08-22 10:36</span></li>
+        <li>订单备注<span>要香菜，要辣，要变态辣！！</span></li>
+      </ul>
+      <div>
+        <h2>猜你喜欢</h2>
+        <div>
+          <a href="javascript:;">
+            <img src="images/order%20detail_recommend_img.png">
+            <div>
+              <h2>香辣口水鸡套餐（微辣）</h2>
+              <h3><span>月售576份</span><em>好评率94%</em></h3>
+              <h4><span>34.5</span><em>满19减17</em></h4>
+              <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
+            </div>
+          </a><a href="javascript:;">
+            <img src="images/order%20detail_recommend_img.png">
+            <div>
+              <h2>香辣口水鸡套餐（微辣）</h2>
+              <h3><span>月售576份</span><em>好评率94%</em></h3>
+              <h4><span>34.5</span><em>满19减17</em></h4>
+              <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
+            </div>
+          </a>
+          <a href="javascript:;">
+            <img src="images/order%20detail_recommend_img.png">
+            <div>
+              <h2>香辣口水鸡套餐（微辣）</h2>
+              <h3><span>月售576份</span><em>好评率94%</em></h3>
+              <h4><span>34.5</span><em>满19减17</em></h4>
+              <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
+            </div>
+          </a><a href="javascript:;">
+            <img src="images/order%20detail_recommend_img.png">
+            <div>
+              <h2>香辣口水鸡套餐（微辣）</h2>
+              <h3><span>月售576份</span><em>好评率94%</em></h3>
+              <h4><span>34.5</span><em>满19减17</em></h4>
+              <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
+            </div>
+          </a>
+        </div>
+        <p>没有更多商品了</p>
+      </div>
+    </div>
+  </f7-page>
+</template>
+
+<!--支付页-->
+<template id="page-pay">
+  <f7-page no-navbar name="pay">
+    <div class="pay-content">
+      <div>
+        <div>
+          <p>支付剩余时间</p>
+          <h2>14 : 56</h2>
+        </div>
+      </div>
+      <div>
+        <h2>
+          <span>二十五块半（天山西路店）外卖订单</span>
+          <em>详情</em>
+          <small>￥41.00</small>
+        </h2>
+      </div>
+      <div>选择支付方式</div>
+      <div class="list-block">
+        <ul>
+          <li class="item-content dis">
+            <div class="item-media"><i></i></div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">支付宝</div>
+                <div class="item-subtitle">成功支付后抽好礼~</div>
+              </div>
+              <div class="item-after"></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i></i></div>
+            <div class="item-inner">
+              <div class="item-title-row">
+                <div class="item-title">花呗</div>
+                <div class="item-subtitle">花呗新用户立减15元！</div>
+              </div>
+              <div class="item-after"></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i></i></div>
+            <div class="item-inner">
+              <div class="item-title">银行卡支付</div>
+              <div class="item-after"></div>
+            </div>
+          </li>
+          <li class="item-content">
+            <div class="item-media"><i></i></div>
+            <div class="item-inner">
+              <div class="item-title">QQ钱包</div>
+              <div class="item-after"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </f7-page>
 </template>
 
 <!--提交订单页-->
@@ -98,6 +260,11 @@
             <h2>口味偏好/餐具份数<i></i></h2>
           </li>
         </ul>
+      </div>
+      <div class="submit-bottom">
+        <span>¥29</span>
+        <small>优惠 ¥23</small>
+        <button class="submit-btn">去支付</button>
       </div>
     </div>
   </f7-page>
@@ -763,7 +930,7 @@
   </f7-page>
 </template>
 
-<!--首页-->
+<!-- 平台首页-->
 <template id="page-home">
   <f7-page navbar-through  name="home">
     <div class="main-header">
@@ -877,7 +1044,7 @@
         </div>
       </f7-swiper-slide>
     </f7-swiper>
-    <div class="stores-content">
+    <div class="home-stores-content">
       <h2>推荐商家</h2>
       <div>
         <ul>

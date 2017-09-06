@@ -184,34 +184,34 @@ h1, h2, h3, h4, h5, h6 {
         opacity: 1;
         background: #666; }
 
-.stores-content > h2 {
+.home-stores-content > h2 {
   color: #333;
   font-size: 1.0625rem;
   line-height: 1.9375rem;
   padding: 0.625rem 0 0.625rem 0.9375rem;
   font-weight: normal;
   border: 1px solid #f5f5f5; }
-.stores-content > div {
+.home-stores-content > div {
   padding: 0 0.6875rem 0 0.6875rem; }
-  .stores-content > div > ul > li {
+  .home-stores-content > div > ul > li {
     padding-top: 1.25rem;
     border-bottom: 1px solid #f4f4f4; }
-    .stores-content > div > ul > li > img {
+    .home-stores-content > div > ul > li > img {
       width: 4.5rem;
       height: 4.375rem;
       display: inline-block;
       vertical-align: top;
       margin-right: 0.6875rem; }
-    .stores-content > div > ul > li > div {
+    .home-stores-content > div > ul > li > div {
       display: inline-block;
       width: calc(100% - 5.4375rem); }
-      .stores-content > div > ul > li > div > div:nth-child(1) {
+      .home-stores-content > div > ul > li > div > div:nth-child(1) {
         height: 4.375rem; }
-        .stores-content > div > ul > li > div > div:nth-child(1) > h3 {
+        .home-stores-content > div > ul > li > div > div:nth-child(1) > h3 {
           font-size: 1rem;
           color: #000;
           line-height: 1rem; }
-          .stores-content > div > ul > li > div > div:nth-child(1) > h3 > span {
+          .home-stores-content > div > ul > li > div > div:nth-child(1) > h3 > span {
             display: inline-block !important;
             font-size: 0.625rem;
             color: #6f3f15;
@@ -222,31 +222,31 @@ h1, h2, h3, h4, h5, h6 {
             padding: 0.25rem 0 0.1875rem 0;
             text-align: center;
             margin-right: 0.5625rem; }
-          .stores-content > div > ul > li > div > div:nth-child(1) > h3 em {
+          .home-stores-content > div > ul > li > div > div:nth-child(1) > h3 em {
             float: right;
             display: inline-block; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > h3 em i {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > h3 em i {
               display: inline-block;
               width: 0.875rem;
               height: 0.875rem; }
-              .stores-content > div > ul > li > div > div:nth-child(1) > h3 em i:nth-child(2) {
+              .home-stores-content > div > ul > li > div > div:nth-child(1) > h3 em i:nth-child(2) {
                 background: url("../images/huodong_piao.png") no-repeat;
                 background-size: 0.875rem;
                 margin-left: 0.375rem; }
-              .stores-content > div > ul > li > div > div:nth-child(1) > h3 em i:nth-child(1) {
+              .home-stores-content > div > ul > li > div > div:nth-child(1) > h3 em i:nth-child(1) {
                 background: url("../images/huodong_fu.png") no-repeat;
                 background-size: 0.875rem; }
-        .stores-content > div > ul > li > div > div:nth-child(1) > h4 {
+        .home-stores-content > div > ul > li > div > div:nth-child(1) > h4 {
           line-height: 0.75rem;
           margin: 0.5rem 0 0.6875rem 0; }
-          .stores-content > div > ul > li > div > div:nth-child(1) > h4 > em {
+          .home-stores-content > div > ul > li > div > div:nth-child(1) > h4 > em {
             display: inline-block;
             position: relative;
             width: 3.875rem;
             height: 0.625rem;
             background: url("../images/pingfen_star_gary.png") no-repeat;
             background-size: 3.875rem 0.625rem; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > h4 > em > i {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > h4 > em > i {
               display: inline-block;
               position: absolute;
               top: 0;
@@ -254,13 +254,13 @@ h1, h2, h3, h4, h5, h6 {
               height: 0.625rem;
               background: url("../images/pingfen_star_yellow.png") no-repeat;
               background-size: 3.875rem 0.625rem; }
-          .stores-content > div > ul > li > div > div:nth-child(1) > h4 > span {
+          .home-stores-content > div > ul > li > div > div:nth-child(1) > h4 > span {
             color: #666;
             font-size: 0.75rem; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > h4 > span:nth-child(2) {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > h4 > span:nth-child(2) {
               display: inline-block;
               margin: 0 0.375rem; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > h4 > span.delivery {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > h4 > span.delivery {
               display: inline-block;
               float: right;
               font-size: 0.625rem;
@@ -271,39 +271,39 @@ h1, h2, h3, h4, h5, h6 {
               text-align: center;
               background: #00a8ff;
               border-radius: 0.125rem; }
-        .stores-content > div > ul > li > div > div:nth-child(1) > div {
+        .home-stores-content > div > ul > li > div > div:nth-child(1) > div {
           height: 0.75rem;
           line-height: 0.75rem; }
-          .stores-content > div > ul > li > div > div:nth-child(1) > div ul {
+          .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul {
             display: inline-block;
             height: 0.75rem; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > div ul li {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul li {
               display: inline-block;
               list-style: none;
               line-height: 0.75rem; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(1) li {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(1) li {
               color: #666;
               font-size: 0.75rem; }
-              .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(1) li:nth-child(1) {
+              .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(1) li:nth-child(1) {
                 padding-right: 0.4375rem;
                 border-right: 1px solid #d8d8d8;
                 margin-right: 0.4375rem; }
-            .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) {
+            .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) {
               float: right; }
-              .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) li {
+              .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) li {
                 color: #999;
                 font-size: 0.6875rem; }
-                .stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) li:nth-child(1) {
+                .home-stores-content > div > ul > li > div > div:nth-child(1) > div ul:nth-child(2) li:nth-child(1) {
                   padding-right: 0.4375rem;
                   border-right: 1px solid #d8d8d8;
                   margin-right: 0.4375rem; }
-      .stores-content > div > ul > li > div > div:nth-child(2) {
+      .home-stores-content > div > ul > li > div > div:nth-child(2) {
         border-top: 1px dashed #ddd;
         padding-top: 0.625rem; }
-        .stores-content > div > ul > li > div > div:nth-child(2) > ul {
+        .home-stores-content > div > ul > li > div > div:nth-child(2) > ul {
           display: inline-block;
           width: 12.5rem; }
-          .stores-content > div > ul > li > div > div:nth-child(2) > ul > li {
+          .home-stores-content > div > ul > li > div > div:nth-child(2) > ul > li {
             width: 12.5rem;
             list-style: none;
             color: #999;
@@ -313,17 +313,17 @@ h1, h2, h3, h4, h5, h6 {
             white-space: nowrap;
             line-height: 0.875rem;
             margin-bottom: 0.6875rem; }
-            .stores-content > div > ul > li > div > div:nth-child(2) > ul > li > img {
+            .home-stores-content > div > ul > li > div > div:nth-child(2) > ul > li > img {
               width: 0.875rem;
               height: 0.875rem;
               display: inline-block;
               vertical-align: sub;
               margin-right: 0.125rem; }
-        .stores-content > div > ul > li > div > div:nth-child(2) .all-activity {
+        .home-stores-content > div > ul > li > div > div:nth-child(2) .all-activity {
           float: right;
           color: #999;
           font-size: 0.6875rem; }
-          .stores-content > div > ul > li > div > div:nth-child(2) .all-activity > i {
+          .home-stores-content > div > ul > li > div > div:nth-child(2) .all-activity > i {
             display: inline-block;
             vertical-align: middle;
             margin-left: 0.3125rem;
@@ -331,23 +331,23 @@ h1, h2, h3, h4, h5, h6 {
             height: 0.25rem;
             background: url("../images/youhui_jiantou.png") no-repeat left top;
             background-size: 0.75rem 0.25rem; }
-      .stores-content > div > ul > li > div > div:nth-child(3) {
+      .home-stores-content > div > ul > li > div > div:nth-child(3) {
         border-top: 1px solid #f4f4f4;
         padding: 0.8125rem 0 0.875rem 0;
         height: 0.6875rem;
         line-height: 0.6875rem; }
-        .stores-content > div > ul > li > div > div:nth-child(3) > i {
+        .home-stores-content > div > ul > li > div > div:nth-child(3) > i {
           display: inline-block;
           width: 0.75rem;
           height: 0.6875rem;
           margin-right: 0.4375rem;
           background: url("../images/nearby_store_icon.png");
           background-size: 0.75rem 0.6875rem; }
-        .stores-content > div > ul > li > div > div:nth-child(3) > span {
+        .home-stores-content > div > ul > li > div > div:nth-child(3) > span {
           color: #666;
           font-size: 0.6875rem;
           line-height: 0.6875rem; }
-        .stores-content > div > ul > li > div > div:nth-child(3) > em {
+        .home-stores-content > div > ul > li > div > div:nth-child(3) > em {
           position: relative;
           display: inline-block;
           margin-top: 0.1875rem;
@@ -356,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
           height: 0.25rem;
           background: url("../images/nearby_store_jiantou.png");
           background-size: 0.75rem 0.25rem; }
-          .stores-content > div > ul > li > div > div:nth-child(3) > em > div {
+          .home-stores-content > div > ul > li > div > div:nth-child(3) > em > div {
             display: none;
             background: #fff;
             position: absolute;
@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
             padding: 0 1.25rem;
             box-sizing: border-box;
             border-radius: 0.125rem; }
-            .stores-content > div > ul > li > div > div:nth-child(3) > em > div > a {
+            .home-stores-content > div > ul > li > div > div:nth-child(3) > em > div > a {
               font-style: normal;
               display: inline-block;
               width: 100%;
@@ -375,16 +375,16 @@ h1, h2, h3, h4, h5, h6 {
               font-size: 0.9375rem;
               padding: 0.8125rem 0 1.125rem 0;
               border-bottom: 1px solid #f4f4f4; }
-              .stores-content > div > ul > li > div > div:nth-child(3) > em > div > a > span {
+              .home-stores-content > div > ul > li > div > div:nth-child(3) > em > div > a > span {
                 float: right;
                 color: #999;
                 font-size: 0.6875rem;
                 line-height: 0.6875rem; }
-                .stores-content > div > ul > li > div > div:nth-child(3) > em > div > a > span > em {
+                .home-stores-content > div > ul > li > div > div:nth-child(3) > em > div > a > span > em {
                   font-style: normal;
                   color: #ff6414;
                   font-size: 0.6875rem; }
-          .stores-content > div > ul > li > div > div:nth-child(3) > em > i {
+          .home-stores-content > div > ul > li > div > div:nth-child(3) > em > i {
             position: absolute;
             border-left: 5px solid transparent;
             border-right: 5px solid transparent;
@@ -1283,5 +1283,421 @@ h1, h2, h3, h4, h5, h6 {
             height: 0.8125rem;
             background: url("../images/order detail_store_arrow.png") no-repeat left top;
             background-size: 1rem 0.8125rem; }
+.submit-content .submit-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #494949;
+  height: 2.75rem; }
+  .submit-content .submit-bottom .submit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #ff8800;
+    width: 6.5625rem;
+    color: #fff;
+    border: none;
+    font-size: 1rem; }
+  .submit-content .submit-bottom > span {
+    display: inline-block;
+    color: #fefefe;
+    font-size: 1.375rem;
+    line-height: 1.375rem;
+    padding: 0 0.5rem 0 0.9375rem;
+    border-right: 1px solid #666;
+    margin: 0.75rem 0.5rem 0 0; }
+  .submit-content .submit-bottom > small {
+    display: inline-block;
+    color: #999;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    vertical-align: top;
+    margin-top: 1.0625rem; }
+
+.pay-content {
+  background: #f5f5f5;
+  height: 100%; }
+  .pay-content > div:nth-child(1) {
+    background: #fff; }
+    .pay-content > div:nth-child(1) > div {
+      border-bottom: 1px solid #eee;
+      text-align: center;
+      margin: 0 0.9375rem; }
+      .pay-content > div:nth-child(1) > div > p {
+        padding: 1.375rem 0 0.875rem 0;
+        color: #666;
+        font-size: 0.8125rem;
+        line-height: 0.8125rem; }
+      .pay-content > div:nth-child(1) > div > h2 {
+        color: #333;
+        font-size: 1.6875rem;
+        line-height: 1.6875rem;
+        padding-bottom: 1.5rem; }
+  .pay-content > div:nth-child(2) {
+    background: #fff; }
+    .pay-content > div:nth-child(2) > h2 {
+      margin: 0 0.9375rem; }
+      .pay-content > div:nth-child(2) > h2 > span {
+        display: inline-block;
+        color: #333;
+        font-size: 0.9375rem;
+        padding: 1.0625rem 0;
+        line-height: 0.9375rem;
+        margin-right: 0.625rem; }
+      .pay-content > div:nth-child(2) > h2 > em {
+        font-style: normal;
+        font-size: 0.9375rem;
+        color: #999; }
+      .pay-content > div:nth-child(2) > h2 > small {
+        float: right;
+        color: #ff5500;
+        font-size: 0.9375rem;
+        display: inline-block;
+        line-height: 0.9375rem;
+        padding-top: 1.125rem; }
+  .pay-content > div:nth-child(3) {
+    padding: 1.0625rem 0.9375rem 0.5625rem 0.9375rem;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 0.8125rem; }
+  .pay-content .list-block {
+    background: #fff;
+    margin: 0; }
+    .pay-content .list-block > ul > li {
+      padding-left: 0.9375rem; }
+      .pay-content .list-block > ul > li .item-media {
+        width: 2.0625rem;
+        min-width: 2.0625rem; }
+        .pay-content .list-block > ul > li .item-media > i {
+          display: inline-block;
+          width: 1.8125rem;
+          height: 1.8125rem; }
+      .pay-content .list-block > ul > li .item-after {
+        width: 1.25rem;
+        height: 1.25rem;
+        background: url("../images/pay_select_s.png") no-repeat;
+        background-size: 1.25rem; }
+      .pay-content .list-block > ul > li .item-title {
+        color: #333;
+        font-size: 0.9375rem; }
+      .pay-content .list-block > ul > li .item-subtitle {
+        border-radius: 0.125rem;
+        background: #f22c2b;
+        color: #fff;
+        font-size: 0.625rem;
+        line-height: 0.625rem;
+        padding: 0.25rem 0.3125rem 0.1875rem 0.3125rem; }
+      .pay-content .list-block > ul > li:nth-child(1) .item-media > i {
+        background: url("../images/pay_alipay.png") no-repeat;
+        background-size: 1.8125rem; }
+      .pay-content .list-block > ul > li:nth-child(2) .item-media > i {
+        background: url("../images/pay_huabei.png") no-repeat;
+        background-size: 1.8125rem; }
+      .pay-content .list-block > ul > li:nth-child(3) .item-media > i {
+        background: url("../images/pay_bank card.png") no-repeat;
+        background-size: 1.8125rem; }
+      .pay-content .list-block > ul > li:nth-child(4) .item-media > i {
+        background: url("../images/pay_qq.png") no-repeat;
+        background-size: 1.8125rem; }
+      .pay-content .list-block > ul > li.dis .item-after {
+        background: url("../images/pay_select_a.png") no-repeat;
+        background-size: 1.25rem; }
+
+.order-detail-content {
+  background: #f5f5f5;
+  padding-bottom: 0.5rem; }
+  .order-detail-content > div:nth-child(1) {
+    background: #fff;
+    text-align: center; }
+    .order-detail-content > div:nth-child(1) > h2 {
+      color: #333;
+      font-size: 1.125rem;
+      line-height: 1.125rem;
+      padding: 1.75rem 0 0.75rem 0; }
+      .order-detail-content > div:nth-child(1) > h2 > i {
+        width: 0.5rem;
+        height: 0.8125rem;
+        display: inline-block;
+        margin-left: 0.625rem; }
+    .order-detail-content > div:nth-child(1) > p {
+      color: #999;
+      font-size: 0.6875rem;
+      line-height: 0.6875rem; }
+    .order-detail-content > div:nth-child(1) > a {
+      display: inline-block;
+      color: #fff;
+      font-size: 0.8125rem;
+      background: #ff8800;
+      border-radius: 0.1875rem;
+      width: 6.5625rem;
+      line-height: 0.8125rem;
+      padding: 0.625rem 0;
+      margin: 1.25rem 0 1.75rem 0; }
+  .order-detail-content > div:nth-child(5) {
+    background: #fff; }
+    .order-detail-content > div:nth-child(5) > h2 {
+      padding: 1rem 0 0.875rem 0.9375rem;
+      color: #333;
+      font-size: 0.875rem; }
+    .order-detail-content > div:nth-child(5) > div {
+      margin-left: 0.6875rem; }
+      .order-detail-content > div:nth-child(5) > div > a {
+        display: inline-block;
+        width: 11.9375rem;
+        margin-right: 0.625rem;
+        margin-bottom: 0.625rem; }
+        .order-detail-content > div:nth-child(5) > div > a > img {
+          display: block;
+          width: 11.9375rem;
+          height: 12rem; }
+        .order-detail-content > div:nth-child(5) > div > a > div {
+          border: 1px solid #eee;
+          border-top: none;
+          padding: 0.625rem 0.6875rem 0 0.6875rem; }
+          .order-detail-content > div:nth-child(5) > div > a > div > h2 {
+            color: #333;
+            font-size: 0.875rem;
+            line-height: 0.875rem; }
+          .order-detail-content > div:nth-child(5) > div > a > div > h3 {
+            color: #666;
+            font-size: 0.625rem;
+            line-height: 0.625rem;
+            margin: 0.5rem 0 0.6875rem 0; }
+            .order-detail-content > div:nth-child(5) > div > a > div > h3 > span {
+              display: inline-block;
+              margin-right: 0.375rem; }
+            .order-detail-content > div:nth-child(5) > div > a > div > h3 > em {
+              font-style: normal; }
+          .order-detail-content > div:nth-child(5) > div > a > div > h4 {
+            color: #f80;
+            line-height: 1rem;
+            padding-bottom: 0.4375rem;
+            border-bottom: 1px dashed #eee; }
+            .order-detail-content > div:nth-child(5) > div > a > div > h4 > span {
+              display: inline-block;
+              vertical-align: middle;
+              font-size: 1rem;
+              margin-right: 0.375rem; }
+            .order-detail-content > div:nth-child(5) > div > a > div > h4 > span:before {
+              font-weight: 400;
+              content: "\A5";
+              font-size: 0.625rem;
+              display: inline-block; }
+            .order-detail-content > div:nth-child(5) > div > a > div > h4 > em {
+              display: inline-block;
+              font-size: 0.5625rem;
+              font-style: normal;
+              padding: 0.25rem 0.375rem 0.125rem 0.375rem;
+              line-height: 0.5625rem;
+              border-radius: 0.1875rem;
+              background: #fff;
+              border: 1px solid #f80; }
+          .order-detail-content > div:nth-child(5) > div > a > div > p {
+            line-height: 0.6875rem;
+            padding: 0.6875rem 0; }
+            .order-detail-content > div:nth-child(5) > div > a > div > p > i {
+              display: inline-block;
+              width: 0.75rem;
+              height: 0.6875rem;
+              background: url("../images/nearby_store_icon.png") no-repeat;
+              background-size: 0.75rem 0.6875rem;
+              margin-right: 0.375rem; }
+            .order-detail-content > div:nth-child(5) > div > a > div > p > span {
+              display: inline-block;
+              color: #999;
+              font-size: 0.5625rem;
+              width: 8.3125rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap; }
+    .order-detail-content > div:nth-child(5) > p {
+      color: #666;
+      font-size: 0.6875rem;
+      padding: 0.625rem 0 0.875rem 0;
+      line-height: 0.6875rem;
+      text-align: center; }
+  .order-detail-content > ul:nth-child(2) {
+    background: #fff;
+    border-bottom: 2px solid #eee;
+    margin: 0.5rem 0.6875rem;
+    padding: 0.875rem 0.8125rem 1.1875rem 0.8125rem; }
+    .order-detail-content > ul:nth-child(2) > li {
+      list-style: none; }
+      .order-detail-content > ul:nth-child(2) > li:nth-child(1) {
+        padding-bottom: 0.5625rem;
+        border-bottom: 1px solid #eee; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 {
+          line-height: 1.5625rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 > span {
+            display: inline-block;
+            vertical-align: top;
+            color: #333;
+            font-size: 0.9375rem;
+            line-height: 0.9375rem;
+            margin-top: 0.3125rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 > i {
+            display: inline-block;
+            float: right;
+            width: 0.5rem;
+            height: 0.8125rem;
+            margin-top: 0.5rem;
+            background: url("../images/order detail_store_arrow.png") no-repeat left top;
+            background-size: 1rem 0.8125rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 > img {
+            width: 1.5625rem;
+            height: 1.5625rem;
+            display: inline-block;
+            margin-right: 0.625rem; }
+      .order-detail-content > ul:nth-child(2) > li:nth-child(2) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px dashed #eee; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(2) > h3 {
+          color: #333;
+          font-size: 0.8125rem;
+          line-height: 0.8125rem;
+          margin-bottom: 0.4375rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(2) > h3 > span {
+            float: right; }
+            .order-detail-content > ul:nth-child(2) > li:nth-child(2) > h3 > span:nth-child(2) {
+              margin-right: 2.8125rem; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(2) > p {
+          color: #999;
+          font-size: 0.6875rem;
+          line-height: 0.6875rem; }
+      .order-detail-content > ul:nth-child(2) > li:nth-child(3) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px dashed #eee; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(3) > h3 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 0.875rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(3) > h3 > span {
+            display: inline-block;
+            float: right;
+            font-size: 0.8125rem;
+            margin-top: 0.125rem;
+            line-height: 0.8125rem; }
+      .order-detail-content > ul:nth-child(2) > li:nth-child(4) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px solid #eee; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(4) > h3 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 1rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(4) > h3 > img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.375rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(4) > h3 > span {
+            float: right;
+            color: #ff5339;
+            font-size: 0.8125rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(4) > h3 > span:before {
+            font-weight: 400;
+            content: "- \A5";
+            font-size: 0.625rem;
+            display: inline-block; }
+      .order-detail-content > ul:nth-child(2) > li:nth-child(5) {
+        padding: 0.8125rem 0;
+        border-bottom: 1px solid #eee; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(5) > h3 {
+          color: #333;
+          font-size: 0.875rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(5) > h3 > span {
+            display: inline-block;
+            float: right;
+            color: #ff5339;
+            font-size: 0.8125rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(5) > h3 > span:before {
+            font-weight: 400;
+            content: "- \A5";
+            font-size: 0.625rem;
+            display: inline-block; }
+      .order-detail-content > ul:nth-child(2) > li:nth-child(6) {
+        padding-top: 1.0625rem; }
+        .order-detail-content > ul:nth-child(2) > li:nth-child(6) > p {
+          display: inline-block; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(6) > p:nth-child(1) {
+            font-size: 0.6875rem;
+            color: #ff8800;
+            line-height: 0.6875rem; }
+            .order-detail-content > ul:nth-child(2) > li:nth-child(6) > p:nth-child(1) > i {
+              display: inline-block;
+              vertical-align: top;
+              width: 0.75rem;
+              height: 0.75rem;
+              background: url("../images/order detail_tell_icon.png") no-repeat;
+              background-size: 0.75rem;
+              margin-right: 0.375rem;
+              margin-top: -0.125rem; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(6) > p:nth-child(2) {
+            float: right;
+            color: #333;
+            font-size: 0.8125rem;
+            line-height: 1.3125rem; }
+            .order-detail-content > ul:nth-child(2) > li:nth-child(6) > p:nth-child(2) > span {
+              font-size: 1.3125rem; }
+            .order-detail-content > ul:nth-child(2) > li:nth-child(6) > p:nth-child(2) > span:before {
+              font-weight: 400;
+              content: "\A5";
+              font-size: 1rem;
+              display: inline-block;
+              margin-left: 0.375rem; }
+  .order-detail-content > ul:nth-child(3), .order-detail-content > ul:nth-child(4) {
+    background: #fff;
+    border-bottom: 2px solid #eee;
+    padding: 1.1875rem 0.8125rem 1.125rem 0.8125rem; }
+    .order-detail-content > ul:nth-child(3) > li, .order-detail-content > ul:nth-child(4) > li {
+      list-style: none;
+      color: #333;
+      font-size: 0.875rem;
+      line-height: 0.875rem; }
+      .order-detail-content > ul:nth-child(3) > li:nth-child(1), .order-detail-content > ul:nth-child(4) > li:nth-child(1) {
+        padding-bottom: 1.1875rem;
+        line-height: 0.875rem;
+        border-bottom: 1px solid #eee; }
+      .order-detail-content > ul:nth-child(3) > li:nth-child(2), .order-detail-content > ul:nth-child(3) > li:nth-child(3), .order-detail-content > ul:nth-child(4) > li:nth-child(2), .order-detail-content > ul:nth-child(4) > li:nth-child(3) {
+        padding: 1.125rem 0;
+        border-bottom: 1px solid #eee; }
+      .order-detail-content > ul:nth-child(3) > li > span, .order-detail-content > ul:nth-child(4) > li > span {
+        float: right;
+        color: #666;
+        font-size: 0.75rem; }
+      .order-detail-content > ul:nth-child(3) > li:last-child, .order-detail-content > ul:nth-child(4) > li:last-child {
+        padding-top: 1.125rem; }
+  .order-detail-content > ul:nth-child(3) {
+    margin: 0 0.6875rem; }
+    .order-detail-content > ul:nth-child(3) > li:nth-child(3) > h2 {
+      color: #333;
+      font-size: 0.875rem;
+      line-height: 0.875rem; }
+      .order-detail-content > ul:nth-child(3) > li:nth-child(3) > h2 > span {
+        float: right;
+        color: #666;
+        font-size: 0.75rem; }
+    .order-detail-content > ul:nth-child(3) > li:nth-child(3) > p {
+      text-align: right;
+      color: #666;
+      font-size: 0.75rem;
+      line-height: 0.75rem;
+      margin-top: 0.4375rem; }
+  .order-detail-content > ul:nth-child(4) {
+    margin: 0.5rem 0.6875rem 0.5625rem 0.5625rem; }
+    .order-detail-content > ul:nth-child(4) > li:nth-child(4) {
+      padding: 1.125rem 0;
+      border-bottom: 1px solid #eee; }
+    .order-detail-content > ul:nth-child(4) > li:nth-child(2) > i, .order-detail-content > ul:nth-child(4) > li:nth-child(2) > span {
+      float: right; }
+    .order-detail-content > ul:nth-child(4) > li:nth-child(2) > span {
+      padding-right: 0.5rem;
+      margin-right: 0.5rem;
+      border-right: 1px solid #ccc; }
+    .order-detail-content > ul:nth-child(4) > li:nth-child(2) > i {
+      color: #f80;
+      font-size: 0.75rem;
+      font-style: normal; }
 
 /*# sourceMappingURL=main.css.map */

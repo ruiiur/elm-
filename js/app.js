@@ -25,7 +25,7 @@ Vue.component('page-order', {
         };
     }
 })
-//首页
+//平台首页
 Vue.component('page-home', {
     template: '#page-home',
     data: function() {
@@ -46,9 +46,21 @@ Vue.component('page-home', {
 Vue.component('page-dish', {
     template: '#page-dish'
 })
-//订菜页
+//提交订单页
 Vue.component('page-submit', {
     template: '#page-submit'
+})
+//支付页
+Vue.component('page-pay', {
+    template: '#page-pay'
+})
+//门店首页
+Vue.component('page-stores', {
+    template: '#page-stores'
+})
+//订单详情页
+Vue.component('page-order-detail', {
+    template: '#page-order-detail'
 })
 
 // Init App
@@ -68,7 +80,7 @@ var app = new Vue({
             component: 'page-order'
         },
         {
-            //首页路由
+            //平台首页路由
             path: '/home/',
             component: 'page-home'
         },
@@ -81,6 +93,21 @@ var app = new Vue({
         //    提交订单页
             path:'/submit/',
             component:'page-submit'
+        },
+        {
+            //     支付页路由
+            path:'/pay/',
+                component:'page-pay'
+        },
+        {
+            //     门店首页路由
+            path:'/stores/',
+            component:'page-stores'
+        },
+        {
+            //      订单详情页路由
+            path:'/order-detail/',
+            component:'page-order-detail'
         }
         ]
     }
