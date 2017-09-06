@@ -214,9 +214,11 @@
       </div>
       <div>
         <h2>
-          <span>二十五块半（天山西路店）外卖订单</span>
-          <em>详情</em>
-          <small>￥41.00</small>
+          <f7-link href="/order-detail/">
+            <span>二十五块半（天山西路店）外卖订单</span>
+            <em>详情</em>
+            <small>￥41.00</small>
+          </f7-link>
         </h2>
       </div>
       <div>选择支付方式</div>
@@ -324,7 +326,7 @@
       <div class="submit-bottom">
         <span>¥29</span>
         <small>优惠 ¥23</small>
-        <button class="submit-btn">去支付</button>
+        <a href="/pay/" class="submit-btn">去支付</a>
       </div>
     </div>
   </f7-page>
@@ -846,6 +848,11 @@
           </dl>
         </div>
       </div>
+      <div class="submit-bottom">
+        <span>¥29</span>
+        <small>优惠 ¥23</small>
+        <a href="/submit/" class="submit-btn">去结算</a>
+      </div>
     </div>
   </f7-page>
 </template>
@@ -929,14 +936,16 @@
           <a href="javascript:;" class="all-order">全部订单<i></i></a>
         </div>
         <div>
-          <img src="images/order_store%20img.png">
-          <div>
-            <h2>二十五块半（天山路店）<i></i><span>订单已完成</span></h2>
-            <p class="order-time">一小时前</p>
-            <p class="order-food">椒香鸡腿-椒香鸡腿 等4件商品</p>
-            <p class="order-money">￥29</p>
-            <a class="again" href="javascript:;">再来一单</a>
-          </div>
+          <f7-link href="/order-detail/">
+            <img src="images/order_store%20img.png">
+            <div>
+              <h2>二十五块半（天山路店）<i></i><span>订单已完成</span></h2>
+              <p class="order-time">一小时前</p>
+              <p class="order-food">椒香鸡腿-椒香鸡腿 等4件商品</p>
+              <p class="order-money">￥29</p>
+              <a class="again" href="javascript:;">再来一单</a>
+            </div>
+          </f7-link>
         </div>
         <a class="more" href="javascript:;">查看更多<i></i></a>
       </div>
@@ -1110,73 +1119,77 @@
         <div>
           <ul>
             <li>
-              <img src="images/store-logo-1.png">
-              <div>
+              <f7-link href="/dish/">
+                <img src="images/store-logo-1.png">
                 <div>
-                  <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
-                  <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
                   <div>
-                    <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
-                    <ul><li>1.26km</li><li>21分钟</li></ul>
+                    <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                    <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                    <div>
+                      <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                      <ul><li>1.26km</li><li>21分钟</li></ul>
+                    </div>
                   </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <img src="images/huodong_te.png">
+                        在线支付满30元减17，满50减20
+                      </li>
+                      <li>
+                        <img src="images/huodong_jian.png">
+                        在线支付满30元减17，满50减20
+                      </li>
+                    </ul>
+                    <a class="all-activity" href="javascript:;">共5个<i></i></a>
+                  </div>
+                  <!--<div>-->
+                  <!--<i></i>-->
+                  <!--<span>附近还有两家老爹锅贴</span>-->
+                  <!--<em></em>-->
+                  <!--</div>-->
                 </div>
-                <div>
-                  <ul>
-                    <li>
-                      <img src="images/huodong_te.png">
-                      在线支付满30元减17，满50减20
-                    </li>
-                    <li>
-                      <img src="images/huodong_jian.png">
-                      在线支付满30元减17，满50减20
-                    </li>
-                  </ul>
-                  <a class="all-activity" href="javascript:;">共5个<i></i></a>
-                </div>
-                <!--<div>-->
-                <!--<i></i>-->
-                <!--<span>附近还有两家老爹锅贴</span>-->
-                <!--<em></em>-->
-                <!--</div>-->
-              </div>
+              </f7-link>
             </li>
             <li>
-              <img src="images/store-logo-1.png">
-              <div>
+              <f7-link href="/stores/">
+                <img src="images/store-logo-1.png">
                 <div>
-                  <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
-                  <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
                   <div>
-                    <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
-                    <ul><li>1.26km</li><li>21分钟</li></ul>
+                    <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                    <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                    <div>
+                      <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                      <ul><li>1.26km</li><li>21分钟</li></ul>
+                    </div>
+                  </div>
+                  <div>
+                    <ul>
+                      <li>
+                        <img src="images/huodong_te.png">
+                        在线支付满30元减17，满50减20
+                      </li>
+                      <li>
+                        <img src="images/huodong_jian.png">
+                        在线支付满30元减17，满50减20
+                      </li>
+                    </ul>
+                    <a class="all-activity" href="javascript:;">共5个<i></i></a>
+                  </div>
+                  <div  @click="showStores">
+                    <i></i>
+                    <span>附近还有两家老爹锅贴</span>
+                    <em>
+                      <div>
+                        <a href="javascript:;">老爹锅贴（上海建涛店）<span>420m / <em>35分钟</em></span></a>
+                        <a href="javascript:;">老爹锅贴（上海剑河路店）<span>2.12km / <em>22分钟</em></span></a>
+                      </div>
+                      <i></i>
+                      <em class="box"></em>
+                    </em>
                   </div>
                 </div>
-                <div>
-                  <ul>
-                    <li>
-                      <img src="images/huodong_te.png">
-                      在线支付满30元减17，满50减20
-                    </li>
-                    <li>
-                      <img src="images/huodong_jian.png">
-                      在线支付满30元减17，满50减20
-                    </li>
-                  </ul>
-                  <a class="all-activity" href="javascript:;">共5个<i></i></a>
-                </div>
-                <div  @click="showStores">
-                  <i></i>
-                  <span>附近还有两家老爹锅贴</span>
-                  <em>
-                    <div>
-                      <a href="javascript:;">老爹锅贴（上海建涛店）<span>420m / <em>35分钟</em></span></a>
-                      <a href="javascript:;">老爹锅贴（上海剑河路店）<span>2.12km / <em>22分钟</em></span></a>
-                    </div>
-                    <i></i>
-                    <em class="box"></em>
-                  </em>
-                </div>
-              </div>
+              </f7-link>
             </li>
           </ul>
         </div>
