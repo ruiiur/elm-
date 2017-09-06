@@ -56,12 +56,25 @@ Vue.component('page-pay', {
 })
 //门店首页
 Vue.component('page-stores', {
-    template: '#page-stores'
+    template: '#page-stores',
+    data: function() {
+        return {
+            active: 'home'
+        };
+    }
 })
 //订单详情页
 Vue.component('page-order-detail', {
     template: '#page-order-detail'
 })
+
+
+
+
+var mainView = myApp.addView('.view-main');//加载页面你得先需要一个视图
+mainView.router.load(options);//把一个页面加载到当前视图
+mainView.router.back(options);//这个方法会触发一个反向的动画并回到上一个页面，也就是浏览历史上的回退
+
 
 // Init App
 var app = new Vue({
