@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="8a0efdf8-daf6-411c-a37f-706d9735110a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.scss" afterPath="$PROJECT_DIR$/css/main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css.map" afterPath="$PROJECT_DIR$/css/main.css.map" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -117,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/css/main.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="321">
-              <caret line="1960" column="39" lean-forward="true" selection-start-line="1960" selection-start-column="39" selection-end-line="1960" selection-end-column="39" />
+              <caret line="1960" column="39" lean-forward="false" selection-start-line="1960" selection-start-column="39" selection-end-line="1960" selection-end-column="39" />
               <folding>
                 <element signature="e#2233#4574#0" expanded="false" />
                 <element signature="e#4597#4637#0" expanded="false" />
@@ -372,12 +373,12 @@
       <workItem from="1504256904616" duration="134000" />
       <workItem from="1504486980854" duration="23202000" />
       <workItem from="1504575236130" duration="25343000" />
-      <workItem from="1504659712667" duration="5174000" />
+      <workItem from="1504659712667" duration="5329000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77712000" />
+    <option name="totallyTimeSpent" value="77867000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -2465,7 +2466,7 @@
     <entry file="file://$PROJECT_DIR$/css/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
-          <caret line="1960" column="39" lean-forward="true" selection-start-line="1960" selection-start-column="39" selection-end-line="1960" selection-end-column="39" />
+          <caret line="1960" column="39" lean-forward="false" selection-start-line="1960" selection-start-column="39" selection-end-line="1960" selection-end-column="39" />
           <folding>
             <element signature="e#2233#4574#0" expanded="false" />
             <element signature="e#4597#4637#0" expanded="false" />
