@@ -1952,13 +1952,13 @@ h1, h2, h3, h4, h5, h6{
               padding: toRem(11px) 0;
               >i{
                 display: inline-block;
-                //vertical-align: top;
+                vertical-align: top;
                 width:toRem(12px);
                 height:toRem(11px);
                 background:url('../images/nearby_store_icon.png') no-repeat;
                 background-size: toRem(12px) toRem(11px);
                 margin-right: toRem(6px);
-                //margin-top: toRem(1px);
+                margin-top: toRem(2px);
               }
               >span {
                 display: inline-block;
