@@ -10,8 +10,8 @@
   <link rel="stylesheet" href="css/framework7.material.min.css">
   <link rel="stylesheet" href="css/framework7.material.colors.min.css">
   <link rel="stylesheet" href="css/framework7-icons.css">
-  <!--<link rel="stylesheet" href="css/framework7.ios.min.css">-->
-  <!--<link rel="stylesheet" href="css/framework7.material.colors.min.css">-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.material.colors.min.css">
   <link rel="stylesheet" href="css/main.css">
 
   <script src="js/jquery.min.js"></script>
@@ -34,7 +34,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-home toolbar-through></page-home>
+        <page-stores toolbar-through></page-stores>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -54,6 +54,10 @@
   <f7-page no-navbar name="stores">
     <div class="stores-content">
       <div class="stores-top">
+        <div class="shadow">
+          <div></div>
+          <img src="images/2..jpg" class="blur">
+        </div>
         <div>
           <img src="images/menu_store_logo.png">
           <h2>二十五块半（天山西路店）<span><i></i>4.5</span></h2>
@@ -313,9 +317,13 @@
           </li>
           <li>
             <h2>匿名购买<i></i></h2>
+            <!--<label class="label-switch">-->
+              <!--<span style="white-space:pre">    </span><input checked type="checkbox" />-->
+              <!--<span style="white-space:pre">    </span><div class="checkbox"></div>-->
+            <!--</label>-->
             <label class="label-switch">
-              <span style="white-space:pre">    </span><input checked type="checkbox" />
-              <span style="white-space:pre">    </span><div class="checkbox"></div>
+              <input type="checkbox" name="switch" value="yes">
+              <div class="checkbox"></div>
             </label>
           </li>
           <li>

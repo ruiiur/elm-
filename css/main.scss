@@ -19,6 +19,9 @@ h1, h2, h3, h4, h5, h6{
 .navbar {
   display: none;
 }
+.page{
+  background: #fff;
+}
 //tab
 .tabbar-labels.toolbar-bottom~.page-content {
   padding-bottom: toRem(56px);
@@ -27,9 +30,16 @@ h1, h2, h3, h4, h5, h6{
   padding-top: 0;
   padding-bottom: toRem(56px);
 }
+.navbar-through .page-content {
+  padding-top:0;
+}
+.toolbar-through .page-content {
+  padding-bottom: 0;
+}
 .page>.toolbar, .view>.navbar, .view>.toolbar, .views>.navbar, .views>.toolbar {
   position: absolute;
 }
+.label-switch input[type=checkbox]:checked+.checkbox:after{-webkit-transform:translateX(20px);transform:translateX(20px);background:#fff}
 //.toolbar{
 //  z-index: 1;
 //}
@@ -48,7 +58,7 @@ h1, h2, h3, h4, h5, h6{
   i{
     width:toRem(24px);
     height:toRem(24px);
-    margin-left:toRem(8px);
+    //margin-left:toRem(8px);
   }
   &:nth-child(1){
     i{
@@ -259,6 +269,7 @@ h1, h2, h3, h4, h5, h6{
 
   //home-stores-content
   .home-stores-content{
+    //background: #fff;
     >h2{
       color:#333;
       font-size: toRem(17px);
@@ -561,7 +572,8 @@ h1, h2, h3, h4, h5, h6{
     margin-bottom: toRem(7px);
     >div{
       &:nth-child(1){
-        margin: toRem(20px) 0;
+        margin-bottom: toRem(20px);
+        padding-top: toRem(15px);
         padding-right: toRem(15px);
         line-height: toRem(15px);
         >h2{
@@ -948,6 +960,7 @@ h1, h2, h3, h4, h5, h6{
 //dish-content
 .dish-content{
   .shop-content{
+    background: #fff;
     >div{
       background: #af6560;
       height:toRem(88px);
@@ -1056,6 +1069,7 @@ h1, h2, h3, h4, h5, h6{
     }
   }
   >ul{
+    background: #fff;
     height:toRem(40px);
     box-shadow: 0 toRem(2px) toRem(5px) rgba(0,0,0,.06);
     position: relative;
@@ -1170,6 +1184,7 @@ h1, h2, h3, h4, h5, h6{
       }
     }
     >div{
+      background: #fff;
       display: inline-block;
       width: calc(100% - 80px);
       overflow: scroll;
@@ -1405,11 +1420,12 @@ h1, h2, h3, h4, h5, h6{
               display: inline-block;
               color:#fefefe;
               font-size: toRem(11px);
-              line-height: toRem(15px);
+              //line-height: toRem(15px);
               width:toRem(50px);
               border-radius: toRem(2px);
-              padding-top: toRem(2px);
+              padding: toRem(2px) 0;
               background: #0089ff;
+              text-align: center;
             }
             >em{
               font-style: normal;
@@ -1665,9 +1681,11 @@ h1, h2, h3, h4, h5, h6{
           }
           &:nth-child(2){
             border-bottom: 1px solid #eee;
-            padding: toRem(9px) 0;
+            padding:toRem(9px) 0 toRem(17px) 0;
             >h2{
               display: inline-block;
+              vertical-align: middle;
+              margin-top: toRem(8px);
               color:#333;
               font-size: toRem(14px);
               line-height: toRem(14px);
@@ -1683,7 +1701,6 @@ h1, h2, h3, h4, h5, h6{
             }
             >label{
               display: inline-block;
-              //vertical-align: middle;
               float:right;
             }
           }
@@ -2272,20 +2289,55 @@ h1, h2, h3, h4, h5, h6{
   height:100%;
   .stores-top{
     background: #fff;
+    position: relative;
+    .shadow{
+      position: relative;
+      top:0;
+      left:0;
+      width:100%;
+      height:toRem(67px);
+      overflow: hidden;
+      >div{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index: 1;
+        background: #000;
+        opacity: .5;
+      }
+      .blur{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        //height:100%;
+        z-index: auto;
+        -webkit-filter: blur(10px); /* Chrome, Opera */
+        -moz-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+        transform:scale(1.1);//设置缩放比例
+      }
+    }
     >div{
-      &:nth-child(1){
+      &:nth-child(2){
         height:toRem(67px);
-        background: #68402f;
         padding:0 toRem(15px);
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 999;
         >img{
-          display: inline-block;
-          vertical-align: top;
-          width:toRem(84px);
-          height:toRem(84px);
-          box-shadow:0 0 15px rgba(0,0,0,.2);
-          margin-top: toRem(19px);
-          border-radius: toRem(5px);
-          margin-right: toRem(11px);
+            display: inline-block;
+            vertical-align: top;
+            width:toRem(84px);
+            height:toRem(84px);
+            box-shadow:0 0 15px rgba(0,0,0,.2);
+            margin-top: toRem(19px);
+            border-radius: toRem(5px);
+            margin-right: toRem(11px);
         }
         >h2{
           display: inline-block;
@@ -2317,7 +2369,7 @@ h1, h2, h3, h4, h5, h6{
           }
         }
       }
-      &:nth-child(4){
+      &:nth-child(5){
         margin: toRem(16px) toRem(15px) toRem(12px) toRem(15px);
         border-top:1px solid #eee;
         height:toRem(42px);
@@ -2403,10 +2455,11 @@ h1, h2, h3, h4, h5, h6{
   .swiper-container{
     height:toRem(166px);
     width:100%;
+    overflow: hidden;
     .swiper-slide{
       >img{
         width:100%;
-        height:toRem(166px);
+        //height:toRem(166px);
       }
     }
     .swiper-pagination{

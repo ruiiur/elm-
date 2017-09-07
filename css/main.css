@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
   display: none; }
 
+.page {
+  background: #fff; }
+
 .tabbar-labels.toolbar-bottom ~ .page-content {
   padding-bottom: 3.5rem; }
 
@@ -22,8 +25,19 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 0;
   padding-bottom: 3.5rem; }
 
+.navbar-through .page-content {
+  padding-top: 0; }
+
+.toolbar-through .page-content {
+  padding-bottom: 0; }
+
 .page > .toolbar, .view > .navbar, .view > .toolbar, .views > .navbar, .views > .toolbar {
   position: absolute; }
+
+.label-switch input[type=checkbox]:checked + .checkbox:after {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  background: #fff; }
 
 .toolbar {
   background: #fff;
@@ -36,8 +50,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #ff8800; }
   .tabbar-labels a.link i, .tabbar-labels a.tab-link i {
     width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 0.5rem; }
+    height: 1.5rem; }
   .tabbar-labels a.link:nth-child(1) i, .tabbar-labels a.tab-link:nth-child(1) i {
     background: url("../images/common_tab_icon.png") no-repeat -1.5rem top;
     background-size: 200%; }
@@ -416,7 +429,8 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 0.9375rem;
     margin-bottom: 0.4375rem; }
     .order-content .my-order > div:nth-child(1) {
-      margin: 1.25rem 0;
+      margin-bottom: 1.25rem;
+      padding-top: 0.9375rem;
       padding-right: 0.9375rem;
       line-height: 0.9375rem; }
       .order-content .my-order > div:nth-child(1) > h2 {
@@ -704,96 +718,99 @@ h1, h2, h3, h4, h5, h6 {
       .center-content ul li:nth-child(3) > h3 > span {
         color: #6ac20b; }
 
-.dish-content .shop-content > div {
-  background: #af6560;
-  height: 5.5rem;
-  padding: 0 0.9375rem 0 0.9375rem;
-  margin-bottom: 1.6875rem; }
-  .dish-content .shop-content > div > div:nth-child(1) {
-    display: inline-block; }
-    .dish-content .shop-content > div > div:nth-child(1) > img {
+.dish-content .shop-content {
+  background: #fff; }
+  .dish-content .shop-content > div {
+    background: #af6560;
+    height: 5.5rem;
+    padding: 0 0.9375rem 0 0.9375rem;
+    margin-bottom: 1.6875rem; }
+    .dish-content .shop-content > div > div:nth-child(1) {
+      display: inline-block; }
+      .dish-content .shop-content > div > div:nth-child(1) > img {
+        display: inline-block;
+        vertical-align: top;
+        width: 5.25rem;
+        height: 5.25rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        margin-top: 0.75rem;
+        border-radius: 0.3125rem;
+        margin-right: 0.5rem; }
+      .dish-content .shop-content > div > div:nth-child(1) > div {
+        display: inline-block;
+        width: 14.4375rem;
+        color: #fff; }
+        .dish-content .shop-content > div > div:nth-child(1) > div > h2 {
+          font-size: 1.125rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 1.25rem 0 0.4375rem 0;
+          line-height: 1.125rem; }
+          .dish-content .shop-content > div > div:nth-child(1) > div > h2 > i {
+            display: inline-block;
+            width: 0.4375rem;
+            height: 0.75rem;
+            background: url("../images/menu_store_details.png") no-repeat;
+            background-size: 0.4375rem 0.75rem; }
+        .dish-content .shop-content > div > div:nth-child(1) > div > h3 {
+          font-size: 0.6875rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          line-height: 0.75rem;
+          margin-bottom: 0.625rem; }
+        .dish-content .shop-content > div > div:nth-child(1) > div > p {
+          font-size: 0.6875rem;
+          line-height: 0.75rem; }
+    .dish-content .shop-content > div > div:nth-child(2) {
       display: inline-block;
       vertical-align: top;
-      width: 5.25rem;
-      height: 5.25rem;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      margin-top: 0.75rem;
-      border-radius: 0.3125rem;
-      margin-right: 0.5rem; }
-    .dish-content .shop-content > div > div:nth-child(1) > div {
-      display: inline-block;
-      width: 14.4375rem;
-      color: #fff; }
-      .dish-content .shop-content > div > div:nth-child(1) > div > h2 {
-        font-size: 1.125rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin: 1.25rem 0 0.4375rem 0;
-        line-height: 1.125rem; }
-        .dish-content .shop-content > div > div:nth-child(1) > div > h2 > i {
-          display: inline-block;
-          width: 0.4375rem;
-          height: 0.75rem;
-          background: url("../images/menu_store_details.png") no-repeat;
-          background-size: 0.4375rem 0.75rem; }
-      .dish-content .shop-content > div > div:nth-child(1) > div > h3 {
-        font-size: 0.6875rem;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        line-height: 0.75rem;
-        margin-bottom: 0.625rem; }
-      .dish-content .shop-content > div > div:nth-child(1) > div > p {
-        font-size: 0.6875rem;
-        line-height: 0.75rem; }
-  .dish-content .shop-content > div > div:nth-child(2) {
+      width: 3.125rem;
+      height: 3.125rem;
+      margin-top: 0.9375rem;
+      text-align: right; }
+      .dish-content .shop-content > div > div:nth-child(2) > span {
+        display: inline-block;
+        width: 1.375rem;
+        height: 0.3125rem;
+        background: url("../images/common_more.png");
+        background-size: 1.375rem 0.3125rem;
+        margin-top: 0.75rem; }
+  .dish-content .shop-content > ul {
+    height: 0.875rem;
+    padding-left: 0.9375rem;
+    display: inline-block;
+    vertical-align: top; }
+    .dish-content .shop-content > ul li {
+      list-style: none;
+      line-height: 0.875rem;
+      color: #666;
+      font-size: 0.6875rem;
+      margin-right: 0.3125rem; }
+      .dish-content .shop-content > ul li > img {
+        display: inline-block;
+        vertical-align: sub;
+        width: 0.875rem;
+        height: 0.875rem; }
+  .dish-content .shop-content .all-activity {
     display: inline-block;
     vertical-align: top;
-    width: 3.125rem;
-    height: 3.125rem;
-    margin-top: 0.9375rem;
-    text-align: right; }
-    .dish-content .shop-content > div > div:nth-child(2) > span {
-      display: inline-block;
-      width: 1.375rem;
-      height: 0.3125rem;
-      background: url("../images/common_more.png");
-      background-size: 1.375rem 0.3125rem;
-      margin-top: 0.75rem; }
-.dish-content .shop-content > ul {
-  height: 0.875rem;
-  padding-left: 0.9375rem;
-  display: inline-block;
-  vertical-align: top; }
-  .dish-content .shop-content > ul li {
-    list-style: none;
-    line-height: 0.875rem;
-    color: #666;
+    padding-right: 0.9375rem;
+    float: right;
+    color: #999;
     font-size: 0.6875rem;
-    margin-right: 0.3125rem; }
-    .dish-content .shop-content > ul li > img {
+    line-height: 0.875rem; }
+    .dish-content .shop-content .all-activity > i {
       display: inline-block;
-      vertical-align: sub;
-      width: 0.875rem;
-      height: 0.875rem; }
-.dish-content .shop-content .all-activity {
-  display: inline-block;
-  vertical-align: top;
-  padding-right: 0.9375rem;
-  float: right;
-  color: #999;
-  font-size: 0.6875rem;
-  line-height: 0.875rem; }
-  .dish-content .shop-content .all-activity > i {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 0.3125rem;
-    width: 0.375rem;
-    height: 0.25rem;
-    background: url("../images/menu_huodong_arrow.png") no-repeat left top;
-    background-size: 0.75rem 0.25rem; }
+      vertical-align: middle;
+      margin-left: 0.3125rem;
+      width: 0.375rem;
+      height: 0.25rem;
+      background: url("../images/menu_huodong_arrow.png") no-repeat left top;
+      background-size: 0.75rem 0.25rem; }
 .dish-content > ul {
+  background: #fff;
   height: 2.5rem;
   box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.06);
   position: relative;
@@ -879,6 +896,7 @@ h1, h2, h3, h4, h5, h6 {
         background: url("../images/menu_youhui_icon.png") no-repeat;
         background-size: 0.9375rem; }
   .dish-content .dish-main > div {
+    background: #fff;
     display: inline-block;
     width: calc(100% - 80px);
     overflow: scroll; }
@@ -1070,11 +1088,11 @@ h1, h2, h3, h4, h5, h6 {
             display: inline-block;
             color: #fefefe;
             font-size: 0.6875rem;
-            line-height: 0.9375rem;
             width: 3.125rem;
             border-radius: 0.125rem;
-            padding-top: 0.125rem;
-            background: #0089ff; }
+            padding: 0.125rem 0;
+            background: #0089ff;
+            text-align: center; }
           .submit-content .submit-main > div:nth-child(1) > div > p > em {
             font-style: normal;
             color: #999;
@@ -1282,9 +1300,11 @@ h1, h2, h3, h4, h5, h6 {
           padding-bottom: 1.125rem; }
       .submit-content .submit-main > ul:nth-child(4) > li:nth-child(2) {
         border-bottom: 1px solid #eee;
-        padding: 0.5625rem 0; }
+        padding: 0.5625rem 0 1.0625rem 0; }
         .submit-content .submit-main > ul:nth-child(4) > li:nth-child(2) > h2 {
           display: inline-block;
+          vertical-align: middle;
+          margin-top: 0.5rem;
           color: #333;
           font-size: 0.875rem;
           line-height: 0.875rem; }
@@ -1736,12 +1756,44 @@ h1, h2, h3, h4, h5, h6 {
   background: #f5f5f5;
   height: 100%; }
   .stores-content .stores-top {
-    background: #fff; }
-    .stores-content .stores-top > div:nth-child(1) {
+    background: #fff;
+    position: relative; }
+    .stores-content .stores-top .shadow {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 4.1875rem;
-      background: #68402f;
-      padding: 0 0.9375rem; }
-      .stores-content .stores-top > div:nth-child(1) > img {
+      overflow: hidden; }
+      .stores-content .stores-top .shadow > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: #000;
+        opacity: .5; }
+      .stores-content .stores-top .shadow .blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: auto;
+        -webkit-filter: blur(10px);
+        /* Chrome, Opera */
+        -moz-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+        transform: scale(1.1); }
+    .stores-content .stores-top > div:nth-child(2) {
+      height: 4.1875rem;
+      padding: 0 0.9375rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999; }
+      .stores-content .stores-top > div:nth-child(2) > img {
         display: inline-block;
         vertical-align: top;
         width: 5.25rem;
@@ -1750,13 +1802,13 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: 1.1875rem;
         border-radius: 0.3125rem;
         margin-right: 0.6875rem; }
-      .stores-content .stores-top > div:nth-child(1) > h2 {
+      .stores-content .stores-top > div:nth-child(2) > h2 {
         display: inline-block;
         color: #fff;
         font-size: 1.1875rem;
         margin-top: 1.875rem;
         line-height: 1.5rem; }
-        .stores-content .stores-top > div:nth-child(1) > h2 > span {
+        .stores-content .stores-top > div:nth-child(2) > h2 > span {
           display: inline-block;
           vertical-align: top;
           width: 3.3125rem;
@@ -1768,7 +1820,7 @@ h1, h2, h3, h4, h5, h6 {
           padding: 0.375rem 0;
           margin-left: 0.125rem;
           text-align: center; }
-          .stores-content .stores-top > div:nth-child(1) > h2 > span > i {
+          .stores-content .stores-top > div:nth-child(2) > h2 > span > i {
             display: inline-block;
             vertical-align: top;
             width: 0.6875rem;
@@ -1776,18 +1828,18 @@ h1, h2, h3, h4, h5, h6 {
             background: url("../images/store home_pingfen.png") no-repeat;
             background-size: 0.6875rem;
             margin-right: 0.25rem; }
-    .stores-content .stores-top > div:nth-child(4) {
+    .stores-content .stores-top > div:nth-child(5) {
       margin: 1rem 0.9375rem 0.75rem 0.9375rem;
       border-top: 1px solid #eee;
       height: 2.625rem; }
-      .stores-content .stores-top > div:nth-child(4) > ul {
+      .stores-content .stores-top > div:nth-child(5) > ul {
         display: inline-block;
         height: 2.625rem; }
-        .stores-content .stores-top > div:nth-child(4) > ul > li {
+        .stores-content .stores-top > div:nth-child(5) > ul > li {
           float: left;
           list-style: none;
           height: 2.625rem; }
-          .stores-content .stores-top > div:nth-child(4) > ul > li > a {
+          .stores-content .stores-top > div:nth-child(5) > ul > li > a {
             display: inline-block;
             color: #333;
             font-size: 0.75rem;
@@ -1795,21 +1847,21 @@ h1, h2, h3, h4, h5, h6 {
             margin: 0.9375rem 0.75rem 0 0;
             border-right: 1px solid #eee;
             line-height: 0.75rem; }
-          .stores-content .stores-top > div:nth-child(4) > ul > li:last-child > a {
+          .stores-content .stores-top > div:nth-child(5) > ul > li:last-child > a {
             border-right: none; }
-      .stores-content .stores-top > div:nth-child(4) > span {
+      .stores-content .stores-top > div:nth-child(5) > span {
         display: inline-block;
         float: right;
         margin-top: 0.875rem; }
-        .stores-content .stores-top > div:nth-child(4) > span > i {
+        .stores-content .stores-top > div:nth-child(5) > span > i {
           display: inline-block;
           height: 0.875rem;
           width: 0.875rem; }
-          .stores-content .stores-top > div:nth-child(4) > span > i:nth-child(1) {
+          .stores-content .stores-top > div:nth-child(5) > span > i:nth-child(1) {
             background: url("../images/huodong_fu.png") no-repeat;
             background-size: 0.875rem;
             margin-right: 0.375rem; }
-          .stores-content .stores-top > div:nth-child(4) > span > i:nth-child(2) {
+          .stores-content .stores-top > div:nth-child(5) > span > i:nth-child(2) {
             background: url("../images/huodong_piao.png") no-repeat;
             background-size: 0.875rem; }
     .stores-content .stores-top > ul {
@@ -1843,10 +1895,10 @@ h1, h2, h3, h4, h5, h6 {
         background-size: 0.75rem 0.25rem; }
   .stores-content .swiper-container {
     height: 10.375rem;
-    width: 100%; }
+    width: 100%;
+    overflow: hidden; }
     .stores-content .swiper-container .swiper-slide > img {
-      width: 100%;
-      height: 10.375rem; }
+      width: 100%; }
     .stores-content .swiper-container .swiper-pagination > span {
       width: 0.3125rem;
       height: 0.3125rem;
