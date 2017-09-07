@@ -43,6 +43,9 @@ h1, h2, h3, h4, h5, h6{
 //.toolbar{
 //  z-index: 1;
 //}
+.page-content{
+  overflow-y: scroll;
+}
 .toolbar {
   background: #fff;
   box-shadow: 0 toRem(1px) toRem(17px) rgba(0,0,0,.1);
