@@ -59,8 +59,7 @@
           <img src="images/2..jpg" class="blur">
         </div>
         <div>
-          <img src="images/menu_store_logo.png">
-          <h2>二十五块半（天山西路店）<span><i></i>4.5</span></h2>
+          <img src="images/menu_store_logo.png"><h2>二十五块半（天山西路店）<span><i></i>4.5</span></h2>
         </div>
         <ul>
           <li><img src="images/huodong_jian.png">满20减15，满40减20，满60减30</li>
@@ -1161,7 +1160,7 @@
                 </div>
               </f7-link>
             </li>
-            <li>
+            <li >
               <f7-link href="/stores/">
                 <img src="images/store-logo-1.png">
                 <div>
@@ -1186,16 +1185,16 @@
                     </ul>
                     <a class="all-activity" href="javascript:;">共5个<i></i></a>
                   </div>
-                  <div  @click="showStores">
+                  <div  @click="showStores(show)">
                     <i></i>
                     <span>附近还有两家老爹锅贴</span>
                     <em>
-                      <div>
+                      <div v-show="show">
                         <a href="javascript:;">老爹锅贴（上海建涛店）<span>420m / <em>35分钟</em></span></a>
                         <a href="javascript:;">老爹锅贴（上海剑河路店）<span>2.12km / <em>22分钟</em></span></a>
                       </div>
-                      <i></i>
-                      <em class="box"></em>
+                      <i v-show="show"></i>
+                      <em class="box" v-show="show"></em>
                     </em>
                   </div>
                 </div>

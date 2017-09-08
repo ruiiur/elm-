@@ -31,6 +31,14 @@ h1, h2, h3, h4, h5, h6 {
 .toolbar-through .page-content {
   padding-bottom: 0; }
 
+.page-content {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+  z-index: 1; }
+
 .page > .toolbar, .view > .navbar, .view > .toolbar, .views > .navbar, .views > .toolbar {
   position: absolute; }
 
@@ -369,8 +377,26 @@ h1, h2, h3, h4, h5, h6 {
           height: 0.25rem;
           background: url("../images/nearby_store_jiantou.png");
           background-size: 0.75rem 0.25rem; }
+          .home-content .home-stores-content > div > ul > li > a > div > div:nth-child(3) > em .box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #000;
+            opacity: .5;
+            width: 100%;
+            height: 100%;
+            z-index: 9999; }
+          .home-content .home-stores-content > div > ul > li > a > div > div:nth-child(3) > em > i {
+            position: absolute;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 7px solid #fff;
+            width: 0;
+            height: 0;
+            right: 0;
+            bottom: 0.5rem;
+            z-index: 10000; }
           .home-content .home-stores-content > div > ul > li > a > div > div:nth-child(3) > em > div {
-            display: none;
             background: #fff;
             position: absolute;
             z-index: 10000;
@@ -397,16 +423,6 @@ h1, h2, h3, h4, h5, h6 {
                   font-style: normal;
                   color: #ff6414;
                   font-size: 0.6875rem; }
-          .home-content .home-stores-content > div > ul > li > a > div > div:nth-child(3) > em > i {
-            position: absolute;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 7px solid #fff;
-            width: 0;
-            height: 0;
-            right: 0;
-            bottom: 0.5rem;
-            z-index: 10000; }
 
 .order-content {
   background: #f5f5f5; }
@@ -1757,7 +1773,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .stores-content {
   background: #f5f5f5;
-  height: 100%; }
+  height: 100%;
+  overflow: scroll; }
   .stores-content .stores-top {
     background: #fff;
     position: relative; }
@@ -1943,7 +1960,8 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0.625rem 0 1.8125rem 0; }
   .stores-content > ul {
     background: #fff;
-    padding: 0 0.9375rem; }
+    padding: 0 0.9375rem;
+    margin-bottom: 0.625rem; }
     .stores-content > ul > li {
       list-style: none;
       padding: 1.0625rem 0;

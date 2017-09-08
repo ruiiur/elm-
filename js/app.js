@@ -30,12 +30,13 @@ Vue.component('page-home', {
     template: '#page-home',
     data: function() {
         return {
-            active: 'home'
+            active: 'home',
+            show:false
         };
     },
     methods: {
-        showStores: function(){
-            this.children('div').show();
+        showStores: function(show){
+            this.show=!show;
         }
         // goFirst:function(){
         //     this.$router.load({'path':'/dish/'});
