@@ -54,31 +54,58 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   box-shadow: 0 0.0625rem 1.0625rem rgba(0, 0, 0, 0.1); }
 
-.tabbar-labels a.link, .tabbar-labels a.tab-link {
+.home-tab a.link, .home-tab a.tab-link {
   padding-top: 0.5rem;
   padding-bottom: 0.3125rem; }
-  .tabbar-labels a.link.active span, .tabbar-labels a.tab-link.active span {
+  .home-tab a.link.active span, .home-tab a.tab-link.active span {
     color: #ff8800; }
-  .tabbar-labels a.link i, .tabbar-labels a.tab-link i {
+  .home-tab a.link i, .home-tab a.tab-link i {
     width: 1.5rem;
     height: 1.5rem; }
-  .tabbar-labels a.link:nth-child(1) i, .tabbar-labels a.tab-link:nth-child(1) i {
+  .home-tab a.link:nth-child(1) i, .home-tab a.tab-link:nth-child(1) i {
     background: url("../images/common_tab_icon.png") no-repeat -1.5rem top;
     background-size: 200%; }
-  .tabbar-labels a.link:nth-child(1).active i, .tabbar-labels a.tab-link:nth-child(1).active i {
+  .home-tab a.link:nth-child(1).active i, .home-tab a.tab-link:nth-child(1).active i {
     background: url("../images/common_tab_icon.png") no-repeat left top;
     background-size: 200%; }
-  .tabbar-labels a.link:nth-child(2) i, .tabbar-labels a.tab-link:nth-child(2) i {
+  .home-tab a.link:nth-child(2) i, .home-tab a.tab-link:nth-child(2) i {
     background: url("../images/common_tab_icon.png") no-repeat -1.5rem -1.5rem;
     background-size: 200%; }
-  .tabbar-labels a.link:nth-child(2).active i, .tabbar-labels a.tab-link:nth-child(2).active i {
+  .home-tab a.link:nth-child(2).active i, .home-tab a.tab-link:nth-child(2).active i {
     background: url("../images/common_tab_icon.png") no-repeat 0 -1.5rem;
     background-size: 200%; }
-  .tabbar-labels a.link:nth-child(3) i, .tabbar-labels a.tab-link:nth-child(3) i {
+  .home-tab a.link:nth-child(3) i, .home-tab a.tab-link:nth-child(3) i {
     background: url("../images/common_tab_icon.png") no-repeat -1.5rem -3rem;
     background-size: 200%; }
-  .tabbar-labels a.link:nth-child(3).active i, .tabbar-labels a.tab-link:nth-child(3).active i {
+  .home-tab a.link:nth-child(3).active i, .home-tab a.tab-link:nth-child(3).active i {
     background: url("../images/common_tab_icon.png") no-repeat 0 -3rem;
+    background-size: 200%; }
+
+.stores-tab a.link, .stores-tab a.tab-link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.3125rem; }
+  .stores-tab a.link.active span, .stores-tab a.tab-link.active span {
+    color: #ff8800; }
+  .stores-tab a.link i, .stores-tab a.tab-link i {
+    width: 1.5rem;
+    height: 1.5rem; }
+  .stores-tab a.link:nth-child(1) i, .stores-tab a.tab-link:nth-child(1) i {
+    background: url("../images/common_tab_hone_a.png") no-repeat left top;
+    background-size: 200%; }
+  .stores-tab a.link:nth-child(1).active i, .stores-tab a.tab-link:nth-child(1).active i {
+    background: url("../images/common_tab_hone_a.png") no-repeat -1.5rem top;
+    background-size: 200%; }
+  .stores-tab a.link:nth-child(2) i, .stores-tab a.tab-link:nth-child(2) i {
+    background: url("../images/common_tab_hone_a.png") no-repeat 0 -1.5rem;
+    background-size: 200%; }
+  .stores-tab a.link:nth-child(2).active i, .stores-tab a.tab-link:nth-child(2).active i {
+    background: url("../images/common_tab_hone_a.png") no-repeat -1.5rem -1.5rem;
+    background-size: 200%; }
+  .stores-tab a.link:nth-child(3) i, .stores-tab a.tab-link:nth-child(3) i {
+    background: url("../images/common_tab_hone_a.png") no-repeat 0 -3rem;
+    background-size: 200%; }
+  .stores-tab a.link:nth-child(3).active i, .stores-tab a.tab-link:nth-child(3).active i {
+    background: url("../images/common_tab_hone_a.png") no-repeat -1.5rem -3rem;
     background-size: 200%; }
 
 .navbar a.link:before, .subnavbar a.link:before, .toolbar a.link:before {
@@ -944,8 +971,6 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 3.3125rem;
   width: 100%;
   overflow: hidden; }
-  .dish-content .dish-main.down {
-    top: 16.6875rem; }
   .dish-content .dish-main > ul {
     width: 5rem;
     height: 100%;
@@ -1717,16 +1742,17 @@ h1, h2, h3, h4, h5, h6 {
       .order-detail-content > ul:nth-child(2) > li:nth-child(1) {
         padding-bottom: 0.5625rem;
         border-bottom: 1px solid #eee; }
-        .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 {
-          line-height: 1.5625rem; }
-          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 > span {
+        .order-detail-content > ul:nth-child(2) > li:nth-child(1) > a {
+          line-height: 1.5625rem;
+          display: block; }
+          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > a > span {
             display: inline-block;
             vertical-align: top;
             color: #333;
             font-size: 0.9375rem;
             line-height: 0.9375rem;
             margin-top: 0.3125rem; }
-          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 > i {
+          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > a > i {
             display: inline-block;
             float: right;
             width: 0.5rem;
@@ -1734,7 +1760,7 @@ h1, h2, h3, h4, h5, h6 {
             margin-top: 0.5rem;
             background: url("../images/order detail_store_arrow.png") no-repeat left top;
             background-size: 1rem 0.8125rem; }
-          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > h2 > img {
+          .order-detail-content > ul:nth-child(2) > li:nth-child(1) > a > img {
             width: 1.5625rem;
             height: 1.5625rem;
             display: inline-block;
@@ -2010,7 +2036,10 @@ h1, h2, h3, h4, h5, h6 {
         list-style: none;
         color: #666;
         font-size: 0.6875rem;
-        line-height: 0.9375rem; }
+        line-height: 0.9375rem;
+        margin-top: 0.625rem; }
+        .stores-content .stores-top > ul > li:first-child {
+          margin-top: 0; }
         .stores-content .stores-top > ul > li > img {
           width: 0.875rem;
           height: 0.875rem;
@@ -2032,6 +2061,9 @@ h1, h2, h3, h4, h5, h6 {
         height: 0.25rem;
         background: url("../images/menu_huodong_arrow.png") no-repeat left top;
         background-size: 0.75rem 0.25rem; }
+        .stores-content .stores-top > a > i.all-show {
+          background: url("../images/menu_huodong_arrow.png") no-repeat -0.375rem top;
+          background-size: 0.75rem 0.25rem; }
   .stores-content .swiper-container {
     height: 10.375rem;
     width: 100%;

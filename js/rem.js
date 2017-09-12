@@ -3,7 +3,7 @@
  */
 //rem自适应布局
 (function (doc, win) {
-    var docEl = doc.documentElement,
+     docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {
             var clientWidth = docEl.clientWidth;

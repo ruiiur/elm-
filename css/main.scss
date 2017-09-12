@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6{
   background: #fff;
   box-shadow: 0 toRem(1px) toRem(17px) rgba(0,0,0,.1);
 }
-.tabbar-labels a.link, .tabbar-labels a.tab-link {
+.home-tab a.link, .home-tab a.tab-link {
   padding-top: toRem(8px);
   padding-bottom: toRem(5px);
   &.active{
@@ -108,6 +108,56 @@ h1, h2, h3, h4, h5, h6{
     &.active{
       i{
         background:url("../images/common_tab_icon.png") no-repeat 0 toRem(-48px);
+        background-size: 200%;
+      }
+    }
+  }
+}
+.stores-tab a.link, .stores-tab a.tab-link {
+  padding-top: toRem(8px);
+  padding-bottom: toRem(5px);
+  &.active{
+    span{
+      color:#ff8800;
+    }
+  }
+  i{
+    width:toRem(24px);
+    height:toRem(24px);
+    //margin-left:toRem(8px);
+  }
+  &:nth-child(1){
+    i{
+      background:url("../images/common_tab_hone_a.png") no-repeat left top;
+      background-size: 200%;
+    }
+    &.active{
+      i{
+        background:url("../images/common_tab_hone_a.png") no-repeat toRem(-24px) top;
+        background-size: 200%;
+      }
+    }
+  }
+  &:nth-child(2){
+    i{
+      background:url("../images/common_tab_hone_a.png") no-repeat 0 toRem(-24px);
+      background-size: 200%;
+    }
+    &.active{
+      i{
+        background:url("../images/common_tab_hone_a.png") no-repeat toRem(-24px) toRem(-24px);
+        background-size: 200%;
+      }
+    }
+  }
+  &:nth-child(3){
+    i{
+      background:url("../images/common_tab_hone_a.png") no-repeat 0 toRem(-48px);
+      background-size: 200%;
+    }
+    &.active{
+      i{
+        background:url("../images/common_tab_hone_a.png") no-repeat toRem(-24px) toRem(-48px);
         background-size: 200%;
       }
     }
@@ -1233,9 +1283,9 @@ h1, h2, h3, h4, h5, h6{
     bottom: toRem(53px);
     width: 100%;
     overflow: hidden;
-    &.down{
-      top: toRem(219px + 24px *2);
-    }
+    //&.down{
+    //  top: toRem(219px + 24px *2);
+    //}
     >ul{
       width:toRem(80px);
       height:100%;
@@ -2242,32 +2292,33 @@ h1, h2, h3, h4, h5, h6{
         &:nth-child(1){
           padding-bottom: toRem(9px);
           border-bottom: 1px solid #eee;
-          >h2{
-            line-height: toRem(25px);
-            >span{
-              display: inline-block;
-              vertical-align: top;
-              color:#333;
-              font-size: toRem(15px);
-              line-height: toRem(15px);
-              margin-top: toRem(5px);
+            >a{
+              line-height: toRem(25px);
+              display: block;
+                >span{
+                  display: inline-block;
+                  vertical-align: top;
+                  color:#333;
+                  font-size: toRem(15px);
+                  line-height: toRem(15px);
+                  margin-top: toRem(5px);
+                }
+                >i{
+                  display: inline-block;
+                  float: right;
+                  width:toRem(8px);
+                  height:toRem(13px);
+                  margin-top: toRem(8px);
+                  background: url('../images/order detail_store_arrow.png') no-repeat left top;
+                  background-size: toRem(16px) toRem(13px);
+                }
+                >img{
+                  width:toRem(25px);
+                  height:toRem(25px);
+                  display: inline-block;
+                  margin-right: toRem(10px);
+                }
             }
-            >i{
-              display: inline-block;
-              float: right;
-              width:toRem(8px);
-              height:toRem(13px);
-              margin-top: toRem(8px);
-              background: url('../images/order detail_store_arrow.png') no-repeat left top;
-              background-size: toRem(16px) toRem(13px);
-            }
-            >img{
-              width:toRem(25px);
-              height:toRem(25px);
-              display: inline-block;
-              margin-right: toRem(10px);
-            }
-          }
         }
         &:nth-child(2){
           padding: toRem(13px) 0;
@@ -2615,6 +2666,10 @@ h1, h2, h3, h4, h5, h6{
         color:#666;
         font-size: toRem(11px);
         line-height: toRem(15px);
+        margin-top: toRem(10px);
+        &:first-child{
+          margin-top: 0;
+        }
         >img{
           width:toRem(14px);
           height:toRem(14px);
@@ -2639,6 +2694,10 @@ h1, h2, h3, h4, h5, h6{
         height:toRem(4px);
         background: url('../images/menu_huodong_arrow.png') no-repeat left top;
         background-size: toRem(12px) toRem(4px);
+        &.all-show{
+          background: url('../images/menu_huodong_arrow.png') no-repeat toRem(-6px) top;
+          background-size: toRem(12px) toRem(4px);
+        }
       }
     }
   }

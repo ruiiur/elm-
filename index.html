@@ -34,17 +34,26 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-dish toolbar-through></page-dish>
+        <page-stores toolbar-through></page-stores>
       </f7-pages>
     </f7-view>
   </f7-views>
 </div>
-<!--底部tab-->
+<!--平台首页底部tab-->
 <template id="com-toolbar">
-  <f7-toolbar bottom tabbar labels class="row no-gutter">
+  <f7-toolbar bottom tabbar labels class="row no-gutter home-tab">
     <f7-link :href="active == 'home'?'#':'/home/'"  class="col-auto" :class="{'active':active=='home'?'active':''}" ignore-cache><i class="home"></i><span>首页</span></f7-link>
     <f7-link :href="active == 'order'?'#':'/order/'" class="col-auto" :class="{'active':active=='order'?'active':''}" ignore-cache><i class="order"></i><span>订单</span></f7-link>
     <f7-link :href="active == 'center'?'#':'/center/'" class="col-auto" :class="{'active':active=='center'?'active':''}" ignore-cache><i class="info"></i><span>我的</span></f7-link>
+  </f7-toolbar>
+</template>
+
+<!--门店首页底部tab-->
+<template id="sto-toolbar">
+  <f7-toolbar bottom tabbar  labels class="row no-gutter stores-tab">
+    <f7-link :href="active == 'stores'?'#':'/stores/'"  class="col-auto" :class="{'active':active=='stores'?'active':''}" ignore-cache><i class="home"></i><span>首页</span></f7-link>
+    <f7-link :href="active == 'stores-order'?'#':'/stores-order/'" class="col-auto" :class="{'active':active=='stores-order'?'active':''}" ignore-cache><i class="order"></i><span>订单</span></f7-link>
+    <f7-link :href="active == 'stores-center'?'#':'/stores-center/'" class="col-auto" :class="{'active':active=='stores-center'?'active':''}" ignore-cache><i class="info"></i><span>我的</span></f7-link>
   </f7-toolbar>
 </template>
 
@@ -62,8 +71,10 @@
         </div>
         <ul>
           <li><img src="images/huodong_jian.png">满20减15，满40减20，满60减30</li>
+          <li v-show="actiShow"><img src="images/huodong_jian.png">满20减15，满40减20，满60减30</li>
+          <li v-show="actiShow"><img src="images/huodong_jian.png">满20减15，满40减20，满60减30</li>
         </ul>
-        <a href="javascript:;">共5个<i></i></a>
+        <a href="javascript:;" @click.stop.prevent="acti(actiShow)">共{{actiNum}}个<i :class="{'all-show':actiShow}"></i></a>
         <div>
           <ul>
             <li><a href="javascript:;">距离1.26km</a></li>
@@ -108,7 +119,7 @@
         <li><i></i><span>怒江北路296号</span><em></em></li>
       </ul>
     </div>
-    <com-toolbar :active="active"></com-toolbar>
+    <sto-toolbar :active="active"></sto-toolbar>
   </f7-page>
 </template>
 
@@ -120,11 +131,11 @@
       <div>
         <h2>订单已完成 <i></i></h2>
         <p>感谢你对点银宝的信任，期待再次光临</p>
-        <a href="javascript:;">再来一单</a>
+        <a href="/dish/">再来一单</a>
       </div>
       <ul>
         <li>
-          <h2><img src="images/order%20detail_storeimg.png"><span>二十五块半（天山西路店）</span><i></i></h2>
+          <a href="/dish/"><img src="images/order%20detail_storeimg.png"><span>二十五块半（天山西路店）</span><i></i></a>
         </li>
         <li>
           <h3>椒香鸡腿-椒香鸡腿<span>￥32</span><span>x4</span></h3>
@@ -163,7 +174,7 @@
       <div>
         <h2>猜你喜欢</h2>
         <div>
-          <a href="javascript:;">
+          <a href="/dish/">
             <img src="images/order%20detail_recommend_img.png">
             <div>
               <h2>香辣口水鸡套餐（微辣）</h2>
@@ -171,7 +182,7 @@
               <h4><span>34.5</span><em>满19减17</em></h4>
               <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
             </div>
-          </a><a href="javascript:;">
+          </a><a href="/dish/">
             <img src="images/order%20detail_recommend_img.png">
             <div>
               <h2>香辣口水鸡套餐（微辣）</h2>
@@ -180,7 +191,7 @@
               <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
             </div>
           </a>
-          <a href="javascript:;">
+          <a href="/dish/">
             <img src="images/order%20detail_recommend_img.png">
             <div>
               <h2>香辣口水鸡套餐（微辣）</h2>
@@ -188,7 +199,7 @@
               <h4><span>34.5</span><em>满19减17</em></h4>
               <p><i></i><span>好鱼好饭套餐（好鱼好饭）</span></p>
             </div>
-          </a><a href="javascript:;">
+          </a><a href="/dish/">
             <img src="images/order%20detail_recommend_img.png">
             <div>
               <h2>香辣口水鸡套餐（微辣）</h2>
@@ -377,6 +388,10 @@
             <img src="images/huodong_jian.png">
             满20减15，满40减20，满60减30，
           </li>
+          <li v-show="actiShow">
+            <img src="images/huodong_jian.png">
+            满20减15，满40减20，满60减30，
+          </li>
         </ul>
         <a @click.stop.prevent="acti" class="all-activity" href="javascript:;">共{{actiNum}}个<i :class="{'all-show':actiShow}"></i></a>
       </div>
@@ -394,7 +409,7 @@
       <div class="dish-search">
         <i></i><span>搜索店内商品，共96件</span>
       </div>
-      <div class="dish-main" :class="{'down':actiShow}">
+      <div class="dish-main">
         <ul>
           <li  class="active"><a href="javascript:;"><i></i>热销</a></li>
           <li><a href="javascript:;"><i></i>优惠</a></li>
@@ -438,9 +453,9 @@
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
-                      <span v-show="count>0">{{count}}</span>
-                      <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
+                      <!--<a class="reduce" href="javascript:;"></a>-->
+                      <!--<span >0</span>-->
+                      <a class="add" href="javascript:;" ></a>
                     </div>
                   </div>
                 </div>
@@ -456,8 +471,8 @@
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
-                      <span v-show="count>0">{{count}}</span>
+                      <!--<a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>-->
+                      <!--<span v-show="count>0">{{count}}</span>-->
                       <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
                     </div>
                   </div>
@@ -474,8 +489,8 @@
                   <div>
                     <strong>8</strong>
                     <div>
-                      <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
-                      <span v-show="count>0">{{count}}</span>
+                      <!--<a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>-->
+                      <!--<span v-show="count>0">{{count}}</span>-->
                       <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
                     </div>
                   </div>
@@ -1249,6 +1264,24 @@
     <com-toolbar :active="active"></com-toolbar>
   </f7-page>
 </template>
+
+<!--门店订单页-->
+<template id="page-stores-order">
+  <f7-page navbar-through  name="stores-order">
+    <p>哈哈哈，这是门店订单页</p>
+    <sto-toolbar :active="active"></sto-toolbar>
+  </f7-page>
+</template>
+
+
+<!--门店中心页-->
+<template id="page-stores-center">
+  <f7-page navbar-through  name="stores-center">
+    <p>哈哈哈，这是门店中心页</p>
+    <sto-toolbar :active="active"></sto-toolbar>
+  </f7-page>
+</template>
+
 
 <script src="js/jquery.min.js"></script>
 <script src="js/framework7.min.js"></script>

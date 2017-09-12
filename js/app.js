@@ -2,11 +2,18 @@
 Vue.use(Framework7Vue);
 
 // Init Page Components
-//底部导航
+//平台首页底部导航
 Vue.component('com-toolbar', {
     props: ['active'],
     template: '#com-toolbar'
 })
+
+//门店首页底部导航
+Vue.component('sto-toolbar', {
+    props: ['active'],
+    template: '#sto-toolbar'
+})
+
 //个人中心页
 Vue.component('page-center', {
     template: '#page-center',
@@ -75,7 +82,7 @@ Vue.component('page-dish', {
             fold: true,//
             funMore:false,//是否显示更多功能
             actiShow:false,//是否显示活动
-            actiNum:3,//商家活动个数
+            actiNum:4,//商家活动个数
         };
     },
     computed: {
@@ -138,13 +145,28 @@ Vue.component('page-dish', {
         //是否显示所有活动
         acti:function(actiShow){
             this.actiShow=!this.actiShow;
+            //活动收缩时
+            if(this.actiShow==false){
+                //获取类dish-main的top样式值，值单位为px
+                this.$el.querySelector('.dish-main').style.top=219+'px';
+                //把top单位化成rem
+                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/Math.round(parseFloat(window.docEl.style.fontSize))+'rem';
+                //然后再赋值给top样式值
+                this.$el.querySelector('.dish-main').style.top=aTop;
+            }
+            //活动展开时
+            else{
+                this.$el.querySelector('.dish-main').style.top=219+(this.actiNum-1)*24+'px';
+                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/Math.round(parseFloat(window.docEl.style.fontSize))+'rem';
+                this.$el.querySelector('.dish-main').style.top=aTop;
+            }
         },
         //增加菜品
         addCart:function(event) {
             this.count++;
             this.totalCount++;
             this.totalPrice=this.pricePer*this.totalCount;
-            this.$emit('add', event.target);
+            // this.$emit('add', event.target);
         },
         //减少菜品
         reduceCart:function(event) {
@@ -239,15 +261,31 @@ Vue.component('page-stores', {
     template: '#page-stores',
     data: function() {
         return {
-            active: 'home'
+            active: 'home',
+            actiShow:false,//是否显示活动
+            actiNum:3,//商家活动个数
         };
+    },
+    methods:{
+        acti:function(actiShow){
+            this.actiShow=!this.actiShow;
+        }
     }
 })
 //订单详情页
 Vue.component('page-order-detail', {
     template: '#page-order-detail'
 })
-
+//门店订单页
+Vue.component('page-stores-order', {
+    props: ['active'],
+    template: '#page-stores-order'
+})
+//门店中心页
+Vue.component('page-stores-center', {
+    props: ['active'],
+    template: '#page-stores-center'
+})
 
 
 
@@ -296,6 +334,16 @@ var app = new Vue({
             //      订单详情页路由
             path:'/order-detail/',
             component:'page-order-detail'
+        },
+        {
+            //门店订单页路由
+            path:'/stores-order/',
+            component:'page-stores-order'
+        },
+        {
+            //门店中心页路由
+            path:'/stores-center/',
+            component:'page-stores-center'
         }
         ]
     }
