@@ -4,7 +4,7 @@ Vue.use(Framework7Vue);
 // Init Page Components
 //平台首页底部导航
 Vue.component('com-toolbar', {
-    props: ['active'],
+    props: ['active','overActive'],
     template: '#com-toolbar'
 })
 
@@ -28,8 +28,14 @@ Vue.component('page-order', {
     template: '#page-order',
     data: function() {
         return {
-            active: 'order'
+            active: 'order',
+            orderShow:false
         };
+    },
+    methods:{
+        isOrderMore:function(){
+            this.orderShow=!this.orderShow;
+        }
     }
 })
 //平台首页
@@ -38,16 +44,42 @@ Vue.component('page-home', {
     data: function() {
         return {
             active: 'home',
-            show:false
+            show:false,//是否显示出所有门店
+            // touchActive:false,//
+            overActive:false,//首页底部的z-index的控制
+            actiNum:4,//活动个数
+            actiShow:false,//是否显示所有活动
+            scroll: ''
         };
     },
     methods: {
-        showStores: function(show){
-            this.show=!show;
+        showStores: function () {
+            this.show = !this.show;
+            this.overActive = !this.overActive;
+        },
+        acti: function () {
+            this.actiShow = !this.actiShow;
         }
-        // goFirst:function(){
-        //     this.$router.load({'path':'/dish/'});
-        // }
+    },
+    mounted: function(){
+        // alert('2');
+        // window.addEventListener('scroll',this.menu)
+        //  document.body.onscroll=this.menu();
+        let $$ = Dom7;
+        console.log('11111',$$(".page-content"));
+        $$(".page-content").on('scroll',function(){
+            // let aRight=45/parseFloat(window.docEl.style.fontSize)+'rem';
+            // console.log(aRight);
+            $$(".shopping-cart").animate({'right':-45});
+            console.log('111')
+        })
+        $$(".page-content").on('scrollEnd',function(){
+            // let aRight=45/parseFloat(window.docEl.style.fontSize)+'rem';
+            // console.log(aRight);
+            $$(".shopping-cart").animate({'right':10});
+            console.log('2222')
+        })
+        // $$(".shopping-cart").animate({'right':10});
     }
 })
 //订菜页
@@ -85,6 +117,7 @@ Vue.component('page-dish', {
             actiNum:4,//商家活动个数
         };
     },
+    //实时计算
     computed: {
         // totalPrice:function() {
         //     let total = 0;
@@ -150,14 +183,14 @@ Vue.component('page-dish', {
                 //获取类dish-main的top样式值，值单位为px
                 this.$el.querySelector('.dish-main').style.top=219+'px';
                 //把top单位化成rem
-                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/Math.round(parseFloat(window.docEl.style.fontSize))+'rem';
+                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/parseFloat(window.docEl.style.fontSize)+'rem';
                 //然后再赋值给top样式值
                 this.$el.querySelector('.dish-main').style.top=aTop;
             }
             //活动展开时
             else{
                 this.$el.querySelector('.dish-main').style.top=219+(this.actiNum-1)*24+'px';
-                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/Math.round(parseFloat(window.docEl.style.fontSize))+'rem';
+                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/parseFloat(window.docEl.style.fontSize)+'rem';
                 this.$el.querySelector('.dish-main').style.top=aTop;
             }
         },
@@ -254,14 +287,45 @@ Vue.component('page-submit', {
 })
 //支付页
 Vue.component('page-pay', {
-    template: '#page-pay'
-})
+    template: '#page-pay',
+    data:function(){
+       return{
+           paymentMethodsList: [
+               {
+                   name: '支付宝',
+                   hint:'成功支付后抽好礼~',
+                   active:false
+               },
+               {
+                   name: '花呗',
+                   hint:'花呗新用户立减15元!',
+                   active:true
+               },
+               {
+                   name: '银行卡支付',
+                   hint:'',
+                   active:true
+               },
+               {
+                   name: 'QQ钱包',
+                   hint:'',
+                   active:true
+               }
+           ]
+       }
+    },
+    methods:{
+        isChecked:function(pay){
+            pay.active = !pay.active;
+        }
+    }
+});
 //门店首页
 Vue.component('page-stores', {
     template: '#page-stores',
     data: function() {
         return {
-            active: 'home',
+            active: 'stores',
             actiShow:false,//是否显示活动
             actiNum:3,//商家活动个数
         };
@@ -278,13 +342,21 @@ Vue.component('page-order-detail', {
 })
 //门店订单页
 Vue.component('page-stores-order', {
-    props: ['active'],
-    template: '#page-stores-order'
+    template: '#page-stores-order',
+    data: function() {
+        return {
+            active: 'stores-order'
+        };
+    }
 })
 //门店中心页
 Vue.component('page-stores-center', {
-    props: ['active'],
-    template: '#page-stores-center'
+    template: '#page-stores-center',
+    data: function() {
+        return {
+            active: 'stores-center'
+        };
+    }
 })
 
 

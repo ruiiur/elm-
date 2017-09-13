@@ -18,6 +18,9 @@ h1, h2, h3, h4, h5, h6 {
 .page {
   background: #fff; }
 
+.home-tab.over-index {
+  z-index: 0; }
+
 .tabbar-labels.toolbar-bottom ~ .page-content {
   padding-bottom: 3.5rem; }
 
@@ -53,6 +56,12 @@ h1, h2, h3, h4, h5, h6 {
 .toolbar {
   background: #fff;
   box-shadow: 0 0.0625rem 1.0625rem rgba(0, 0, 0, 0.1); }
+
+.label-switch .checkbox {
+  width: 3.25rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  height: 2rem; }
 
 .home-tab a.link, .home-tab a.tab-link {
   padding-top: 0.5rem;
@@ -379,6 +388,9 @@ h1, h2, h3, h4, h5, h6 {
             height: 0.25rem;
             background: url("../images/youhui_jiantou.png") no-repeat left top;
             background-size: 0.75rem 0.25rem; }
+            .home-content .home-stores-content > div > ul > li > a > div > div:nth-child(2) .all-activity > i.all-show {
+              background: url("../images/menu_huodong_arrow.png") no-repeat -0.375rem top;
+              background-size: 0.75rem 0.25rem; }
       .home-content .home-stores-content > div > ul > li > a > div > div:nth-child(3) {
         border-top: 1px solid #f4f4f4;
         padding: 0.8125rem 0 0.875rem 0;
@@ -427,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
             background: #fff;
             position: absolute;
             z-index: 10000;
-            width: 25.25rem;
+            width: 24.9375rem;
             right: -0.375rem;
             bottom: 0.9375rem;
             padding: 0 1.25rem;
@@ -450,6 +462,16 @@ h1, h2, h3, h4, h5, h6 {
                   font-style: normal;
                   color: #ff6414;
                   font-size: 0.6875rem; }
+.home-content .shopping-cart {
+  position: fixed;
+  bottom: 4.75rem;
+  right: 0.6875rem;
+  background: #fff url("../images/common_tab_car.png") no-repeat center center;
+  background-size: 1.5625rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  box-shadow: 0 0 0.4375rem #ccc;
+  border-radius: 50%; }
 
 .order-content {
   background: #f5f5f5; }
@@ -500,8 +522,12 @@ h1, h2, h3, h4, h5, h6 {
           background: url("../images/order_all list_arrow.png") no-repeat;
           background-size: 0.3125rem 0.5rem;
           margin-left: 0.375rem; }
-    .order-content .my-order > div:nth-child(2) {
-      border-bottom: 1px solid #eee; }
+    .order-content .my-order > div:nth-child(2) > a {
+      display: block;
+      border-bottom: 1px solid #eee;
+      margin-top: 0.625rem; }
+      .order-content .my-order > div:nth-child(2) > a:first-child {
+        margin-top: 0; }
       .order-content .my-order > div:nth-child(2) > a > img {
         display: inline-block;
         vertical-align: top;
@@ -1170,6 +1196,7 @@ h1, h2, h3, h4, h5, h6 {
       bottom: 0;
       height: 3.3125rem; }
       .dish-content .dish-bottom .shopcart .content .content-right .pay {
+        display: inline-block;
         height: 3.3125rem;
         line-height: 3.3125rem;
         color: #fff;
@@ -1320,11 +1347,12 @@ h1, h2, h3, h4, h5, h6 {
       .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) {
         padding-bottom: 1.0625rem;
         border-bottom: 1px solid #eee; }
-        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) > h2 {
+        .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) > a {
+          display: block;
           color: #333;
           font-size: 0.9375rem;
           line-height: 0.9375rem; }
-          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) > h2 i {
+          .submit-content .submit-main > ul:nth-child(2) > li:nth-child(1) > a i {
             display: inline-block;
             float: right;
             width: 0.5rem;

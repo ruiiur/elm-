@@ -34,14 +34,14 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-stores toolbar-through></page-stores>
+        <page-home toolbar-through></page-home>
       </f7-pages>
     </f7-view>
   </f7-views>
 </div>
 <!--平台首页底部tab-->
 <template id="com-toolbar">
-  <f7-toolbar bottom tabbar labels class="row no-gutter home-tab">
+  <f7-toolbar bottom tabbar labels class="row no-gutter home-tab" >
     <f7-link :href="active == 'home'?'#':'/home/'"  class="col-auto" :class="{'active':active=='home'?'active':''}" ignore-cache><i class="home"></i><span>首页</span></f7-link>
     <f7-link :href="active == 'order'?'#':'/order/'" class="col-auto" :class="{'active':active=='order'?'active':''}" ignore-cache><i class="order"></i><span>订单</span></f7-link>
     <f7-link :href="active == 'center'?'#':'/center/'" class="col-auto" :class="{'active':active=='center'?'active':''}" ignore-cache><i class="info"></i><span>我的</span></f7-link>
@@ -237,37 +237,13 @@
       <div>选择支付方式</div>
       <div class="list-block">
         <ul>
-          <li class="item-content dis">
+          <li @click="isChecked(paymentMethod)" rel="ss" class="item-content" :class="{'dis':paymentMethod.active}" v-for="(paymentMethod,index) in paymentMethodsList">
             <div class="item-media"><i></i></div>
             <div class="item-inner">
               <div class="item-title-row">
-                <div class="item-title">支付宝</div>
-                <div class="item-subtitle">成功支付后抽好礼~</div>
+                <div class="item-title">{{paymentMethod.name}}</div>
+                <div class="item-subtitle" v-show="paymentMethod.hint!=''">{{paymentMethod.hint}}</div>
               </div>
-              <div class="item-after"></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i></i></div>
-            <div class="item-inner">
-              <div class="item-title-row">
-                <div class="item-title">花呗</div>
-                <div class="item-subtitle">花呗新用户立减15元！</div>
-              </div>
-              <div class="item-after"></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i></i></div>
-            <div class="item-inner">
-              <div class="item-title">银行卡支付</div>
-              <div class="item-after"></div>
-            </div>
-          </li>
-          <li class="item-content">
-            <div class="item-media"><i></i></div>
-            <div class="item-inner">
-              <div class="item-title">QQ钱包</div>
               <div class="item-after"></div>
             </div>
           </li>
@@ -295,7 +271,7 @@
         </div>
         <ul>
           <li>
-            <h2>二十五块半（天山西路店）<i></i></h2>
+            <a href="/dish/">二十五块半（天山西路店）<i></i></a>
           </li>
           <li>
             <h3>椒香鸡腿-椒香鸡腿<span>￥32</span><span>x4</span></h3>
@@ -902,10 +878,10 @@
                 <div class="desc">另需配送费￥{{deliveryPrice}}元</div>
               </div>
             </div>
-            <div class="content-right" @click.stop.prevent="pay">
-              <div class="pay" :class="payClass">
+            <div class="content-right" @click="pay">
+              <a class="pay" :class="payClass" :href="totalPrice >= minPrice?'submit':'#'">
                 {{payDesc}}
-              </div>
+              </a>
             </div>
           </div>
           <!--<div class="ball-container">-->
@@ -1009,11 +985,31 @@
               <p class="order-time">一小时前</p>
               <p class="order-food">椒香鸡腿-椒香鸡腿 等4件商品</p>
               <p class="order-money">￥29</p>
-              <a class="again" href="javascript:;">再来一单</a>
+              <a class="again" href="/dish/">再来一单</a>
+            </div>
+          </f7-link>
+          <f7-link href="/order-detail/" v-show="orderShow">
+            <img src="images/order_store%20img.png">
+            <div>
+              <h2>二十五块半（天山路店）<i></i><span>订单已完成</span></h2>
+              <p class="order-time">一小时前</p>
+              <p class="order-food">椒香鸡腿-椒香鸡腿 等4件商品</p>
+              <p class="order-money">￥29</p>
+              <a class="again" href="/dish/">再来一单</a>
+            </div>
+          </f7-link>
+          <f7-link href="/order-detail/" v-show="orderShow">
+            <img src="images/order_store%20img.png">
+            <div>
+              <h2>二十五块半（天山路店）<i></i><span>订单已完成</span></h2>
+              <p class="order-time">一小时前</p>
+              <p class="order-food">椒香鸡腿-椒香鸡腿 等4件商品</p>
+              <p class="order-money">￥29</p>
+              <a class="again" href="/dish/">再来一单</a>
             </div>
           </f7-link>
         </div>
-        <a class="more" href="javascript:;">查看更多<i></i></a>
+        <a class="more" href="javascript:;" @click="isOrderMore()">查看更多<i></i></a>
       </div>
       <div class="nearby">
         <ul>
@@ -1066,12 +1062,12 @@
 </template>
 
 <!-- 平台首页-->
-<template id="page-home">
+<template id="page-home" >
   <f7-page navbar-through  name="home">
     <div class="home-content">
       <div class="main-header">
         <div>
-          <div><i class="location"></i><span>长宁区临空经济园...</span><i class="down"></i></div>
+          <div><i class="location"></i><span >长宁区临空经济园...</span><i class="down"></i></div>
           <aside>
             <div>
               <h2>35.6°</h2>
@@ -1197,7 +1193,7 @@
                     </div>
                   </div>
                   <div>
-                    <ul>
+                    <ul @click.stop.prevent="acti">
                       <li>
                         <img src="images/huodong_te.png">
                         在线支付满30元减17，满50减20
@@ -1206,8 +1202,16 @@
                         <img src="images/huodong_jian.png">
                         在线支付满30元减17，满50减20
                       </li>
+                      <li v-show="actiShow">
+                        <img src="images/huodong_jian.png">
+                        在线支付满30元减17，满50减20
+                      </li>
+                      <li v-show="actiShow">
+                        <img src="images/huodong_jian.png">
+                        在线支付满30元减17，满50减20
+                      </li>
                     </ul>
-                    <a class="all-activity" href="javascript:;">共5个<i></i></a>
+                    <a class="all-activity" href="javascript:;" @click.stop.prevent="acti">共{{actiNum}}个<i :class="{'all-show':actiShow}"></i></a>
                   </div>
                   <!--<div>-->
                   <!--<i></i>-->
@@ -1231,7 +1235,7 @@
                   </div>
                   <div>
                     <ul>
-                      <li>
+                      <li >
                         <img src="images/huodong_te.png">
                         在线支付满30元减17，满50减20
                       </li>
@@ -1242,7 +1246,7 @@
                     </ul>
                     <a class="all-activity" href="javascript:;">共5个<i></i></a>
                   </div>
-                  <div  @click="showStores(show)">
+                  <div  @click.stop.prevent="showStores()"  >
                     <i></i>
                     <span>附近还有两家老爹锅贴</span>
                     <em>
@@ -1251,7 +1255,7 @@
                         <a href="javascript:;">老爹锅贴（上海剑河路店）<span>2.12km / <em>22分钟</em></span></a>
                       </div>
                       <i v-show="show"></i>
-                      <em class="box" v-show="show"></em>
+                      <em class="box" v-show="show" @touchmove.prevent></em>
                     </em>
                   </div>
                 </div>
@@ -1260,8 +1264,9 @@
           </ul>
         </div>
       </div>
+      <div class="shopping-cart"></div>
     </div>
-    <com-toolbar :active="active"></com-toolbar>
+    <com-toolbar :active="active" :class="{'over-index':overActive}"></com-toolbar>
   </f7-page>
 </template>
 

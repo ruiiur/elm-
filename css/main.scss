@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6{
   background: #fff;
 }
 //tab
+  .home-tab{
+    &.over-index{
+      z-index:0;
+    }
+}
 .tabbar-labels.toolbar-bottom~.page-content {
   padding-bottom: toRem(56px);
 }
@@ -62,6 +67,12 @@ h1, h2, h3, h4, h5, h6{
 .toolbar {
   background: #fff;
   box-shadow: 0 toRem(1px) toRem(17px) rgba(0,0,0,.1);
+}
+.label-switch .checkbox {
+  width: toRem(52px);
+  border-radius: toRem(16px);
+  box-sizing: border-box;
+  height: toRem(32px);
 }
 .home-tab a.link, .home-tab a.tab-link {
   padding-top: toRem(8px);
@@ -514,6 +525,10 @@ h1, h2, h3, h4, h5, h6{
                       height:toRem(4px);
                       background: url('../images/youhui_jiantou.png') no-repeat left top;
                       background-size: toRem(12px) toRem(4px);
+                      &.all-show{
+                        background: url('../images/menu_huodong_arrow.png') no-repeat toRem(-6px) top;
+                        background-size: toRem(12px) toRem(4px);
+                      }
                     }
                   }
                 }
@@ -571,7 +586,7 @@ h1, h2, h3, h4, h5, h6{
                       background: #fff;
                       position: absolute;
                       z-index: 10000;
-                      width:toRem(404px);
+                      width:toRem(399px);
                       right:toRem(-6px);
                       bottom:toRem(15px);
                       padding: 0 toRem(20px);
@@ -606,6 +621,17 @@ h1, h2, h3, h4, h5, h6{
         }
       }
     }
+  }
+  .shopping-cart{
+    position: fixed;
+    bottom: toRem(76px);
+    right:toRem(11px);
+    background:#fff url('../images/common_tab_car.png') no-repeat center center;
+    background-size: toRem(25px);
+    width:toRem(45px);
+    height:toRem(45px);
+    box-shadow:0 0 toRem(7px) #ccc;
+    border-radius: 50%;
   }
 }
 
@@ -668,8 +694,13 @@ h1, h2, h3, h4, h5, h6{
         }
       }
       &:nth-child(2){
-        border-bottom: 1px solid #eee;
         >a{
+          display: block;
+          border-bottom: 1px solid #eee;
+          margin-top: toRem(10px);
+          &:first-child{
+            margin-top: 0;
+          }
           >img{
             display: inline-block;
             vertical-align: top;
@@ -1544,6 +1575,7 @@ h1, h2, h3, h4, h5, h6{
           //width: toRem(116px);
           height: toRem(53px);
           .pay {
+            display: inline-block;
             height: toRem(53px);
             line-height: toRem(53px);
             color: #fff;
@@ -1743,7 +1775,8 @@ h1, h2, h3, h4, h5, h6{
           &:nth-child(1){
             padding-bottom: toRem(17px);
             border-bottom: 1px solid #eee;
-            >h2{
+            >a{
+              display: block;
               color:#333;
               font-size: toRem(15px);
               line-height: toRem(15px);
