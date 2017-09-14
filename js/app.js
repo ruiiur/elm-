@@ -45,11 +45,9 @@ Vue.component('page-home', {
         return {
             active: 'home',
             show:false,//是否显示出所有门店
-            // touchActive:false,//
             overActive:false,//首页底部的z-index的控制
             actiNum:4,//活动个数
-            actiShow:false,//是否显示所有活动
-            scroll: ''
+            actiShow:false//是否显示所有活动
         };
     },
     methods: {
@@ -62,24 +60,17 @@ Vue.component('page-home', {
         }
     },
     mounted: function(){
-        // alert('2');
-        // window.addEventListener('scroll',this.menu)
-        //  document.body.onscroll=this.menu();
         let $$ = Dom7;
-        console.log('11111',$$(".page-content"));
-        $$(".page-content").on('scroll',function(){
-            // let aRight=45/parseFloat(window.docEl.style.fontSize)+'rem';
-            // console.log(aRight);
-            $$(".shopping-cart").animate({'right':-45});
-            console.log('111')
+        //购物车标签
+        let touch=this.$refs.move;
+        //首页触摸时购物车向右滑动
+        $$(".page-content").on('touchmove',function(){
+            touch.style.animation='mymove 1s';
+        });
+        //首页触摸结束时购物车出现
+        $$(".page-content").on('touchend',function(){
+            touch.style.animation='myback 1s';
         })
-        $$(".page-content").on('scrollEnd',function(){
-            // let aRight=45/parseFloat(window.docEl.style.fontSize)+'rem';
-            // console.log(aRight);
-            $$(".shopping-cart").animate({'right':10});
-            console.log('2222')
-        })
-        // $$(".shopping-cart").animate({'right':10});
     }
 })
 //订菜页
@@ -109,30 +100,17 @@ Vue.component('page-dish', {
                 {
                     show: false
                 }
-            ],//
-            dropBalls: [],//
+            ],//balls数组来代表五个小球
+            dropBalls: [],//dropBalls数组正在运行的小球
             fold: true,//
             funMore:false,//是否显示更多功能
             actiShow:false,//是否显示活动
             actiNum:4,//商家活动个数
+            isPanel:false//是否显示大图
         };
     },
     //实时计算
     computed: {
-        // totalPrice:function() {
-        //     let total = 0;
-        //     this.selectFoods.forEach((food) => {
-        //         total += food.price * food.count;
-        // });
-        //     return total;
-        // },
-        // totalCount:function() {
-        //     let count = 0;
-        //     this.selectFoods.forEach((food) => {
-        //         count += food.count;
-        // });
-        //     return count;
-        // },
         payDesc:function() {
             if (this.totalPrice === 0) {
                 return `￥${this.minPrice}元起送`;
@@ -150,25 +128,6 @@ Vue.component('page-dish', {
                 return 'enough';
             }
         }
-        // listShow:function() {
-        //     if (!this.totalCount) {
-        //         this.fold = true;
-        //         return false;
-        //     }
-        //     let show = !this.fold;
-        //     if (show) {
-        //         this.$nextTick(() => {
-        //             if (!this.scroll) {
-        //             this.scroll = new BScroll(this.$refs.listContent, {
-        //                 click: true
-        //             });
-        //         } else {
-        //             this.scroll.refresh();
-        //         }
-        //     });
-        //     }
-        //     return show;
-        // }
     },
     methods: {
         //更多功能
@@ -209,74 +168,73 @@ Vue.component('page-dish', {
                 this.totalPrice=this.pricePer*this.totalCount;
             }
         },
-        drop:function(el) {
-            for (let i = 0; i < this.balls.length; i++) {
-                let ball = this.balls[i];
-                if (!ball.show) {
-                    ball.show = true;
-                    ball.el = el;
-                    this.dropBalls.push(ball);
-                    return;
-                }
-            }
-        },
-        toggleList:function() {
-            if (!this.totalCount) {
-                return;
-            }
-            this.fold = !this.fold;
-        },
-        hideList:function() {
-            this.fold = true;
-        },
-        // empty:function() {
-        //     this.selectFoods.forEach((food) => {
-        //         food.count = 0;
-        // });
-        // },
+        //判断是否可以去支付
         pay:function() {
             if (this.totalPrice < this.minPrice) {
                 return;
             }
             window.alert(`支付${this.totalPrice}元`);
         },
-        // addFood:function(target) {
-        //     this.drop(target);
-        // },
-        beforeDrop:function(el) {
+        //显示大图
+        panelShow:function(){
+            this.isPanel=!this.isPanel;
+        },
+        //关闭大图
+        panelClose:function(){
+            this.isPanel=!this.isPanel;
+        },
+        //关于购物车小球飞出的动画
+        drop:function(el) {
+            //触发一次事件就会将所有小球进行遍历
+            for (let i = 0; i < this.balls.length; i++) {
+                let ball = this.balls[i];
+                if (!ball.show) { //将false的小球放到dropBalls
+                    ball.show = true;
+                    ball.el = el; //设置小球的el属性为一个dom对象
+                    this.dropBalls.push(ball);
+                    return;
+                }
+            }
+        },
+
+        beforeEnter:function(el){ //这个方法的执行是因为这是一个vue的监听事件
             let count = this.balls.length;
             while (count--) {
                 let ball = this.balls[count];
                 if (ball.show) {
-                    let rect = ball.el.getBoundingClientRect();
+                    let rect = ball.el.getBoundingClientRect(); //获取小球的相对于视口的位移(小球高度)
                     let x = rect.left - 32;
-                    let y = -(window.innerHeight - rect.top - 22);
-                    el.style.display = '';
+                    let y = -(window.innerHeight - rect.top - 22); //负数,因为是从左上角往下的的方向
+                    el.style.display = ''; //清空display
                     el.style.webkitTransform = `translate3d(0,${y}px,0)`;
                     el.style.transform = `translate3d(0,${y}px,0)`;
-                    let inner = el.getElementsByClassName('inner-hook')[0];
+                    //处理内层动画
+                    let inner = el.getElementsByClassName('inner-hook')[0]; //使用inner-hook类来单纯被js操作
                     inner.style.webkitTransform = `translate3d(${x}px,0,0)`;
                     inner.style.transform = `translate3d(${x}px,0,0)`;
                 }
             }
         },
-        dropping:function(el, done) {
+
+        enter:function(el, done) { //这个方法的执行是因为这是一个vue的监听事件
             /* eslint-disable no-unused-vars */
-            let rf = el.offsetHeight;
-            this.$nextTick(() => {
+            let rf = el.offsetHeight; //触发重绘html
+            this.$nextTick(() => { //让动画效果异步执行,提高性能
                 el.style.webkitTransform = 'translate3d(0,0,0)';
-            el.style.transform = 'translate3d(0,0,0)';
-            let inner = el.getElementsByClassName('inner-hook')[0];
-            inner.style.webkitTransform = 'translate3d(0,0,0)';
-            inner.style.transform = 'translate3d(0,0,0)';
-            el.addEventListener('transitionend', done);
-        });
+                el.style.transform = 'translate3d(0,0,0)';
+                //处理内层动画
+                let inner = el.getElementsByClassName('inner-hook')[0]; //使用inner-hook类来单纯被js操作
+                inner.style.webkitTransform = 'translate3d(0,0,0)';
+                inner.style.transform = 'translate3d(0,0,0)';
+                el.addEventListener('transitionend', done); //Vue为了知道过渡的完成，必须设置相应的事件监听器。
+            });
         },
-        afterDrop:function(el) {
-            let ball = this.dropBalls.shift();
+
+        afterEnter:function(el) { //这个方法的执行是因为这是一个vue的监听事件
+            let ball = this.dropBalls.shift(); //完成一次动画就删除一个dropBalls的小球
             if (ball) {
                 ball.show = false;
-                el.style.display = 'none';
+                el.style.display = 'none'; //隐藏小球
             }
         }
     }
@@ -358,6 +316,140 @@ Vue.component('page-stores-center', {
         };
     }
 })
+//菜品详情页
+Vue.component('page-food-detail', {
+    template: '#page-food-detail',
+    data: function() {
+        return {
+            count: 0,//单个商品添加的数量
+            totalCount:0,//购物车添加商品的数量
+            totalPrice:0,//购物车总价格
+            deliveryPrice:5,//配送费
+            minPrice:20,//起送金额
+            pricePer:8,//商品单价
+            balls: [
+                {
+                    show: false
+                },
+                {
+                    show: false
+                },
+                {
+                    show: false
+                },
+                {
+                    show: false
+                },
+                {
+                    show: false
+                }
+            ],//balls数组来代表五个小球
+            dropBalls: [],//dropBalls数组正在运行的小球
+            fold: true,//
+            funMore:false,//是否显示更多功能
+            actiShow:false,//是否显示活动
+            actiNum:4,//商家活动个数
+            isPanel:false//是否显示大图
+        };
+    },
+    computed: {
+        payDesc:function() {
+            if (this.totalPrice === 0) {
+                return `￥${this.minPrice}元起送`;
+            } else if (this.totalPrice < this.minPrice) {
+                let diff = this.minPrice - this.totalPrice;
+                return `还差￥${diff}元起送`;
+            } else {
+                return '去结算';
+            }
+        },
+        payClass:function() {
+            if (this.totalPrice < this.minPrice) {
+                return 'not-enough';
+            } else {
+                return 'enough';
+            }
+        }
+    },
+    methods: {
+        //增加菜品
+        addCart:function(event) {
+            this.count++;
+            this.totalCount++;
+            this.totalPrice=this.pricePer*this.totalCount;
+            // this.$emit('add', event.target);
+        },
+        //减少菜品
+        reduceCart:function(event) {
+            if (this.count) {
+                this.count--;
+                this.totalCount--;
+                this.totalPrice=this.pricePer*this.totalCount;
+            }
+        },
+        //判断是否可以去支付
+        pay:function() {
+            if (this.totalPrice < this.minPrice) {
+                return;
+            }
+            window.alert(`支付${this.totalPrice}元`);
+        },
+        //关于购物车小球飞出的动画
+        drop:function(el) {
+            //触发一次事件就会将所有小球进行遍历
+            for (let i = 0; i < this.balls.length; i++) {
+                let ball = this.balls[i];
+                if (!ball.show) { //将false的小球放到dropBalls
+                    ball.show = true;
+                    ball.el = el; //设置小球的el属性为一个dom对象
+                    this.dropBalls.push(ball);
+                    return;
+                }
+            }
+        },
+
+        beforeEnter:function(el){ //这个方法的执行是因为这是一个vue的监听事件
+            let count = this.balls.length;
+            while (count--) {
+                let ball = this.balls[count];
+                if (ball.show) {
+                    let rect = ball.el.getBoundingClientRect(); //获取小球的相对于视口的位移(小球高度)
+                    let x = rect.left - 32;
+                    let y = -(window.innerHeight - rect.top - 22); //负数,因为是从左上角往下的的方向
+                    el.style.display = ''; //清空display
+                    el.style.webkitTransform = `translate3d(0,${y}px,0)`;
+                    el.style.transform = `translate3d(0,${y}px,0)`;
+                    //处理内层动画
+                    let inner = el.getElementsByClassName('inner-hook')[0]; //使用inner-hook类来单纯被js操作
+                    inner.style.webkitTransform = `translate3d(${x}px,0,0)`;
+                    inner.style.transform = `translate3d(${x}px,0,0)`;
+                }
+            }
+        },
+
+        enter:function(el, done) { //这个方法的执行是因为这是一个vue的监听事件
+            /* eslint-disable no-unused-vars */
+            let rf = el.offsetHeight; //触发重绘html
+            this.$nextTick(() => { //让动画效果异步执行,提高性能
+                el.style.webkitTransform = 'translate3d(0,0,0)';
+                el.style.transform = 'translate3d(0,0,0)';
+                //处理内层动画
+                let inner = el.getElementsByClassName('inner-hook')[0]; //使用inner-hook类来单纯被js操作
+                inner.style.webkitTransform = 'translate3d(0,0,0)';
+                inner.style.transform = 'translate3d(0,0,0)';
+                el.addEventListener('transitionend', done); //Vue为了知道过渡的完成，必须设置相应的事件监听器。
+            });
+        },
+
+        afterEnter:function(el) { //这个方法的执行是因为这是一个vue的监听事件
+            let ball = this.dropBalls.shift(); //完成一次动画就删除一个dropBalls的小球
+            if (ball) {
+                ball.show = false;
+                el.style.display = 'none'; //隐藏小球
+            }
+        }
+    }
+})
 
 
 
@@ -416,6 +508,11 @@ var app = new Vue({
             //门店中心页路由
             path:'/stores-center/',
             component:'page-stores-center'
+        },
+        {
+            //菜品详情页路由
+            path:'/food-detail/',
+            component:'page-food-detail'
         }
         ]
     }

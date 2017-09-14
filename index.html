@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/framework7.ios.min.css">
   <link rel="stylesheet" href="css/framework7.material.colors.min.css">
   <link rel="stylesheet" href="css/main.css">
-
+  <link rel="stylesheet" href="css/food-detail.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/framework7.min.js"></script>
   <script src="js/vue.min.js"></script>
@@ -34,7 +34,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-home toolbar-through></page-home>
+        <page-food-detail toolbar-through></page-food-detail>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -401,7 +401,7 @@
               <strong>热销</strong>
               <span>大家喜欢吃，才是真的好吃</span>
             </dt>
-            <dd>
+            <dd  @click.stop.prevent="panelShow">
               <div>
                 <img src="images/menu_foodimage.png"><div>
                   <h2>椒香鸡腿</h2>
@@ -868,7 +868,7 @@
       </div>
       <div class="dish-bottom">
         <div class="shopcart">
-          <div class="content" @click="toggleList">
+          <div class="content">
             <div class="content-left">
               <div class="logo-wrapper" :class="{'highlight':totalCount>0}">
                   <div class="num" v-show="totalCount>0" :class="{'double':totalCount>9}">{{totalCount}}</div>
@@ -884,16 +884,40 @@
               </a>
             </div>
           </div>
-          <!--<div class="ball-container">-->
-            <!--<div v-for="ball in balls">-->
-              <!--<transition name="drop" @before-enter="beforeDrop" @enter="dropping" @after-enter="afterDrop">-->
-                <!--<div class="ball" v-show="ball.show">-->
-                  <!--<div class="inner inner-hook"></div>-->
-                <!--</div>-->
-              <!--</transition>-->
-            <!--</div>-->
-          <!--</div>-->
+          <div class="ball-container">
+            <transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">
+              <div class="ball" v-show="ball.show">
+                <div class="inner inner-hook"></div>
+              </div>
+            </transition>
+          </div>
         </div>
+      </div>
+      <div class="food-panel" v-show="isPanel">
+        <div>
+          <f7-link :href="/food-detail/">
+            <div>
+              <img src="images/menu_bigimage.png">
+            </div><div>
+            <h2>蜜汁叉烧肉</h2>
+            <h3>酥脆金黄，层次鲜明，前所未尝的鸡排香脆度，让舌头也恋爱</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <p><span class="recommend">老板推荐</span>
+              <!--<span class="surplus">剩8份</span>-->
+            </p>
+            <div>
+              <strong>8</strong>
+              <a href="javascript:;" @click.stop.prevent="addCart" v-show="count==0">加入购物车</a>
+              <div v-show="count>0">
+                <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
+                <span v-show="count>0">{{count}}</span>
+                <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
+              </div>
+            </div>
+          </div>
+          </f7-link>
+        </div>
+        <div @click.stop.prevent="panelClose"></div>
       </div>
     </div>
   </f7-page>
@@ -1264,8 +1288,8 @@
           </ul>
         </div>
       </div>
-      <div class="shopping-cart"></div>
     </div>
+    <div class="shopping-cart" ref="move"></div>
     <com-toolbar :active="active" :class="{'over-index':overActive}"></com-toolbar>
   </f7-page>
 </template>
@@ -1284,6 +1308,65 @@
   <f7-page navbar-through  name="stores-center">
     <p>哈哈哈，这是门店中心页</p>
     <sto-toolbar :active="active"></sto-toolbar>
+  </f7-page>
+</template>
+
+
+<!--菜品详情页-->
+<template id="page-food-detail">
+  <f7-page navbar-through  name="food-detail">
+    <div class="food-detail-content">
+      <div class="dish-bottom">
+        <div class="shopcart">
+          <div class="content">
+            <div class="content-left">
+              <div class="logo-wrapper" :class="{'highlight':totalCount>0}">
+                <div class="num" v-show="totalCount>0" :class="{'double':totalCount>9}">{{totalCount}}</div>
+              </div>
+              <div class="price-wrapper">
+                <div class="price">￥{{totalPrice}}</div>
+                <div class="desc">另需配送费￥{{deliveryPrice}}元</div>
+              </div>
+            </div>
+            <div class="content-right" @click="pay">
+              <a class="pay" :class="payClass" :href="totalPrice >= minPrice?'submit':'#'">
+                {{payDesc}}
+              </a>
+            </div>
+          </div>
+          <div class="ball-container">
+            <transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">
+              <div class="ball" v-show="ball.show">
+                <div class="inner inner-hook"></div>
+              </div>
+            </transition>
+          </div>
+        </div>
+      </div>
+      <div class="food-detail-top">
+        <f7-link>
+          <div>
+            <img src="images/menu_bigimage.png">
+          </div><div>
+          <h2>蜜汁叉烧肉</h2>
+          <h3>酥脆金黄，层次鲜明，前所未尝的鸡排香脆度，让舌头也恋爱</h3>
+          <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+          <p><span class="recommend">老板推荐</span>
+            <!--<span class="surplus">剩8份</span>-->
+          </p>
+          <div>
+            <strong>8</strong>
+            <a href="javascript:;" @click.stop.prevent="addCart" v-show="count==0">加入购物车</a>
+            <div v-show="count>0">
+              <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
+              <span v-show="count>0">{{count}}</span>
+              <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
+            </div>
+          </div>
+        </div>
+        </f7-link>
+      </div>
+    </div>
   </f7-page>
 </template>
 

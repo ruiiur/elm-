@@ -1,0 +1,21 @@
+html {
+  font-size: 16px; }
+
+body {
+  margin: 0;
+  background: #f5f5f5 !important; }
+
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p, th, td, img {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.navbar {
+  display: none; }
+
+.page {
+  background: #fff; }
+
+/*# sourceMappingURL=common.css.map */

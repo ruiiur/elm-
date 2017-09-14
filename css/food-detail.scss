@@ -1,0 +1,245 @@
+@import "common";
+.food-detail-content{
+  .dish-bottom {
+    .shopcart {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      z-index: 50;
+      width: 100%;
+      height: toRem(53px);
+      .content {
+        display: flex;
+        background: #505052;
+        font-size: 0;
+        color: #fff;
+        .content-left {
+          flex: 1;
+          .logo-wrapper {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            bottom: toRem(20px);
+            margin: 0 toRem(12px);
+            //padding: 6px;
+            width: toRem(61px);
+            height: toRem(61px);
+            box-sizing: border-box;
+            border-radius: 50%;
+            background: #141d27;
+            background: url('../images/menu_shoppingcart_icon_a.png') no-repeat;
+            background-size: toRem(61px);
+            &.highlight {
+              background: url('../images/menu_shoppingcart_icon_s.png') no-repeat;
+              background-size: toRem(61px);
+            }
+            .num {
+              position: absolute;
+              top: toRem(5px);
+              right: toRem(2px);
+              width: toRem(17px);
+              height: toRem(17px);
+              line-height: toRem(19px);
+              text-align: center;
+              border-radius: 50%;
+              font-size: toRem(11px);
+              font-weight: 700;
+              color: #fff;
+              background: #ff5500;
+              &.double {
+                width: 25px;
+                border-radius: 40%;
+              }
+            }
+          }
+          .price-wrapper {
+            display: inline-block;
+            vertical-align: top;
+            .price {
+              color: #fff;
+              font-size: toRem(19px);
+              line-height: toRem(19px);
+              margin: toRem(10px) 0 toRem(5px) 0;
+            }
+            .desc {
+              color: #fff;
+              font-size: toRem(11px);
+              line-height: toRem(11px);
+            }
+          }
+        }
+        .content-right {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          //width: toRem(116px);
+          height: toRem(53px);
+          .pay {
+            display: inline-block;
+            height: toRem(53px);
+            line-height: toRem(53px);
+            color: #fff;
+            font-size: toRem(16px);
+            background: #535356;
+            text-align: center;
+            padding: 0 toRem(15px);
+            min-width: toRem(86px);
+            &.not-enough {
+              background: #535356;
+              color: #fff;
+            }
+            &.enough {
+              background: $main-color;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .ball-container {
+        .ball {
+          position: fixed;
+          left: 32px;
+          bottom: 22px;
+          z-index: 200;
+          transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+          .inner {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: rgb(0, 160, 220);
+            transition: all 0.4s linear;
+          }
+        }
+      }
+    }
+  }
+  .food-detail-top{
+    >a{
+      display: block;
+      >div{
+        &:nth-child(1){
+          position: relative;
+          >img{
+            width:100%;
+            height:toRem(353px);
+            display: block;
+          }
+          &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height:toRem(100px);
+            background: linear-gradient(transparent,rgba(0,0,0,.3));
+          }
+        }
+        &:nth-child(2){
+          position: relative;
+          padding: toRem(12px) toRem(10px) 0 toRem(20px);
+          height: toRem(102px);
+          box-sizing: border-box;
+          >h2{
+            color:#333;
+            font-size: toRem(15px);
+            line-height: toRem(15px);
+            font-weight: bold;
+            //margin: toRem(4px) 0 toRem(8px) 0;
+          }
+          >h3{
+            position: absolute;
+            color:#fff;
+            font-size: toRem(10px);
+            line-height: toRem(15px);
+            bottom:toRem(116px);
+            padding-right: toRem(10px);
+          }
+          >h4{
+            color:#666;
+            font-size: toRem(12px);
+            line-height: toRem(12px);
+            margin: toRem(10px) 0 toRem(9px) 0;
+            >span{
+              display: inline-block;
+              &:nth-child(1){
+                margin-right:toRem(6px);
+              }
+            }
+          }
+          >p{
+            line-height: toRem(17px);
+            margin: toRem(6px) 0;
+            .recommend{
+              color:#ff5339;
+              font-size: toRem(9px);
+              border:1px solid #ff7561;
+              border-radius: toRem(1px);
+              padding: toRem(1px) toRem(3px) 0 toRem(3px);
+            }
+            .surplus{
+              color:#0089ff;
+              font-size:toRem(9px);
+              border-radius: toRem(1px);
+              padding: toRem(2px) toRem(5px) toRem(1px) toRem(5px);
+              background: #dbeaff;
+              margin-left: toRem(9px);
+            }
+          }
+          >div{
+            >strong{
+              color:$main-color;
+              font-size: toRem(16px);
+            }
+            >strong:before{
+              font-weight: 400;
+              content: "\A5";
+              font-size: toRem(14px);
+              display: inline-block;
+            }
+            >a{
+              display: inline-block;
+              float: right;
+              color:#fff;
+              font-size: toRem(11px);
+              line-height: toRem(11px);
+              width:toRem(80px);
+              text-align: center;
+              padding: toRem(7px) 0 toRem(6px) 0;
+              background: linear-gradient(to right,#ffa200,$main-color);
+              border-radius: toRem(11px);
+            }
+            >div{
+              display: inline-block;
+              float: right;
+              >a{
+                display: inline-block;
+                vertical-align: top;
+                width:toRem(22px);
+                height:toRem(22px);
+              }
+              .reduce{
+                background: url('../images/menu_subtract.png') no-repeat;
+                background-size: toRem(22px);
+              }
+              .add{
+                background: url('../images/menu_add.png') no-repeat;
+                background-size: toRem(22px);
+              }
+              >span{
+                color:#666;
+                font-size: toRem(14px);
+                display: inline-block;
+                line-height: toRem(14px);
+                margin:toRem(5px) toRem(10px) 0 toRem(10px);
+              }
+            }
+          }
+        }
+      }
+    }
+    background: #fff;
+    height:toRem(470px);
+    width:100%;
+    margin: auto;
+  }
+}
