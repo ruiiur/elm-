@@ -14,12 +14,14 @@ body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p,
 h1, h2, h3, h4, h5, h6{
   font-weight: normal;
 }
+ul{
+  >li{
+    list-style: none;
+  }
+}
 @function toRem($px){
   @return ($px/$default-font-size)*1rem;
 }
 .navbar {
   display: none;
-}
-.page{
-  background: #fff;
 }

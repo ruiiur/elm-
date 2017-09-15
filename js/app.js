@@ -106,7 +106,30 @@ Vue.component('page-dish', {
             funMore:false,//是否显示更多功能
             actiShow:false,//是否显示活动
             actiNum:4,//商家活动个数
-            isPanel:false//是否显示大图
+            isPanel:false,//是否显示大图
+            types:[
+                {
+                    typeText:'香辣味'
+                },
+                {
+                    typeText:'甜味'
+                },
+                {
+                    typeText:'咖喱味'
+                },
+                {
+                    typeText:'甜辣香味'
+                },
+                {
+                    typeText:'甜味甜味甜'
+                },
+                {
+                    typeText:'甜味甜味甜味'
+                },
+                {
+                    typeText:'甜味甜味甜味甜'
+                }
+            ]
         };
     },
     //实时计算
@@ -182,6 +205,22 @@ Vue.component('page-dish', {
         //关闭大图
         panelClose:function(){
             this.isPanel=!this.isPanel;
+        },
+        //计算产品规格的字数
+        typeC:function(type){
+            console.log(type.typeText.length);
+            if(type.typeText.length=='2'||type.typeText.length=='1' ||type.typeText.length=='3'){
+                return 'type-short';
+            }
+            else if(type.typeText.length=='4'){
+                return 'type-four';
+            }
+            else if(type.typeText.length=='5'){
+                return 'type-five';
+            }
+            else{
+                return 'type-more';
+            }
         },
         //关于购物车小球飞出的动画
         drop:function(el) {
@@ -349,7 +388,7 @@ Vue.component('page-food-detail', {
             funMore:false,//是否显示更多功能
             actiShow:false,//是否显示活动
             actiNum:4,//商家活动个数
-            isPanel:false//是否显示大图
+            isPanel:false,//是否显示大图
         };
     },
     computed: {
@@ -393,6 +432,14 @@ Vue.component('page-food-detail', {
                 return;
             }
             window.alert(`支付${this.totalPrice}元`);
+        },
+        //显示大图
+        panelShow:function(){
+            this.isPanel=!this.isPanel;
+        },
+        //关闭大图
+        panelClose:function(){
+            this.isPanel=!this.isPanel;
         },
         //关于购物车小球飞出的动画
         drop:function(el) {

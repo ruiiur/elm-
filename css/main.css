@@ -12,6 +12,9 @@ body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, form, input, textarea, p,
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal; }
 
+ul > li {
+  list-style: none; }
+
 .navbar {
   display: none; }
 
@@ -1355,6 +1358,131 @@ h1, h2, h3, h4, h5, h6 {
       top: 0;
       left: 0;
       z-index: 1000; }
+.dish-content .food-specification {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  text-align: center; }
+  .dish-content .food-specification:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .dish-content .food-specification > div:nth-child(1) {
+    display: inline-block;
+    width: 21.875rem;
+    vertical-align: middle;
+    margin: auto;
+    background: #fff;
+    position: relative;
+    z-index: 1001;
+    border-radius: 0.3125rem; }
+    .dish-content .food-specification > div:nth-child(1) > h2 {
+      font-size: 0.9375rem;
+      color: #333;
+      margin: 1.5rem 0 2.125rem 0;
+      font-weight: bold;
+      line-height: 0.9375rem; }
+    .dish-content .food-specification > div:nth-child(1) > a {
+      position: absolute;
+      right: 1.125rem;
+      top: 1rem;
+      display: inline-block;
+      background: url("../images/menu_speci close_icon.png") no-repeat;
+      background-size: 1rem;
+      width: 1rem;
+      height: 1rem; }
+    .dish-content .food-specification > div:nth-child(1) > p {
+      color: #333;
+      font-size: 0.75rem;
+      text-align: left;
+      padding-left: 0.875rem;
+      line-height: 0.75rem; }
+    .dish-content .food-specification > div:nth-child(1) .specification-type {
+      text-align: left;
+      margin: 0.8125rem 2rem 1.375rem 2rem; }
+      .dish-content .food-specification > div:nth-child(1) .specification-type > a {
+        color: #999;
+        text-align: center;
+        font-size: 0.75rem;
+        display: inline-block;
+        line-height: 1.9375rem;
+        background: #f5f5f5;
+        border-radius: 0.125rem;
+        height: 1.875rem;
+        margin: 0 0.625rem 0.5rem 0; }
+        .dish-content .food-specification > div:nth-child(1) .specification-type > a.active {
+          color: #ff8800;
+          background: #fff0de; }
+        .dish-content .food-specification > div:nth-child(1) .specification-type > a.type-short {
+          width: 4.6875rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-type > a.type-four {
+          width: 5.0625rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-type > a.type-five {
+          width: 5.5625rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-type > a.type-more {
+          padding: 0 0.6875rem; }
+    .dish-content .food-specification > div:nth-child(1) .specification-bottom {
+      background: #fbfbfb;
+      border-radius: 0 0 0.3125rem 0.3125rem;
+      height: 3.5rem;
+      text-align: left;
+      padding: 1.0625rem 0.625rem 1.125rem 1.25rem;
+      box-sizing: border-box; }
+      .dish-content .food-specification > div:nth-child(1) .specification-bottom > strong {
+        color: #ff8800;
+        font-size: 1rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-bottom > strong > span {
+          font-size: 0.6875rem;
+          color: #333;
+          margin-left: 0.625rem; }
+      .dish-content .food-specification > div:nth-child(1) .specification-bottom > strong:before {
+        font-weight: 400;
+        content: "\A5";
+        font-size: 0.625rem;
+        display: inline-block; }
+      .dish-content .food-specification > div:nth-child(1) .specification-bottom > a {
+        display: inline-block;
+        float: right;
+        color: #fff;
+        font-size: 0.6875rem;
+        line-height: 0.6875rem;
+        width: 5rem;
+        text-align: center;
+        padding: 0.4375rem 0 0.375rem 0;
+        background: linear-gradient(to right, #ffa200, #ff8800);
+        border-radius: 0.6875rem; }
+      .dish-content .food-specification > div:nth-child(1) .specification-bottom > div {
+        display: inline-block;
+        float: right; }
+        .dish-content .food-specification > div:nth-child(1) .specification-bottom > div > a {
+          display: inline-block;
+          vertical-align: top;
+          width: 1.375rem;
+          height: 1.375rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-bottom > div .reduce {
+          background: url("../images/menu_subtract.png") no-repeat;
+          background-size: 1.375rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-bottom > div .add {
+          background: url("../images/menu_add.png") no-repeat;
+          background-size: 1.375rem; }
+        .dish-content .food-specification > div:nth-child(1) .specification-bottom > div > span {
+          color: #666;
+          font-size: 0.875rem;
+          display: inline-block;
+          line-height: 0.875rem;
+          margin: 0.3125rem 0.625rem 0 0.625rem; }
+  .dish-content .food-specification > div:nth-child(2) {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: 1000; }
 
 .submit-content .user-information {
   height: 5.625rem;

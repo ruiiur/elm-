@@ -1,5 +1,8 @@
 @import "common";
 //tab
+.page{
+  background: #fff;
+}
   .home-tab{
     &.over-index{
       z-index:0;
@@ -1739,6 +1742,159 @@
         top:50%;
         margin-top: toRem(-235px);
         border-radius: toRem(5px);
+      }
+      &:nth-child(2){
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,.5);
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+    }
+  }
+  .food-specification{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    >div{
+      //display: block;
+      &:nth-child(1){
+        display: inline-block;
+        width:toRem(350px);
+        vertical-align: middle;
+        margin: auto;
+        background: #fff;
+        position: relative;
+        z-index: 1001;
+        border-radius: toRem(5px);
+        >h2{
+          font-size: toRem(15px);
+          color:#333;
+          margin: toRem(24px) 0 toRem(34px) 0;
+          font-weight: bold;
+          line-height: toRem(15px);
+        }
+        >a{
+          position: absolute;
+          right:toRem(18px);
+          top:toRem(16px);
+          display: inline-block;
+          background: url('../images/menu_speci close_icon.png') no-repeat;
+          background-size: toRem(16px);
+          width:toRem(16px);
+          height:toRem(16px);
+        }
+        >p{
+          color:#333;
+          font-size: toRem(12px);
+          text-align: left;
+          padding-left: toRem(14px);
+          line-height: toRem(12px);
+        }
+        .specification-type{
+          text-align: left;
+          margin:toRem(13px) toRem(32px) toRem(22px) toRem(32px);
+          >a{
+            color:#999;
+            text-align: center;
+            font-size: toRem(12px);
+            display: inline-block;
+            line-height: toRem(31px);
+            background: #f5f5f5;
+            border-radius: toRem(2px);
+            height:toRem(30px);
+            margin:0 toRem(10px) toRem(8px) 0;
+            &.active{
+              color:$main-color;
+              background: #fff0de;
+            }
+            &.type-short{
+              width:toRem(75px);
+            }
+            &.type-four{
+              width:toRem(81px);
+            }
+            &.type-five{
+              width:toRem(89px);
+            }
+            &.type-more{
+              padding: 0 toRem(11px);
+            }
+          }
+        }
+        .specification-bottom{
+          background: #fbfbfb;
+          border-radius: 0  0 toRem(5px) toRem(5px);
+          height:toRem(56px);
+          text-align: left;
+          //line-height: toRem(56px);
+          padding: toRem(17px) toRem(10px) toRem(18px) toRem(20px);
+          box-sizing: border-box;
+          >strong{
+            color:$main-color;
+            font-size: toRem(16px);
+            >span{
+              font-size: toRem(11px);
+              color:#333;
+              margin-left: toRem(10px);
+            }
+          }
+          >strong:before{
+            font-weight: 400;
+            content: "\A5";
+            font-size: toRem(10px);
+            display: inline-block;
+          }
+          >a{
+            display: inline-block;
+            float: right;
+            color:#fff;
+            font-size: toRem(11px);
+            line-height: toRem(11px);
+            width:toRem(80px);
+            text-align: center;
+            padding: toRem(7px) 0 toRem(6px) 0;
+            background: linear-gradient(to right,#ffa200,$main-color);
+            border-radius: toRem(11px);
+          }
+          >div{
+            display: inline-block;
+            float: right;
+            >a{
+              display: inline-block;
+              vertical-align: top;
+              width:toRem(22px);
+              height:toRem(22px);
+            }
+            .reduce{
+              background: url('../images/menu_subtract.png') no-repeat;
+              background-size: toRem(22px);
+            }
+            .add{
+              background: url('../images/menu_add.png') no-repeat;
+              background-size: toRem(22px);
+            }
+            >span{
+              color:#666;
+              font-size: toRem(14px);
+              display: inline-block;
+              line-height: toRem(14px);
+              margin:toRem(5px) toRem(10px) 0 toRem(10px);
+            }
+          }
+        }
       }
       &:nth-child(2){
         position: fixed;

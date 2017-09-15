@@ -1,5 +1,10 @@
 @import "common";
 .food-detail-content{
+  background: #f5f5f5;
+  height:100%;
+  overflow: scroll;
+  padding-bottom: toRem(53px);
+  box-sizing: border-box;
   .dish-bottom {
     .shopcart {
       position: fixed;
@@ -112,8 +117,33 @@
         }
       }
     }
+    .discounts{
+      background:#fcf5c6;
+      opacity: .8;
+      position: fixed;
+      left: 0;
+      bottom: toRem(53px);
+      z-index: 49;
+      width: 100%;
+      height:toRem(28px);
+    }
+    >p{
+      position: fixed;
+      text-align: center;
+      left: 0;
+      bottom: toRem(60px);
+      z-index: 50;
+      width: 100%;
+      font-size: toRem(11px);
+      color:#333;
+      line-height: toRem(11px);
+      >span{
+        color:#ff5339;
+      }
+    }
   }
   .food-detail-top{
+    background: #fff;
     >a{
       display: block;
       >div{
@@ -121,7 +151,7 @@
           position: relative;
           >img{
             width:100%;
-            height:toRem(353px);
+            height:toRem(350px);
             display: block;
           }
           &:before{
@@ -136,8 +166,8 @@
         }
         &:nth-child(2){
           position: relative;
-          padding: toRem(12px) toRem(10px) 0 toRem(20px);
-          height: toRem(102px);
+          padding: toRem(14px) toRem(15px) toRem(11px) toRem(20px);
+          height: toRem(118px);
           box-sizing: border-box;
           >h2{
             color:#333;
@@ -151,7 +181,7 @@
             color:#fff;
             font-size: toRem(10px);
             line-height: toRem(15px);
-            bottom:toRem(116px);
+            bottom:toRem(132px);
             padding-right: toRem(10px);
           }
           >h4{
@@ -241,5 +271,352 @@
     height:toRem(470px);
     width:100%;
     margin: auto;
+  }
+  .food-detail-appraise{
+    background: #fff;
+    margin: toRem(12px) 0;
+    >h2{
+      padding: toRem(16px) toRem(15px) toRem(14px) toRem(5px);
+      margin-left: toRem(15px);
+      color:#333;
+      font-size: toRem(15px);
+      line-height: toRem(15px);
+      border-bottom: 1px solid #eee;
+      >span{
+        font-size: toRem(13px);
+      }
+      >a{
+        display: inline-block;
+        float: right;
+        color:#999;
+        font-size: toRem(13px);
+        >i{
+          display: inline-block;
+          vertical-align: top;
+          width:toRem(8px);
+          height:toRem(13px);
+          margin-top: toRem(1px);
+          background: url('../images/order detail_store_arrow.png') no-repeat left top;
+          background-size: toRem(16px) toRem(13px);
+          margin-left: toRem(6px);
+        }
+      }
+    }
+    >ul{
+      margin-left: toRem(15px);
+      >li{
+        padding: toRem(14px) 0 toRem(17px) 0;
+        border-bottom: 1px solid #eee;
+        >img{
+          display: inline-block;
+          vertical-align: top;
+          width:toRem(32px);
+          height:toRem(32px);
+          margin-right: toRem(6px);
+        }
+        >div{
+          display:inline-block;
+          margin-top: toRem(2px);
+          >h3{
+            font-size: toRem(12px);
+            color:#333;
+            line-height: toRem(12px);
+            >span{
+              color:#999;
+              font-size: toRem(11px);
+              margin-left: toRem(11px);
+            }
+          }
+          >h4{
+            color:#666;
+            font-size: toRem(11px);
+            margin: toRem(10px) 0 toRem(18px) 0;
+            line-height: toRem(11px);
+            >img{
+              display: inline-block;
+              width:toRem(11px);
+              height:toRem(11px);
+              margin: 0 toRem(4px) 0 toRem(6px);
+            }
+            >span{
+              color:#ffc233;
+              font-size: toRem(11px);
+            }
+          }
+          >p{
+            color:#666;
+            font-size: toRem(12px);
+            line-height: toRem(12px);
+          }
+        }
+      }
+    }
+    >a{
+      display:block ;
+      padding: toRem(16px) 0;
+      text-align: center;
+      color:#999;
+      font-size: toRem(12px);
+      >i{
+        display: inline-block;
+        vertical-align: top;
+        width:toRem(8px);
+        height:toRem(13px);
+        margin-top: toRem(1px);
+        background: url('../images/order detail_store_arrow.png') no-repeat left top;
+        background-size: toRem(16px) toRem(13px);
+        margin-left: toRem(6px);
+      }
+    }
+  }
+  .food-detail-recommend{
+    >p{
+      background: #fff;
+      color:#333;
+      font-size: toRem(14px);
+      padding: toRem(16px) 0 toRem(14px) toRem(15px);
+      line-height: toRem(14px);
+      margin-bottom: toRem(2px);
+    }
+    >div{
+      background: #f5f5f5;
+       >a{
+         display: inline-block;
+         vertical-align: top;
+        background: #fff;
+        width:toRem(205px);
+         margin-bottom: toRem(2px);
+          >div{
+            display: block;
+            &:nth-child(1){
+              >img{
+                display: block;
+                width:toRem(205px);
+                height:toRem(205px);
+              }
+            }
+            &:nth-child(2){
+              position: relative;
+              padding: toRem(12px) toRem(10px) toRem(16px) toRem(11px);
+              height:toRem(88px);
+              box-sizing: border-box;
+              >h2{
+                color:#333;
+                font-size: toRem(13px);
+                line-height: toRem(13px);
+                font-weight: bold;
+                margin-bottom:toRem(7px);
+              }
+              >p{
+                line-height: toRem(17px);
+                .recommend{
+                  color:#ff5339;
+                  font-size: toRem(9px);
+                  border:1px solid #ff7561;
+                  border-radius: toRem(1px);
+                  padding: toRem(1px) toRem(3px) 0 toRem(3px);
+                }
+              }
+              >strong{
+                position: absolute;
+                bottom: toRem(14px);
+                color:$main-color;
+                font-size: toRem(16px);
+                line-height: toRem(16px);
+              }
+              >strong:before{
+                font-weight: 400;
+                content: "\A5";
+                font-size: toRem(10px);
+                display: inline-block;
+              }
+              >div{
+                position: absolute;
+                bottom: toRem(16px);
+                display: inline-block;
+                right: toRem(10px);
+                >a{
+                  display: inline-block;
+                  vertical-align: top;
+                  width:toRem(22px);
+                  height:toRem(22px);
+                }
+                .reduce{
+                  background: url('../images/menu_subtract.png') no-repeat;
+                  background-size: toRem(22px);
+                }
+                .add{
+                  background: url('../images/menu_add.png') no-repeat;
+                  background-size: toRem(22px);
+                }
+                >span{
+                  color:#666;
+                  font-size: toRem(14px);
+                  display: inline-block;
+                  line-height: toRem(14px);
+                  margin:toRem(5px) toRem(10px) 0 toRem(10px);
+                }
+              }
+            }
+          }
+         &:nth-child(odd){
+           margin-right:toRem(4px);
+         }
+      }
+    }
+  }
+  .food-panel{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    >div{
+      display: block;
+      &:nth-child(1){
+        >a{
+          display: block;
+          >div{
+            &:nth-child(1){
+              position: relative;
+              >img{
+                width:toRem(353px);
+                height:toRem(353px);
+                display: block;
+              }
+              &:before{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height:toRem(100px);
+                background: linear-gradient(transparent,rgba(0,0,0,.3));
+              }
+            }
+            &:nth-child(2){
+              position: relative;
+              padding: toRem(12px) toRem(10px) 0 toRem(20px);
+              height: toRem(102px);
+              box-sizing: border-box;
+              >h2{
+                color:#333;
+                font-size: toRem(15px);
+                line-height: toRem(15px);
+                font-weight: bold;
+                //margin: toRem(4px) 0 toRem(8px) 0;
+              }
+              >h3{
+                position: absolute;
+                color:#fff;
+                font-size: toRem(10px);
+                line-height: toRem(15px);
+                bottom:toRem(116px);
+                padding-right: toRem(10px);
+              }
+              >h4{
+                color:#666;
+                font-size: toRem(12px);
+                line-height: toRem(12px);
+                margin: toRem(10px) 0 toRem(9px) 0;
+                >span{
+                  display: inline-block;
+                  &:nth-child(1){
+                    margin-right:toRem(6px);
+                  }
+                }
+              }
+              >p{
+                line-height: toRem(17px);
+                margin: toRem(6px) 0;
+                .recommend{
+                  color:#ff5339;
+                  font-size: toRem(9px);
+                  border:1px solid #ff7561;
+                  border-radius: toRem(1px);
+                  padding: toRem(1px) toRem(3px) 0 toRem(3px);
+                }
+                .surplus{
+                  color:#0089ff;
+                  font-size:toRem(9px);
+                  border-radius: toRem(1px);
+                  padding: toRem(2px) toRem(5px) toRem(1px) toRem(5px);
+                  background: #dbeaff;
+                  margin-left: toRem(9px);
+                }
+              }
+              >div{
+                >strong{
+                  color:$main-color;
+                  font-size: toRem(16px);
+                }
+                >strong:before{
+                  font-weight: 400;
+                  content: "\A5";
+                  font-size: toRem(14px);
+                  display: inline-block;
+                }
+                >a{
+                  display: inline-block;
+                  float: right;
+                  color:#fff;
+                  font-size: toRem(11px);
+                  line-height: toRem(11px);
+                  width:toRem(80px);
+                  text-align: center;
+                  padding: toRem(7px) 0 toRem(6px) 0;
+                  background: linear-gradient(to right,#ffa200,$main-color);
+                  border-radius: toRem(11px);
+                }
+                >div{
+                  display: inline-block;
+                  float: right;
+                  >a{
+                    display: inline-block;
+                    vertical-align: top;
+                    width:toRem(22px);
+                    height:toRem(22px);
+                  }
+                  .reduce{
+                    background: url('../images/menu_subtract.png') no-repeat;
+                    background-size: toRem(22px);
+                  }
+                  .add{
+                    background: url('../images/menu_add.png') no-repeat;
+                    background-size: toRem(22px);
+                  }
+                  >span{
+                    color:#666;
+                    font-size: toRem(14px);
+                    display: inline-block;
+                    line-height: toRem(14px);
+                    margin:toRem(5px) toRem(10px) 0 toRem(10px);
+                  }
+                }
+              }
+            }
+          }
+        }
+        background: #fff;
+        height:toRem(470px);
+        width:toRem(353px);
+        margin: auto;
+        position: relative;
+        z-index: 1001;
+        top:50%;
+        margin-top: toRem(-235px);
+        border-radius: toRem(5px);
+      }
+      &:nth-child(2){
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,.5);
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+    }
   }
 }
