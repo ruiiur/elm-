@@ -960,6 +960,7 @@
           }
         }
         &:nth-child(3){
+          position: relative;
           >a{
             &:nth-child(1){
               background: url('../images/service_selected_icon.png') no-repeat center top;
@@ -971,6 +972,27 @@
             }
             &:nth-child(3){
               background: url('../images/service_center_icon.png') no-repeat center top;
+              background-size: toRem(19px);
+            }
+            &:nth-child(4){
+              background: url('../images/service_setupi_icon.png') no-repeat center top;
+              background-size: toRem(19px);
+            }
+          }
+          >span{
+            display: inline-block;
+            margin-left: toRem(15px);
+            width:calc(100% - #{toRem(15px)});
+            height:toRem(1px);
+            background: #eee;
+            position: absolute;
+            bottom: 0;
+          }
+        }
+        &:nth-child(4){
+          >a{
+            &:nth-child(1){
+              background: url('../images/service_notice_icon.png') no-repeat center top;
               background-size: toRem(19px);
             }
           }
@@ -1129,43 +1151,54 @@
                 padding: toRem(8px) 0;
                 border-bottom: 1px solid #4b4b4b;
                 line-height: toRem(17px);
-                >i{
-                  width:toRem(17px);
-                  height:toRem(17px);
+                >a{
                   display: inline-block;
-                  vertical-align: middle;
-                  margin-right: toRem(10px);
+                  >i{
+                    width:toRem(17px);
+                    height:toRem(17px);
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-right: toRem(10px);
+                  }
+                  >span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    color:#fff;
+                    font-size: toRem(12px);
+                    line-height: toRem(12px);
+                  }
                 }
-                >span{
-                  display: inline-block;
-                  vertical-align: middle;
-                  color:#fff;
-                   font-size: toRem(12px);
-                  line-height: toRem(12px);
-                                 }
                 &:nth-child(1){
                   padding-top: toRem(12px);
-                  >i{
-                    background: url('../images/common_more_icon.png') no-repeat;
-                    background-size: toRem(17px) toRem(68px);
+                  >a{
+                    >i{
+                      background: url('../images/common_more_icon.png') no-repeat;
+                      background-size: toRem(17px) toRem(68px);
+                    }
                   }
                 }
                 &:nth-child(2){
-                  >i{
-                    background: url('../images/common_more_icon.png') no-repeat 0 toRem(-17px);
-                    background-size: toRem(17px) toRem(68px);
+                  >a{
+                    >i{
+                      background: url('../images/common_more_icon.png') no-repeat 0 toRem(-17px);
+                      background-size: toRem(17px) toRem(68px);
+                    }
                   }
                 }
                 &:nth-child(3){
-                  >i{
-                    background: url('../images/common_more_icon.png') no-repeat 0 toRem(-34px);
-                    background-size: toRem(17px) toRem(68px);
+                  >a{
+                    >i{
+                      background: url('../images/common_more_icon.png') no-repeat 0 toRem(-34px);
+                      background-size: toRem(17px) toRem(68px);
+                    }
                   }
                 }
                 &:nth-child(4){
-                  >i{
-                    background: url('../images/common_more_icon.png') no-repeat 0 toRem(-51px);
-                    background-size: toRem(17px) toRem(68px);
+                  >a{
+                    >i{
+                      background: url('../images/common_more_icon.png') no-repeat 0 toRem(-51px);
+                      background-size: toRem(17px) toRem(68px);
+                    }
                   }
                 }
                 &:last-child{
@@ -1845,10 +1878,13 @@
           >strong{
             color:$main-color;
             font-size: toRem(16px);
+            //line-height: toRem(16px);
             >span{
               font-size: toRem(11px);
+              display: inline-block;
+              vertical-align: top;
               color:#333;
-              margin-left: toRem(10px);
+              margin:toRem(3px) 0 0 toRem(8px);
             }
           }
           >strong:before{

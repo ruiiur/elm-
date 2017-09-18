@@ -753,14 +753,30 @@ ul > li {
           background: #eee;
           position: absolute;
           bottom: 0; }
-      .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(1) {
-        background: url("../images/service_selected_icon.png") no-repeat center top;
-        background-size: 1.1875rem; }
-      .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(2) {
-        background: url("../images/service_freeflow_icon.png") no-repeat center top;
-        background-size: 1.1875rem; }
-      .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(3) {
-        background: url("../images/service_center_icon.png") no-repeat center top;
+      .center-content > div:nth-child(3) > div:nth-child(3) {
+        position: relative; }
+        .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(1) {
+          background: url("../images/service_selected_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(2) {
+          background: url("../images/service_freeflow_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(3) {
+          background: url("../images/service_center_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(3) > a:nth-child(4) {
+          background: url("../images/service_setupi_icon.png") no-repeat center top;
+          background-size: 1.1875rem; }
+        .center-content > div:nth-child(3) > div:nth-child(3) > span {
+          display: inline-block;
+          margin-left: 0.9375rem;
+          width: calc(100% - 0.9375rem);
+          height: 0.0625rem;
+          background: #eee;
+          position: absolute;
+          bottom: 0; }
+      .center-content > div:nth-child(3) > div:nth-child(4) > a:nth-child(1) {
+        background: url("../images/service_notice_icon.png") no-repeat center top;
         background-size: 1.1875rem; }
   .center-content ul {
     height: 5rem;
@@ -878,30 +894,32 @@ ul > li {
             padding: 0.5rem 0;
             border-bottom: 1px solid #4b4b4b;
             line-height: 1.0625rem; }
-            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li > i {
-              width: 1.0625rem;
-              height: 1.0625rem;
-              display: inline-block;
-              vertical-align: middle;
-              margin-right: 0.625rem; }
-            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li > span {
-              display: inline-block;
-              vertical-align: middle;
-              color: #fff;
-              font-size: 0.75rem;
-              line-height: 0.75rem; }
+            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li > a {
+              display: inline-block; }
+              .dish-content .shop-content > div > div:nth-child(2) > div > ul > li > a > i {
+                width: 1.0625rem;
+                height: 1.0625rem;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 0.625rem; }
+              .dish-content .shop-content > div > div:nth-child(2) > div > ul > li > a > span {
+                display: inline-block;
+                vertical-align: middle;
+                color: #fff;
+                font-size: 0.75rem;
+                line-height: 0.75rem; }
             .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(1) {
               padding-top: 0.75rem; }
-              .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(1) > i {
+              .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(1) > a > i {
                 background: url("../images/common_more_icon.png") no-repeat;
                 background-size: 1.0625rem 4.25rem; }
-            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(2) > i {
+            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(2) > a > i {
               background: url("../images/common_more_icon.png") no-repeat 0 -1.0625rem;
               background-size: 1.0625rem 4.25rem; }
-            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(3) > i {
+            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(3) > a > i {
               background: url("../images/common_more_icon.png") no-repeat 0 -2.125rem;
               background-size: 1.0625rem 4.25rem; }
-            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(4) > i {
+            .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:nth-child(4) > a > i {
               background: url("../images/common_more_icon.png") no-repeat 0 -3.1875rem;
               background-size: 1.0625rem 4.25rem; }
             .dish-content .shop-content > div > div:nth-child(2) > div > ul > li:last-child {
@@ -1437,8 +1455,10 @@ ul > li {
         font-size: 1rem; }
         .dish-content .food-specification > div:nth-child(1) .specification-bottom > strong > span {
           font-size: 0.6875rem;
+          display: inline-block;
+          vertical-align: top;
           color: #333;
-          margin-left: 0.625rem; }
+          margin: 0.1875rem 0 0 0.5rem; }
       .dish-content .food-specification > div:nth-child(1) .specification-bottom > strong:before {
         font-weight: 400;
         content: "\A5";

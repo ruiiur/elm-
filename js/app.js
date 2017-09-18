@@ -109,27 +109,35 @@ Vue.component('page-dish', {
             isPanel:false,//是否显示大图
             types:[
                 {
-                    typeText:'香辣味'
+                    typeText:'香辣味',
+                    price:28
                 },
                 {
-                    typeText:'甜味'
+                    typeText:'甜味',
+                    price:8
                 },
                 {
-                    typeText:'咖喱味'
+                    typeText:'咖喱味',
+                    price:12
                 },
                 {
-                    typeText:'甜辣香味'
+                    typeText:'甜辣香味',
+                    price:15
                 },
                 {
-                    typeText:'甜味甜味甜'
+                    typeText:'甜味甜味甜',
+                    price:18
                 },
                 {
-                    typeText:'甜味甜味甜味'
+                    typeText:'甜味甜味甜味',
+                    price:20
                 },
                 {
-                    typeText:'甜味甜味甜味甜'
+                    typeText:'甜味甜味甜味甜',
+                    price:28
                 }
-            ]
+            ],//菜品的规格
+            isType:false,//是否显示菜品规格
         };
     },
     //实时计算
@@ -206,9 +214,17 @@ Vue.component('page-dish', {
         panelClose:function(){
             this.isPanel=!this.isPanel;
         },
+        //显示规格
+        typeShow:function(){
+            this.isType=!this.isType;
+        },
+        //关闭规格
+        typeClose:function(){
+            this.isType=!this.isType;
+        },
         //计算产品规格的字数
         typeC:function(type){
-            console.log(type.typeText.length);
+            // console.log(type.typeText.length);
             if(type.typeText.length=='2'||type.typeText.length=='1' ||type.typeText.length=='3'){
                 return 'type-short';
             }
@@ -498,8 +514,281 @@ Vue.component('page-food-detail', {
     }
 })
 
+//店内搜索页
+Vue.component('page-store-search', {
+    template: '#page-store-search',
+    data:function () {
+        return{
+            hotList:[
+                {
+                    hotText:'湘西外婆菜丰盛套餐',
+                },
+                {
+                    hotText:'盛套餐',
+                },
+                {
+                    hotText:'套餐',
+                },
+                {
+                    hotText:'餐',
+                },
+                {
+                    hotText:'湘西外婆菜丰盛套餐',
+                },
+                {
+                    hotText:'湘西外婆菜丰盛套餐',
+                },
+                {
+                    hotText:'甜辣香味湘西外婆菜丰盛套餐',
+                },
+                {
+                    hotText:'湘西外婆菜丰盛套餐',
+                },
+                {
+                    hotText:'甜味湘西外婆菜丰盛套餐甜味甜味',
+                },
+                {
+                    hotText:'湘西外婆菜丰盛套餐味甜',
+                }
+            ],//热门搜索
+            hide:false,
+            count: 0,//单个商品添加的数量
+            totalCount:0,//购物车添加商品的数量
+            totalPrice:0,//购物车总价格
+            deliveryPrice:5,//配送费
+            minPrice:20,//起送金额
+            pricePer:8,//商品单价
+            balls: [
+                {
+                    show: false
+                },
+                {
+                    show: false
+                },
+                {
+                    show: false
+                },
+                {
+                    show: false
+                },
+                {
+                    show: false
+                }
+            ],//balls数组来代表五个小球
+            dropBalls: [],//dropBalls数组正在运行的小球
+            fold: true,//
+            funMore:false,//是否显示更多功能
+            actiShow:false,//是否显示活动
+            actiNum:4,//商家活动个数
+            isPanel:false,//是否显示大图
+            types:[
+                {
+                    typeText:'香辣味',
+                    price:28
+                },
+                {
+                    typeText:'甜味',
+                    price:8
+                },
+                {
+                    typeText:'咖喱味',
+                    price:12
+                },
+                {
+                    typeText:'甜辣香味',
+                    price:15
+                },
+                {
+                    typeText:'甜味甜味甜',
+                    price:18
+                },
+                {
+                    typeText:'甜味甜味甜味',
+                    price:20
+                },
+                {
+                    typeText:'甜味甜味甜味甜',
+                    price:28
+                }
+            ],//菜品的规格
+            isType:false,//是否显示菜品规格
+        }
+    },
+    //实时计算
+    computed: {
+        payDesc:function() {
+            if (this.totalPrice === 0) {
+                return `￥${this.minPrice}元起送`;
+            } else if (this.totalPrice < this.minPrice) {
+                let diff = this.minPrice - this.totalPrice;
+                return `还差￥${diff}元起送`;
+            } else {
+                return '去结算';
+            }
+        },
+        payClass:function() {
+            if (this.totalPrice < this.minPrice) {
+                return 'not-enough';
+            } else {
+                return 'enough';
+            }
+        }
+    },
+    methods: {
+        //更多功能
+        commonMore:function(funMore){
+            this.funMore=!this.funMore;
+        },
+        //是否显示所有活动
+        acti:function(actiShow){
+            this.actiShow=!this.actiShow;
+            //活动收缩时
+            if(this.actiShow==false){
+                //获取类dish-main的top样式值，值单位为px
+                this.$el.querySelector('.dish-main').style.top=219+'px';
+                //把top单位化成rem
+                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/parseFloat(window.docEl.style.fontSize)+'rem';
+                //然后再赋值给top样式值
+                this.$el.querySelector('.dish-main').style.top=aTop;
+            }
+            //活动展开时
+            else{
+                this.$el.querySelector('.dish-main').style.top=219+(this.actiNum-1)*24+'px';
+                let aTop=parseInt(this.$el.querySelector('.dish-main').style.top)/parseFloat(window.docEl.style.fontSize)+'rem';
+                this.$el.querySelector('.dish-main').style.top=aTop;
+            }
+        },
+        //增加菜品
+        addCart:function(event) {
+            this.count++;
+            this.totalCount++;
+            this.totalPrice=this.pricePer*this.totalCount;
+            // this.$emit('add', event.target);
+        },
+        //减少菜品
+        reduceCart:function(event) {
+            if (this.count) {
+                this.count--;
+                this.totalCount--;
+                this.totalPrice=this.pricePer*this.totalCount;
+            }
+        },
+        //判断是否可以去支付
+        pay:function() {
+            if (this.totalPrice < this.minPrice) {
+                return;
+            }
+            window.alert(`支付${this.totalPrice}元`);
+        },
+        //显示大图
+        panelShow:function(){
+            this.isPanel=!this.isPanel;
+        },
+        //关闭大图
+        panelClose:function(){
+            this.isPanel=!this.isPanel;
+        },
+        //显示规格
+        typeShow:function(){
+            this.isType=!this.isType;
+        },
+        //关闭规格
+        typeClose:function(){
+            this.isType=!this.isType;
+        },
+        //计算热门搜索的字数
+        hotC:function(hot){
+            // console.log(type.typeText.length);
+            if(hot.hotText.length=='2'||hot.hotText.length=='1' ||hot.hotText.length=='3'){
+                return 'type-short';
+            }
+            else if(hot.hotText.length=='4'){
+                return 'type-four';
+            }
+            else if(hot.hotText.length=='5'){
+                return 'type-five';
+            }
+            else{
+                return 'type-more';
+            }
+        },
+        //计算产品规格的字数
+        typeC:function(type){
+            // console.log(type.typeText.length);
+            if(type.typeText.length=='2'||type.typeText.length=='1' ||type.typeText.length=='3'){
+                return 'type-short';
+            }
+            else if(type.typeText.length=='4'){
+                return 'type-four';
+            }
+            else if(type.typeText.length=='5'){
+                return 'type-five';
+            }
+            else{
+                return 'type-more';
+            }
+        },
+        //关于购物车小球飞出的动画
+        drop:function(el) {
+            //触发一次事件就会将所有小球进行遍历
+            for (let i = 0; i < this.balls.length; i++) {
+                let ball = this.balls[i];
+                if (!ball.show) { //将false的小球放到dropBalls
+                    ball.show = true;
+                    ball.el = el; //设置小球的el属性为一个dom对象
+                    this.dropBalls.push(ball);
+                    return;
+                }
+            }
+        },
 
+        beforeEnter:function(el){ //这个方法的执行是因为这是一个vue的监听事件
+            let count = this.balls.length;
+            while (count--) {
+                let ball = this.balls[count];
+                if (ball.show) {
+                    let rect = ball.el.getBoundingClientRect(); //获取小球的相对于视口的位移(小球高度)
+                    let x = rect.left - 32;
+                    let y = -(window.innerHeight - rect.top - 22); //负数,因为是从左上角往下的的方向
+                    el.style.display = ''; //清空display
+                    el.style.webkitTransform = `translate3d(0,${y}px,0)`;
+                    el.style.transform = `translate3d(0,${y}px,0)`;
+                    //处理内层动画
+                    let inner = el.getElementsByClassName('inner-hook')[0]; //使用inner-hook类来单纯被js操作
+                    inner.style.webkitTransform = `translate3d(${x}px,0,0)`;
+                    inner.style.transform = `translate3d(${x}px,0,0)`;
+                }
+            }
+        },
 
+        enter:function(el, done) { //这个方法的执行是因为这是一个vue的监听事件
+            /* eslint-disable no-unused-vars */
+            let rf = el.offsetHeight; //触发重绘html
+            this.$nextTick(() => { //让动画效果异步执行,提高性能
+                el.style.webkitTransform = 'translate3d(0,0,0)';
+                el.style.transform = 'translate3d(0,0,0)';
+                //处理内层动画
+                let inner = el.getElementsByClassName('inner-hook')[0]; //使用inner-hook类来单纯被js操作
+                inner.style.webkitTransform = 'translate3d(0,0,0)';
+                inner.style.transform = 'translate3d(0,0,0)';
+                el.addEventListener('transitionend', done); //Vue为了知道过渡的完成，必须设置相应的事件监听器。
+            });
+        },
+
+        afterEnter:function(el) { //这个方法的执行是因为这是一个vue的监听事件
+            let ball = this.dropBalls.shift(); //完成一次动画就删除一个dropBalls的小球
+            if (ball) {
+                ball.show = false;
+                el.style.display = 'none'; //隐藏小球
+            }
+        }
+    }
+})
+
+//服务中心页
+Vue.component('page-service-center', {
+    template: '#page-service-center'
+})
 // Init App
 var app = new Vue({
     el: '#app',
@@ -560,6 +849,16 @@ var app = new Vue({
             //菜品详情页路由
             path:'/food-detail/',
             component:'page-food-detail'
+        },
+        {
+            //店内搜索页路由
+            path:'/store-search/',
+            component:'page-store-search'
+        },
+        {
+            //服务中心页路由
+            path:'/service-center/',
+            component:'page-service-center'
         }
         ]
     }

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/framework7.material.colors.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/food-detail.css">
+  <link rel="stylesheet" href="css/store-search.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/framework7.min.js"></script>
   <script src="js/vue.min.js"></script>
@@ -34,7 +35,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-dish toolbar-through></page-dish>
+        <page-center toolbar-through></page-center>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -343,10 +344,10 @@
             <span></span>
             <div v-show="funMore">
               <ul>
-                <li><i></i><span>店内搜索</span></li>
-                <li><i></i><span>多人拼单</span></li>
-                <li><i></i><span>分享商家</span></li>
-                <li><i></i><span>收藏菜品</span></li>
+                <li><a href="/store-search/"><i></i><span>店内搜索</span></a></li>
+                <li><a href=""><i></i><span>多人拼单</span></a></li>
+                <li><a href=""><i></i><span>分享商家</span></a></li>
+                <li><a href=""><i></i><span>收藏菜品</span></a></li>
               </ul>
             </div>
           </div>
@@ -419,7 +420,7 @@
                 </div>
               </div>
             </dd>
-            <dd>
+            <dd  @click.stop.prevent="typeShow">
               <div>
                 <img src="images/menu_foodimage.png"><div>
                   <h2>椒香鸡腿</h2>
@@ -919,13 +920,14 @@
         </div>
         <div @click.stop.prevent="panelClose"></div>
       </div>
-      <div class="food-specification">
+      <div class="food-specification" v-show="isType">
         <div>
           <h2>密多多特惠套餐</h2>
-          <a href=""></a>
+          <a href="" @click.stop.prevent="typeClose"></a>
           <p>规格：</p>
           <div class="specification-type">
-            <a v-for="type in types" :class="typeC(type)">{{type.typeText}}</a>
+            <!--:class="[index==0?'active':'',typeC(type)]"-->
+            <a v-for="(type,index) in types" :class="[index==0?'active':'',typeC(type)]">{{type.typeText}}</a>
           </div>
           <div class="specification-bottom">
             <strong>8<span>（甜辣味）</span></strong>
@@ -937,7 +939,7 @@
             </div>
           </div>
         </div>
-        <div></div>
+        <div  @click.stop.prevent="typeClose"></div>
       </div>
     </div>
   </f7-page>
@@ -1000,12 +1002,23 @@
               <i></i>
               <p>免费流量</p>
               <span>每月最高500M</span>
-            </a><a href="javascript:;">
+            </a><a href="/service-center/">
               <i></i>
               <p>服务中心</p>
               <span></span>
-            </a>
+            </a><a href="javascript:;">
+            <i></i>
+            <p>设置</p>
+            <span></span>
+          </a>
+          <span></span>
           </div>
+        <div>
+          <a href="javascript:;">
+            <i></i>
+            <p>通知</p>
+          </a>
+        </div>
       </div>
     </div>
     <com-toolbar :active="active"></com-toolbar>
@@ -1497,6 +1510,198 @@
           </f7-link>
         </div>
         <div @click.stop.prevent="panelClose"></div>
+      </div>
+    </div>
+  </f7-page>
+</template>
+
+<!--店内搜索页-->
+<template id="page-store-search">
+  <f7-page navbar-through  name="store-search">
+    <div class="store-search-content">
+      <div>
+        <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+          <div class="searchbar-input">
+            <input type="search" placeholder="搜索店内工资，共96件"><a href="#" class="searchbar-clear"></a>
+          </div><a href="#" class="searchbar-cancel">Cancel</a>
+        </form>
+      </div>
+      <div class="store-hot-search" v-show="hide">
+        <h2>热门搜索</h2>
+        <div>
+          <a v-for="hot in hotList" :class="hotC(hot)">{{hot.hotText}}</a>
+        </div>
+      </div>
+      <ul>
+        <li>
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li  @click.stop.prevent="panelShow">
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
+                <span v-show="count>0">{{count}}</span>
+                <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li  @click.stop.prevent="typeShow">
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+      </ul>
+      <div class="dish-bottom">
+        <div class="shopcart">
+          <div class="content">
+            <div class="content-left">
+              <div class="logo-wrapper" :class="{'highlight':totalCount>0}">
+                <div class="num" v-show="totalCount>0" :class="{'double':totalCount>9}">{{totalCount}}</div>
+              </div>
+              <div class="price-wrapper">
+                <div class="price">￥{{totalPrice}}</div>
+                <div class="desc">另需配送费￥{{deliveryPrice}}元</div>
+              </div>
+            </div>
+            <div class="content-right" @click="pay">
+              <a class="pay" :class="payClass" :href="totalPrice >= minPrice?'submit':'#'">
+                {{payDesc}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="food-panel" v-show="isPanel">
+        <div>
+          <f7-link :href="/food-detail/">
+            <div>
+              <img src="images/menu_bigimage.png">
+            </div><div>
+            <h2>蜜汁叉烧肉</h2>
+            <h3>酥脆金黄，层次鲜明，前所未尝的鸡排香脆度，让舌头也恋爱</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <p><span class="recommend">老板推荐</span>
+              <!--<span class="surplus">剩8份</span>-->
+            </p>
+            <div>
+              <strong>8</strong>
+              <a href="javascript:;" @click.stop.prevent="addCart" v-show="count==0">加入购物车</a>
+              <div v-show="count>0">
+                <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
+                <span v-show="count>0">{{count}}</span>
+                <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
+              </div>
+            </div>
+          </div>
+          </f7-link>
+        </div>
+        <div @click.stop.prevent="panelClose"></div>
+      </div>
+      <div class="food-specification" v-show="isType">
+        <div>
+          <h2>密多多特惠套餐</h2>
+          <a href="" @click.stop.prevent="typeClose"></a>
+          <p>规格：</p>
+          <div class="specification-type">
+            <!--:class="[index==0?'active':'',typeC(type)]"-->
+            <a v-for="(type,index) in types" :class="[index==0?'active':'',typeC(type)]">{{type.typeText}}</a>
+          </div>
+          <div class="specification-bottom">
+            <strong>8<span>（甜辣味）</span></strong>
+            <a href="javascript:;" @click.stop.prevent="addCart" v-show="count==0">加入购物车</a>
+            <div v-show="count>0">
+              <a class="reduce" href="javascript:;" @click.stop.prevent="reduceCart" v-show="count>0"></a>
+              <span v-show="count>0">{{count}}</span>
+              <a class="add" href="javascript:;" @click.stop.prevent="addCart"></a>
+            </div>
+          </div>
+        </div>
+        <div  @click.stop.prevent="typeClose"></div>
+      </div>
+    </div>
+  </f7-page>
+</template>
+
+
+<!--服务中心页-->
+<template id="page-service-center">
+  <f7-page navbar-through  name="service-center">
+    <div class="service-center-content">
+      <div>
+        <a href="">
+          <i></i>
+          <p>在线客服</p>
+        </a><a href="">
+        <i></i>
+        <p>客服热线</p>
+      </a>
+      </div>
+      <div>
+        <h2>热门问题</h2>
+        <ul>
+          <li><a href=""><span>支付问题</span><i></i></a></li>
+          <li><a href=""><span>余额问题</span><i></i></a></li>
+          <li><a href=""><span>红包问题</span><i></i></a></li>
+          <li><a href=""><span>会员问题</span><i></i></a></li>
+          <li><a href=""><span>活动问题</span><i></i></a></li>
+          <li><a href=""><span>积分问题</span><i></i></a></li>
+          <li><a href=""><span>其他问题</span><i></i></a></li>
+        </ul>
       </div>
     </div>
   </f7-page>
