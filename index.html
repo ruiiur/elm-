@@ -15,6 +15,10 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/food-detail.css">
   <link rel="stylesheet" href="css/store-search.css">
+  <link rel="stylesheet" href="css/service-center.css">
+  <link rel="stylesheet" href="css/setting.css">
+  <link rel="stylesheet" href="css/coupon-center.css">
+  <link rel="stylesheet" href="css/shopping-cart.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/framework7.min.js"></script>
   <script src="js/vue.min.js"></script>
@@ -35,7 +39,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-center toolbar-through></page-center>
+        <page-shopping-cart toolbar-through></page-shopping-cart>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -982,10 +986,9 @@
             <i></i>
             <p>我的收藏</p>
             <span></span>
-          </a><a href="javascript:;">
+          </a><a href="/coupon-center/">
             <i></i>
-            <p>推荐有奖</p>
-            <span>5元现金</span>
+            <p>领券中心</p>
           </a><a href="javascript:;">
             <i></i>
             <p>积分商城</p>
@@ -1006,7 +1009,7 @@
               <i></i>
               <p>服务中心</p>
               <span></span>
-            </a><a href="javascript:;">
+            </a><a href="/setting/">
             <i></i>
             <p>设置</p>
             <span></span>
@@ -1322,7 +1325,7 @@
         </div>
       </div>
     </div>
-    <div class="shopping-cart" ref="move"></div>
+    <a class="shopping-cart" ref="move" href="/shopping-cart/"></a>
     <com-toolbar :active="active" :class="{'over-index':overActive}"></com-toolbar>
   </f7-page>
 </template>
@@ -1703,6 +1706,143 @@
           <li><a href=""><span>其他问题</span><i></i></a></li>
         </ul>
       </div>
+    </div>
+  </f7-page>
+</template>
+
+<!--设置---关于点银宝页-->
+<template id="page-setting">
+  <f7-page navbar-through  name="setting">
+    <div class="setting-content">
+      <img src="images/about_dianyinbao.png">
+      <p>微信公众号：点银宝</p>
+      <a href="javascript:;"><span>点银宝协议和说明</span><i></i></a>
+      <p>协购（上海）电子商务有限公司</p>
+    </div>
+  </f7-page>
+</template>
+
+<!--领券中心页-->
+<template id="page-coupon-center">
+  <f7-page navbar-through  name="coupon-center">
+    <div class="coupon-center-content">
+      <div>
+        <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+          <div class="searchbar-input">
+            <input type="search" placeholder="简餐"><a href="#" class="searchbar-clear"></a>
+          </div><a href="#" class="searchbar-cancel">Cancel</a>
+        </form>
+      </div>
+      <div>
+        <p></p>
+        <span>你可能喜欢的店铺优惠券</span>
+      </div>
+      <ul>
+        <li>
+          <div>
+            <a href="">
+              <img src="images/get%20coupon_store.png">
+              <div>
+                <h2>二十五块半（天山西路店）</h2>
+                <p>5元优惠券，满30可用</p>
+              </div>
+            </a>
+            <div :class="{'done':active}" @click.stop.prevent="getCoupon">
+              <strong>5</strong>
+              <span>{{couponText}}</span>
+            </div>
+          </div>
+          <div>
+            <a href=""><img src="images/get%20coupon_food_1.png"></a>
+            <a href=""><img src="images/get%20coupon_food_2.png"></a>
+            <a href=""><img src="images/get%20coupon_food_3.png"></a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="">
+              <img src="images/get%20coupon_store.png">
+              <div>
+                <h2>二十五块半（天山西路店）</h2>
+                <p>5元优惠券，满30可用</p>
+              </div>
+            </a>
+            <div>
+              <strong>5</strong>
+              <span>立即领取</span>
+            </div>
+          </div>
+          <div>
+            <a href=""><img src="images/get%20coupon_food_1.png"></a>
+            <a href=""><img src="images/get%20coupon_food_2.png"></a>
+            <a href=""><img src="images/get%20coupon_food_3.png"></a>
+          </div>
+        </li>
+        <li>
+          <div>
+            <a href="">
+              <img src="images/get%20coupon_store.png">
+              <div>
+                <h2>二十五块半（天山西路店）</h2>
+                <p>5元优惠券，满30可用</p>
+              </div>
+            </a>
+            <div>
+              <strong>5</strong>
+              <span>立即领取</span>
+            </div>
+          </div>
+          <div>
+            <a href=""><img src="images/get%20coupon_food_1.png"></a>
+            <a href=""><img src="images/get%20coupon_food_2.png"></a>
+            <a href=""><img src="images/get%20coupon_food_3.png"></a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </f7-page>
+</template>
+
+
+<!--平台购物车-->
+<template id="page-shopping-cart">
+  <f7-page navbar-through  name="shopping-cart">
+    <div class="shopping-cart-content">
+      <ul>
+        <li>
+          <a href="javascript:;">
+            <i></i><span>二十五块半（天山西路店）</span><em></em><i></i>
+          </a>
+          <ul class="list-block">
+            <li class="swipeout">
+              <a class="swipeout-content item-content">
+                <i></i>
+                <img src="images/shopping%20car_food_1.png">
+                <div>
+                  <h2>椒香鸡腿</h2>
+                  <p>椒香鸡腿 x1<span><em>29</em></span></p>
+                </div>
+              </a>
+              <div class="swipeout-actions-right">
+                <a href="#" class="action1">删除</a>
+              </div>
+            </li>
+            <li class="swipeout">
+              <a class="swipeout-content item-content">
+                <i></i>
+                <img src="images/shopping%20car_food_2.png">
+                <div>
+                  <h2>麻辣香锅闷面+可乐+卤蛋一枚</h2>
+                  <p>麻辣香锅闷面+可乐+卤蛋一枚 x1<span><i>39</i><em>29</em></span></p>
+                </div>
+              </a>
+              <div class="swipeout-actions-right">
+                <a href="#" class="action1">删除</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </f7-page>
 </template>

@@ -46,7 +46,8 @@ ul > li {
     .store-search-content > div:nth-child(1) .searchbar input[type=search] {
       background-image: url("../images/common_search_icon.png");
       -webkit-background-size: 0.9375rem;
-      background-size: 0.9375rem; }
+      background-size: 0.9375rem;
+      background-color: #f8f8f8; }
     .store-search-content > div:nth-child(1) .searchbar .searchbar-clear {
       position: absolute;
       width: 1.8125rem;

@@ -789,6 +789,33 @@ Vue.component('page-store-search', {
 Vue.component('page-service-center', {
     template: '#page-service-center'
 })
+
+//设置--关于点银宝页
+Vue.component('page-setting', {
+    template: '#page-setting'
+})
+
+//领券中心页
+Vue.component('page-coupon-center', {
+    template: '#page-coupon-center',
+    data:function(){
+        return{
+            couponText:'立即领取',//优惠券提示
+            active:false
+        }
+    },
+    methods:{
+       getCoupon:function(){
+           this.active=true;
+           this.couponText='去使用';
+       }
+    }
+})
+
+//平台购物车页
+Vue.component('page-shopping-cart', {
+    template: '#page-shopping-cart'
+})
 // Init App
 var app = new Vue({
     el: '#app',
@@ -859,6 +886,21 @@ var app = new Vue({
             //服务中心页路由
             path:'/service-center/',
             component:'page-service-center'
+        },
+        {
+            //设置--关于点银宝页路由
+            path:'/setting/',
+            component:'page-setting'
+        },
+        {
+            //领券中心页路由
+            path:'/coupon-center/',
+            component:'page-coupon-center'
+        },
+        {
+            //平台购物车页路由
+            path:'/shopping-cart/',
+            component:'page-shopping-cart'
         }
         ]
     }

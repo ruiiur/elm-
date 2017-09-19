@@ -1,0 +1,166 @@
+@import "common";
+.coupon-center-content {
+  background: #f5f5f5;
+  height: 100%;
+  overflow: scroll;
+  > div {
+    &:nth-child(1) {
+      background: #fff;
+      .searchbar {
+        height: toRem(54px);
+        width: 100%;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 0 toRem(11px);
+        .searchbar-input {
+          width: 100%;
+          height: toRem(29px);
+          position: relative;
+          -webkit-flex-shrink: 1;
+          -ms-flex: 0 1 auto;
+          flex-shrink: 1;
+          border-radius: toRem(2px);
+          border: 1px solid #eee;
+          background: #f8f8f8;
+        }
+        .searchbar-cancel {
+          color: #999;
+          font-size: toRem(17px);
+        }
+      }
+      .searchbar input[type=search] {
+        background-image: url('../images/common_search_icon.png');
+        -webkit-background-size: toRem(15px);
+        background-size: toRem(15px);
+        background-color:#f8f8f8;
+      }
+      .searchbar .searchbar-clear {
+        position: absolute;
+        width: toRem(29px);
+        height: toRem(29px);
+        background-image: url('../images/search_qingchu_icon.png');
+        -webkit-background-size: toRem(15px);
+        background-size: toRem(15px);
+      }
+      .searchbar:after {
+        height: 0;
+      }
+    }
+    &:nth-child(2){
+      background: #f5f5f5;
+      height:toRem(23px);
+      padding: 0 toRem(11px);
+      position: relative;
+      >p{
+        height:1px;
+        background: #ddd;
+        margin-top: toRem(22px);
+        //box-sizing: border-box;
+      }
+      >span{
+        position: absolute;
+        display: block;
+        width: toRem(192px);
+        text-align: center;
+        color:#999;
+        font-size: toRem(13px);
+        line-height: toRem(13px);
+        bottom: toRem(15px);
+        background: #f5f5f5;
+        left:50%;
+        margin-left: toRem(-96px);
+      }
+    }
+  }
+  >ul{
+    >li{
+      background: #fff;
+      margin-bottom:  toRem(12px);
+      padding: toRem(17px) toRem(11px) toRem(20px) toRem(11px);
+      >div{
+        &:nth-child(1){
+          >a{
+            display: inline-block;
+            margin-bottom: toRem(11px);
+            >img{
+              width:toRem(40px);
+              height:toRem(40px);
+              margin-right: toRem(5px);
+            }
+            >div{
+              display: inline-block;
+              vertical-align: top;
+              margin-top: toRem(4px);
+              >h2{
+                color:#999;
+                font-size: toRem(12px);
+                line-height: toRem(12px);
+                margin-bottom: toRem(10px);
+              }
+              >p{
+                color:#333;
+                font-size: toRem(12px);
+                line-height: toRem(12px);
+              }
+            }
+          }
+          >div{
+            display: inline-block;
+            float: right;
+            width: toRem(120px);
+            height:toRem(30px);
+            background: url('../images/get coupon_bg.png') no-repeat;
+            background-size: toRem(120px) toRem(30px);
+            margin-top: toRem(6px);
+            &.done{
+              background: url('../images/get coupon_done_bg.png') no-repeat;
+              background-size: toRem(120px) toRem(30px);
+              >strong,>strong:before,>span{
+                color:#ff4e45;
+              }
+            }
+            >strong{
+              color:#fff;
+              font-size: toRem(16px);
+              font-weight: normal;
+              line-height: toRem(30px);
+              width:toRem(48px);
+              text-align: center;
+              display: inline-block;
+            }
+            >strong:before{
+              content:'\A5';
+              font-size: toRem(11px);
+              color:#fff;
+              font-weight: 400;
+            }
+            >span{
+              color:#fff;
+              font-weight: toRem(11px);
+              display: inline-block;
+              line-height: toRem(30px);
+              width:toRem(64px);
+              text-align: center;
+            }
+          }
+        }
+        &:nth-child(2){
+          height: toRem(120px);
+          >a{
+            width:toRem(128px);
+            height:toRem(120px);
+            display: block;
+            float: left;
+            >img{
+              width:toRem(128px);
+              height:toRem(120px);
+            }
+            &:nth-child(2){
+              margin: 0 toRem(3px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

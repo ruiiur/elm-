@@ -1,0 +1,49 @@
+@import "common";
+.setting-content {
+  background: #f5f5f5;
+  height: 100%;
+  overflow: scroll;
+  position: relative;
+  >img{
+    width:toRem(88px);
+    height:toRem(88px);
+    display:block;
+    margin: toRem(70px) auto toRem(20px) auto;
+  }
+  >p{
+    color:#999;
+    font-size: toRem(11px);
+    line-height: toRem(11px);
+    text-align: center;
+    &:nth-child(2){
+      margin-bottom: toRem(40px);
+    }
+    &:nth-child(4){
+      position: absolute;
+      bottom:  toRem(40px);
+      width:100%;
+    }
+  }
+  >a{
+    display: inline-block;
+    background: #fff;
+    padding: toRem(15px) toRem(11px) toRem(15px) toRem(15px);
+    width: 100%;
+    box-sizing: border-box;
+    >span{
+      color:#666;
+      font-size: toRem(14px);
+    }
+    >i{
+      display: inline-block;
+      float: right;
+      vertical-align: top;
+      width:toRem(8px);
+      height:toRem(13px);
+      margin-top: toRem(2px);
+      background: url('../images/order detail_store_arrow.png') no-repeat left top;
+      background-size: toRem(16px) toRem(13px);
+      margin-left: toRem(12px);
+    }
+  }
+}
