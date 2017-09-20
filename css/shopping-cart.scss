@@ -6,6 +6,7 @@
   >ul{
     >li{
       background: #fff;
+      margin-bottom: toRem(12px);
       >a{
         display: inline-block;
         padding: toRem(15px) toRem(15px) toRem(12px) 0;
@@ -22,6 +23,12 @@
             height:toRem(18px);
             background: url('../images/shopping car_choice done.png') no-repeat;
             background-size: toRem(18px);
+            &.not-done{
+              width:toRem(18px);
+              height:toRem(18px);
+              background: url('../images/shopping car_choice.png') no-repeat;
+              background-size: toRem(18px);
+            }
           }
           &:nth-child(4){
             display: inline-block;
@@ -65,6 +72,12 @@
               height:toRem(18px);
               background: url('../images/shopping car_choice done.png') no-repeat;
               background-size: toRem(18px);
+              &.not-done{
+                width:toRem(18px);
+                height:toRem(18px);
+                background: url('../images/shopping car_choice.png') no-repeat;
+                background-size: toRem(18px);
+              }
             }
             >img{
               width:toRem(45px);
@@ -116,11 +129,76 @@
               }
             }
           }
+          .swipeout-actions-right{
+            >a{
+              background: red;
+            }
+          }
         }
       }
-      //.list-block .item-content {
-      //  padding-left: 0;
-      //}
+      .shopping-discounts{
+        padding: toRem(12px) toRem(15px) toRem(14px) 0;
+        margin-left: toRem(15px);
+        border-bottom: 1px solid #eee;
+        >p{
+          color:#333;
+          font-size: toRem(14px);
+          >span{
+            display: inline-block;
+            font-size: toRem(15px);
+            float: right;
+          }
+          >span:before{
+            content: '\A5';
+            font-size: toRem(10px);
+          }
+        }
+        .food-box{
+          margin-bottom: toRem(6px);
+        }
+      }
+      .account{
+       padding: 0 toRem(15px);
+       height:toRem(57px);
+       border-bottom: 1px solid #eee;
+       >span{
+         display: inline-block;
+         color:#666;
+         font-size: toRem(12px);
+         line-height: toRem(57px);
+         >i{
+           color:$main-color;
+         }
+       }
+       >div{
+         display: inline-block;
+         float: right;
+         line-height: toRem(57px);
+         >span{
+           color:$main-color;
+           font-size: toRem(14px);
+         }
+         >span:before{
+           content: '\A5';
+           font-size: toRem(14px);
+         }
+         >a{
+           display: inline-block;
+           color:#fff;
+           font-size: toRem(13px);
+           background: linear-gradient(to right,#ffa200,$main-color);
+           width:toRem(80px);
+           height: toRem(32px);
+           line-height: toRem(33px);
+           border-radius: toRem(2px);
+           text-align: center;
+           margin-left: toRem(10px);
+           &.not-enough{
+             background: #ccc;
+           }
+         }
+       }
+     }
     }
   }
 }

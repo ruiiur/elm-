@@ -15,6 +15,12 @@ h1, h2, h3, h4, h5, h6 {
 ul > li {
   list-style: none; }
 
+i, em {
+  font-style: normal; }
+
+input:focus, textarea:focus, select:focus {
+  outline-offset: 0; }
+
 .navbar {
   display: none; }
 
@@ -23,7 +29,8 @@ ul > li {
   height: 100%;
   overflow: scroll; }
   .shopping-cart-content > ul > li {
-    background: #fff; }
+    background: #fff;
+    margin-bottom: 0.75rem; }
     .shopping-cart-content > ul > li > a {
       display: inline-block;
       padding: 0.9375rem 0.9375rem 0.75rem 0;
@@ -39,6 +46,11 @@ ul > li {
         height: 1.125rem;
         background: url("../images/shopping car_choice done.png") no-repeat;
         background-size: 1.125rem; }
+        .shopping-cart-content > ul > li > a > i:nth-child(1).not-done {
+          width: 1.125rem;
+          height: 1.125rem;
+          background: url("../images/shopping car_choice.png") no-repeat;
+          background-size: 1.125rem; }
       .shopping-cart-content > ul > li > a > i:nth-child(4) {
         display: inline-block;
         float: right;
@@ -74,6 +86,11 @@ ul > li {
           height: 1.125rem;
           background: url("../images/shopping car_choice done.png") no-repeat;
           background-size: 1.125rem; }
+          .shopping-cart-content > ul > li .list-block > li .item-content > i.not-done {
+            width: 1.125rem;
+            height: 1.125rem;
+            background: url("../images/shopping car_choice.png") no-repeat;
+            background-size: 1.125rem; }
         .shopping-cart-content > ul > li .list-block > li .item-content > img {
           width: 2.8125rem;
           height: 2.8125rem;
@@ -113,5 +130,57 @@ ul > li {
               .shopping-cart-content > ul > li .list-block > li .item-content > div > p > span > em:before {
                 content: '\A5';
                 font-size: 0.625rem; }
+      .shopping-cart-content > ul > li .list-block > li .swipeout-actions-right > a {
+        background: red; }
+    .shopping-cart-content > ul > li .shopping-discounts {
+      padding: 0.75rem 0.9375rem 0.875rem 0;
+      margin-left: 0.9375rem;
+      border-bottom: 1px solid #eee; }
+      .shopping-cart-content > ul > li .shopping-discounts > p {
+        color: #333;
+        font-size: 0.875rem; }
+        .shopping-cart-content > ul > li .shopping-discounts > p > span {
+          display: inline-block;
+          font-size: 0.9375rem;
+          float: right; }
+        .shopping-cart-content > ul > li .shopping-discounts > p > span:before {
+          content: '\A5';
+          font-size: 0.625rem; }
+      .shopping-cart-content > ul > li .shopping-discounts .food-box {
+        margin-bottom: 0.375rem; }
+    .shopping-cart-content > ul > li .account {
+      padding: 0 0.9375rem;
+      height: 3.5625rem;
+      border-bottom: 1px solid #eee; }
+      .shopping-cart-content > ul > li .account > span {
+        display: inline-block;
+        color: #666;
+        font-size: 0.75rem;
+        line-height: 3.5625rem; }
+        .shopping-cart-content > ul > li .account > span > i {
+          color: #ff8800; }
+      .shopping-cart-content > ul > li .account > div {
+        display: inline-block;
+        float: right;
+        line-height: 3.5625rem; }
+        .shopping-cart-content > ul > li .account > div > span {
+          color: #ff8800;
+          font-size: 0.875rem; }
+        .shopping-cart-content > ul > li .account > div > span:before {
+          content: '\A5';
+          font-size: 0.875rem; }
+        .shopping-cart-content > ul > li .account > div > a {
+          display: inline-block;
+          color: #fff;
+          font-size: 0.8125rem;
+          background: linear-gradient(to right, #ffa200, #ff8800);
+          width: 5rem;
+          height: 2rem;
+          line-height: 2.0625rem;
+          border-radius: 0.125rem;
+          text-align: center;
+          margin-left: 0.625rem; }
+          .shopping-cart-content > ul > li .account > div > a.not-enough {
+            background: #ccc; }
 
 /*# sourceMappingURL=shopping-cart.css.map */

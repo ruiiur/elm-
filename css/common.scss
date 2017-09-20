@@ -19,6 +19,12 @@ ul{
     list-style: none;
   }
 }
+i,em{
+  font-style: normal;
+}
+input:focus, textarea:focus, select:focus {
+  outline-offset: 0;
+}
 @function toRem($px){
   @return ($px/$default-font-size)*1rem;
 }

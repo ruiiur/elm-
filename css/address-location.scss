@@ -1,0 +1,107 @@
+@import "common";
+.address-location-content {
+  background: #f5f5f5;
+  height: 100%;
+  overflow: scroll;
+  > div {
+    background: #fff;
+    &:nth-child(1) {
+      .searchbar {
+        height: toRem(54px);
+        width: 100%;
+        background: #fff;
+        box-sizing: border-box;
+        padding: 0 toRem(15px) 0 toRem(90px);
+        .searchbar-input {
+          width: 100%;
+          height: toRem(29px);
+          position: relative;
+          -webkit-flex-shrink: 1;
+          -ms-flex: 0 1 auto;
+          flex-shrink: 1;
+          border-radius: toRem(2px);
+          border: 1px solid #eee;
+          background: #f8f8f8;
+        }
+        .searchbar-cancel {
+          color: #999;
+          font-size: toRem(17px);
+        }
+      }
+      .searchbar input[type=search] {
+        background-image: url('../images/common_search_icon.png');
+        -webkit-background-size: toRem(15px);
+        background-size: toRem(15px);
+        background-color: #f8f8f8;
+      }
+      .searchbar .searchbar-clear {
+        position: absolute;
+        width: toRem(29px);
+        height: toRem(29px);
+        background-image: url('../images/search_qingchu_icon.png');
+        -webkit-background-size: toRem(15px);
+        background-size: toRem(15px);
+      }
+      > div {
+        position: absolute;
+        z-index: 10;
+        top: toRem(18px);
+        left: toRem(15px);
+        display: inline-block;
+        > i {
+          width: toRem(13px);
+          height: toRem(16px);
+          display: inline-block;
+          background: url('../images/map_dingwei_icon.png') no-repeat;
+          background-size: toRem(13px) toRem(16px);
+        }
+        > em {
+          display: inline-block;
+          vertical-align: top;
+          margin-top: toRem(8px);
+          width: toRem(6px);
+          height: toRem(3px);
+          background: url('../images/menu_huodong_arrow.png') no-repeat left top;
+          background-size: toRem(12px) toRem(3px);
+        }
+        > span {
+          display: inline-block;
+          vertical-align: top;
+          color: #666;
+          font-size: toRem(14px);
+          margin: 0 toRem(4px);
+        }
+      }
+    }
+  }
+  .map-location{
+    height:toRem(345px);
+    width:100%;
+    background: red;
+  }
+  >ul{
+    position: fixed;
+    height:toRem(336px);
+    bottom: 0;
+    left:0;
+    width: 100%;
+    background: #fff;
+    padding-left: toRem(15px);
+    overflow: scroll;
+    >li{
+      padding: toRem(12px) 0 toRem(12px) toRem(5px);
+      border-bottom: 1px solid #eee;
+      >h2{
+        color:#666;
+        font-size: toRem(14px);
+        line-height: toRem(14px);
+        margin-bottom: toRem(8px);
+      }
+      >p{
+        color:#c7c7c7;
+        font-size: toRem(11px);
+        line-height: toRem(11px);
+      }
+    }
+  }
+}

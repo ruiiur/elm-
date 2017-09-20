@@ -19,6 +19,10 @@
   <link rel="stylesheet" href="css/setting.css">
   <link rel="stylesheet" href="css/coupon-center.css">
   <link rel="stylesheet" href="css/shopping-cart.css">
+  <link rel="stylesheet" href="css/delivery-address.css">
+  <link rel="stylesheet" href="css/new-address.css">
+  <link rel="stylesheet" href="css/search-address.css">
+  <link rel="stylesheet" href="css/address-location.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/framework7.min.js"></script>
   <script src="js/vue.min.js"></script>
@@ -39,7 +43,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-shopping-cart toolbar-through></page-shopping-cart>
+        <page-address-location toolbar-through></page-address-location>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -978,7 +982,7 @@
       <div>
         <h3>我的服务</h3>
         <div>
-          <a href="javascript:;">
+          <a href="/delivery-address/">
             <i></i>
             <p>收货地址</p>
             <span></span>
@@ -1804,19 +1808,19 @@
 </template>
 
 
-<!--平台购物车-->
+<!--平台购物车页-->
 <template id="page-shopping-cart">
   <f7-page navbar-through  name="shopping-cart">
     <div class="shopping-cart-content">
       <ul>
         <li>
           <a href="javascript:;">
-            <i></i><span>二十五块半（天山西路店）</span><em></em><i></i>
+            <i class="not-done"></i><span>二十五块半（天山西路店）</span><em></em><i></i>
           </a>
           <ul class="list-block">
             <li class="swipeout">
               <a class="swipeout-content item-content">
-                <i></i>
+                <i class="not-done"></i>
                 <img src="images/shopping%20car_food_1.png">
                 <div>
                   <h2>椒香鸡腿</h2>
@@ -1829,7 +1833,7 @@
             </li>
             <li class="swipeout">
               <a class="swipeout-content item-content">
-                <i></i>
+                <i class="not-done"></i>
                 <img src="images/shopping%20car_food_2.png">
                 <div>
                   <h2>麻辣香锅闷面+可乐+卤蛋一枚</h2>
@@ -1841,10 +1845,204 @@
               </div>
             </li>
           </ul>
+          <div class="account">
+            <!--<span>已享受满减，优惠<i>12</i>元</span>-->
+            <div><span>9</span><a href="javascript:;" class="not-enough">去结算</a></div>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:;">
+            <i></i><span>超级机车（天山西路店）</span><em></em><i></i>
+          </a>
+          <ul class="list-block">
+            <li class="swipeout">
+              <a class="swipeout-content item-content">
+                <i></i>
+                <img src="images/shopping%20car_food_1.png">
+                <div>
+                  <h2>梅干地瓜薯条</h2>
+                  <p>梅干地瓜薯条 x1<span><em>29</em></span></p>
+                </div>
+              </a>
+              <div class="swipeout-actions-right">
+                <a href="#" class="action1">删除</a>
+              </div>
+            </li>
+          </ul>
+          <div class="shopping-discounts">
+            <p class="food-box">餐盒<span>2</span></p>
+            <p class="full-reduction">满减优惠<span>12</span></p>
+          </div>
+          <div class="account">
+            <span>已享受满减，优惠<i>12</i>元</span>
+            <div><span>29</span><a href="javascript:;">去结算</a></div>
+          </div>
         </li>
       </ul>
     </div>
   </f7-page>
+</template>
+
+
+<!--收货地址页-->
+<template id="page-delivery-address">
+  <f7-page navbar-through name="delivery-address">
+    <div class="delivery-address-content">
+      <ul v-if="addressList.length>0">
+        <li v-for="list in addressList">
+          <div>
+            <h2>{{list.address}}</h2>
+            <p><span>{{list.name}}</span><i>{{list.sex}}</i><em>{{list.tel}}</em></p>
+          </div>
+          <i></i>
+        </li>
+      </ul>
+      <div class="no-address" v-if="addressList.length==0">
+        <img src="images/adress_kongbai.png">
+        <h2>没有收货地址</h2>
+        <p>点击下方按钮新增</p>
+      </div>
+      <div class="add-address">
+        <a href="/new-address/">
+          <i></i>
+          <span>新增收货地址</span>
+        </a>
+      </div>
+    </div>
+  </f7-page>
+</template>
+
+
+<!--搜索地址页-->
+<template id="page-search-address">
+  <f7-page navbar-through name="search-address">
+    <div class="search-address-content">
+        <div>
+            <div>
+                <i></i>
+                <span>上海</span>
+                <em></em>
+            </div>
+            <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+                <div class="searchbar-input">
+                    <input type="search" placeholder="搜索" value="文洋"><a href="#" class="searchbar-clear"></a>
+                </div><a href="#" class="searchbar-cancel">Cancel</a>
+            </form>
+        </div>
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <h2>文洋大厦<span>5.8千米</span></h2>
+                    <p>协和路1033号</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <h2>上海文洋汽车贸易有限公司<span>5.8千米</span></h2>
+                    <p>协和路1033号</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <h2>文洋闵行大众<span>5.8千米</span></h2>
+                    <p>协和路1033号</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <h2>文洋公司<span>5.8千米</span></h2>
+                    <p>协和路1033号</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+  </f7-page>
+</template>
+
+<!--新增地址页-->
+<template id="page-new-address">
+  <f7-page navbar-through name="new-address">
+    <div class="new-address-content">
+      <ul>
+        <li>
+          <label>联系人</label><div>
+            <input type="text" placeholder="收货人姓名">
+            <div>
+              <span>先生</span>
+              <span class="active">女士</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <label>电话</label>
+          <input type="text" placeholder="收货人手机号码">
+        </li>
+        <li>
+          <label>地址</label>
+          <a href="">
+            <input type="text" placeholder="选择收货地址">
+            <i></i>
+          </a>
+        </li>
+        <li>
+          <label>门牌号</label>
+          <input type="text" placeholder="例：3号楼201室">
+        </li>
+      </ul>
+      <a href="javascript:;">保存</a>
+    </div>
+  </f7-page>
+</template>
+
+<!--新增地址定位页-->
+<template id="page-address-location">
+    <f7-page navbar-through name="address-location">
+        <div class="address-location-content">
+            <div>
+                <div>
+                    <i></i>
+                    <span>上海</span>
+                    <em></em>
+                </div>
+                <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+                    <div class="searchbar-input">
+                        <input type="search" placeholder="搜索" value="文洋"><a href="#" class="searchbar-clear"></a>
+                    </div><a href="#" class="searchbar-cancel">Cancel</a>
+                </form>
+            </div>
+            <div class="map-location"></div>
+            <ul>
+                <li>
+                    <h2>文洋大厦</h2>
+                    <p>协和路1033号</p>
+                </li>
+                <li>
+                    <h2>洪凯小区</h2>
+                    <p>福泉路1033号</p>
+                </li>
+                <li>
+                    <h2>洪凯小区</h2>
+                    <p>福泉路1033号</p>
+                </li>
+                <li>
+                    <h2>洪凯小区</h2>
+                    <p>福泉路1033号</p>
+                </li>
+                <li>
+                    <h2>洪凯小区</h2>
+                    <p>福泉路1033号</p>
+                </li>
+                <li>
+                    <h2>洪凯小区</h2>
+                    <p>福泉路1033号</p>
+                </li>
+                <li>
+                    <h2>洪凯小区</h2>
+                    <p>福泉路1033号</p>
+                </li>
+            </ul>
+        </div>
+    </f7-page>
 </template>
 
 

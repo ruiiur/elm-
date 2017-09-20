@@ -1,0 +1,90 @@
+@import "common";
+.delivery-address-content {
+  background: #f5f5f5;
+  height: 100%;
+  overflow: scroll;
+  >ul{
+    background: #fff;
+    >li{
+      padding: 0 toRem(15px);
+      height:toRem(73px);
+      border-bottom: 1px solid #eee;
+      box-sizing: border-box;
+      >div{
+        display: inline-block;
+        >h2{
+          color:#333;
+          font-size: toRem(15px);
+          line-height: toRem(15px);
+          margin: toRem(15px) 0 toRem(9px) 0;
+        }
+        >p{
+          color:#666;
+          font-size: toRem(14px);
+          line-height: toRem(14px);
+          >i{
+            margin:0 toRem(40px) 0 toRem(10px);
+          }
+        }
+      }
+      >i{
+        display: inline-block;
+        //line-height: toRem(73px);
+        //vertical-align: middle;
+        margin-top: toRem(24px);
+        float: right;
+        width:toRem(20px);
+        height:toRem(20px);
+        background: url('../images/adrees_xiugai_icon.png') no-repeat;
+        background-size: toRem(20px);
+      }
+    }
+  }
+  .no-address{
+    text-align: center;
+    >img{
+      width:toRem(229px);
+      height:toRem(153px);
+      margin: toRem(165px) 0 toRem(29px) 0;
+    }
+    >h2{
+      font-size: toRem(16px);
+      color:#666;
+      line-height: toRem(16px);
+      margin-bottom: toRem(14px);
+    }
+    >p{
+      font-size: toRem(11px);
+      color:#666;
+    }
+  }
+  .add-address{
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height:toRem(53px);
+    >a{
+      display: inline-block;
+      width:100%;
+      height:toRem(53px);
+      line-height: toRem(53px);
+      text-align: center;
+      >i{
+        display: inline-block;
+        vertical-align:middle;
+        margin-top: toRem(-5px);
+        width:toRem(20px);
+        height:toRem(20px);
+        background: url('../images/adress_add.png') no-repeat;
+        background-size: toRem(20px);
+      }
+      >span{
+        font-size: toRem(15px);
+        color:$main-color;
+        margin-left: toRem(10px);
+      }
+    }
+  }
+}

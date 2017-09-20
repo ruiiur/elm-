@@ -816,6 +816,70 @@ Vue.component('page-coupon-center', {
 Vue.component('page-shopping-cart', {
     template: '#page-shopping-cart'
 })
+
+//收货地址页
+Vue.component('page-delivery-address',{
+    template:'#page-delivery-address',
+    data:function(){
+        return{
+            addressList:[
+                {
+                    address:'文洋大厦',
+                    name:'魏福思',
+                    sex:'先生',
+                    tel:'18867542341'
+                },
+                {
+                    address:'文洋大厦',
+                    name:'魏福思',
+                    sex:'先生',
+                    tel:'18867542341'
+                },
+                {
+                    address:'文洋大厦',
+                    name:'魏福思',
+                    sex:'先生',
+                    tel:'18867542341'
+                },
+                {
+                    address:'文洋大厦',
+                    name:'魏福思',
+                    sex:'先生',
+                    tel:'18867542341'
+                },
+                {
+                    address:'文洋大厦',
+                    name:'魏福思',
+                    sex:'先生',
+                    tel:'18867542341'
+                },
+                {
+                    address:'文洋大厦',
+                    name:'魏福思',
+                    sex:'先生',
+                    tel:'18867542341'
+                }
+            ]
+        }
+    }
+})
+
+
+//搜索地址页
+Vue.component('page-search-address', {
+    template: '#page-search-address'
+})
+
+//新增地址页
+Vue.component('page-new-address', {
+    template: '#page-new-address'
+})
+//新增地址定位页
+Vue.component('page-address-location', {
+    template: '#page-address-location'
+})
+
+
 // Init App
 var app = new Vue({
     el: '#app',
@@ -901,6 +965,26 @@ var app = new Vue({
             //平台购物车页路由
             path:'/shopping-cart/',
             component:'page-shopping-cart'
+        },
+        {
+            //收货地址页路由
+            path:'/delivery-address/',
+            component:'page-delivery-address'
+        },
+        {
+            //搜索地址页路由
+            path:'/search-address/',
+            component:'page-search-address'
+        },
+        {
+            //新增地址页路由
+            path:'/new-address/',
+            component:'page-new-address'
+        },
+        {
+            //新增地址定位页路由
+            path:'/address-location/',
+            component:'page-address-location'
         }
         ]
     }
