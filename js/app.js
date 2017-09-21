@@ -865,6 +865,12 @@ Vue.component('page-delivery-address',{
 })
 
 
+//账号与安全页
+Vue.component('page-account', {
+    template: '#page-account'
+})
+
+
 //搜索地址页
 Vue.component('page-search-address', {
     template: '#page-search-address'
@@ -876,7 +882,61 @@ Vue.component('page-new-address', {
 })
 //新增地址定位页
 Vue.component('page-address-location', {
-    template: '#page-address-location'
+    template: '#page-address-location',
+    mounted:function(){
+        this.loadmap();     //加载地图和相关组件
+    },
+    methods: {
+        loadmap:function(){
+            const map = new AMap.Map('container', {
+                zoom: 9
+            });
+        }
+    }
+})
+
+
+//通知中心页
+Vue.component('page-notice', {
+    template: '#page-notice'
+})
+
+//我的收藏页
+Vue.component('page-collection', {
+    template: '#page-collection',
+    data: function() {
+        return {
+            show:false,//是否显示出所有门店
+            actiNum:4,//活动个数
+            actiShow:false//是否显示所有活动
+        };
+    },
+    methods: {
+        showStores: function () {
+            this.show = !this.show;
+        },
+        acti: function () {
+            this.actiShow = !this.actiShow;
+        }
+    },
+})
+
+
+//我的优惠页
+Vue.component('page-discount', {
+    template: '#page-discount',
+    data:function () {
+        return{
+            viewA:true,//控制查看按钮显示或隐藏
+            ineffectualShow:false//控制无效券是否显示
+        }
+    },
+    methods:{
+        view:function(){
+            this.viewA=false;
+            this.ineffectualShow=true;
+        }
+    }
 })
 
 
@@ -985,6 +1045,26 @@ var app = new Vue({
             //新增地址定位页路由
             path:'/address-location/',
             component:'page-address-location'
+        },
+        {
+            //通知中心页路由
+            path:'/notice/',
+            component:'page-notice'
+        },
+        {
+            //我的收藏页路由
+            path:'/collection/',
+            component:'page-collection'
+        },
+        {
+            //我的优惠页路由
+            path:'/discount/',
+            component:'page-discount'
+        },
+        {
+            //账号与安全页路由
+            path:'/account/',
+            component:'page-account'
         }
         ]
     }

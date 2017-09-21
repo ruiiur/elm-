@@ -1,0 +1,290 @@
+@import "common";
+.collection-content {
+  background: #f5f5f5;
+  height: 100%;
+  overflow: scroll;
+  >div{
+    margin-bottom: toRem(12px);
+    background: #fff;
+    >h2{
+      color:#333;
+      font-size: toRem(14px);
+      padding: toRem(12px) 0 toRem(12px) 0;
+      font-weight: normal;
+      margin-left: toRem(15px);
+      border-bottom:1px solid #f5f5f5;
+      >span{
+        color:#999;
+      }
+    }
+    >div{
+      padding:  0 toRem(11px) 0 toRem(11px);
+      >ul{
+        >li{
+          padding-top: toRem(20px);
+          border-bottom:1px solid #f4f4f4;
+          &:last-child{
+            border-bottom: none;
+          }
+          >a{
+            >img{
+              width:toRem(72px);
+              height:toRem(70px);
+              display: inline-block;
+              vertical-align: top;
+              margin-right: toRem(11px);
+            }
+            >div{
+              display: inline-block;
+              width:calc(100% - #{toRem(90px)});
+              >div{
+                &:nth-child(1){
+                  height:toRem(70px);
+                  >h3{
+                    font-size: toRem(16px);
+                    color:#000;
+                    line-height: toRem(16px);
+                    >span{
+                      display: inline-block !important;
+                      font-size: toRem(10px);
+                      color:#6f3f15;
+                      border-radius: toRem(2px);
+                      background: #ffea00;
+                      line-height: toRem(10px);
+                      width:toRem(30px);
+                      padding: toRem(4px) 0 toRem(3px) 0;
+                      text-align: center;
+                      margin-right: toRem(9px);
+                    }
+                    em{
+                      float: right;
+                      display: inline-block;
+                      i{
+                        display: inline-block;
+                        width: toRem(14px);
+                        height:toRem(14px);
+                        &:nth-child(2){
+                          background: url('../images/huodong_piao.png') no-repeat;
+                          background-size: toRem(14px);
+                          margin-left: toRem(6px);
+                        }
+                        &:nth-child(1){
+                          background: url('../images/huodong_fu.png') no-repeat;
+                          background-size: toRem(14px);
+                        }
+                      }
+                    }
+                  }
+                  >h4{
+                    line-height: toRem(12px);
+                    margin: toRem(8px) 0 toRem(11px) 0;
+                    >em{
+                      display: inline-block;
+                      position: relative;
+                      width:toRem(62px);
+                      height:toRem(10px);
+                      background: url('../images/pingfen_star_gary.png') no-repeat;
+                      background-size: toRem(62px) toRem(10px);
+                      >i{
+                        display: inline-block;
+                        position: absolute;
+                        top:0;
+                        width:toRem(58px);
+                        height:toRem(10px);
+                        background: url('../images/pingfen_star_yellow.png') no-repeat;
+                        background-size: toRem(62px) toRem(10px);
+                      }
+                    }
+                    >span{
+                      color:#666;
+                      font-size: toRem(12px);
+                      &:nth-child(2){
+                        display: inline-block;
+                        margin: 0 toRem(6px);
+                      }
+                      &.delivery{
+                        display: inline-block;
+                        float: right;
+                        font-size: toRem(10px);
+                        color:#fff;
+                        width:toRem(50px);
+                        line-height: toRem(10px);
+                        padding: toRem(3px) 0 toRem(2px) 0;
+                        text-align: center;
+                        background: #00a8ff;
+                        border-radius: toRem(2px);
+                      }
+                    }
+                  }
+                  >div{
+                    height:toRem(12px);
+                    line-height: toRem(12px);
+                    ul{
+                      display: inline-block;
+                      height:toRem(12px);
+                      li{
+                        display: inline-block;
+                        list-style: none;
+                        line-height: toRem(12px);
+                      }
+                      &:nth-child(1){
+                        li{
+                          color:#666;
+                          font-size:toRem(12px);
+                          &:nth-child(1){
+                            padding-right: toRem(7px);
+                            border-right:1px solid #d8d8d8;
+                            margin-right: toRem(7px);
+                          }
+                        }
+                      }
+                      &:nth-child(2){
+                        float: right;
+                        li{
+                          color:#999;
+                          font-size: toRem(11px);
+                          &:nth-child(1){
+                            padding-right: toRem(7px);
+                            border-right:1px solid #d8d8d8;
+                            margin-right: toRem(7px);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                &:nth-child(2){
+                  border-top:1px dashed #ddd;
+                  padding-top: toRem(10px);
+                  >ul{
+                    display: inline-block;
+                    width:toRem(200px);
+                    >li{
+                      width:toRem(200px);
+                      list-style: none;
+                      color:#999;
+                      font-size: toRem(11px);
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      line-height: toRem(16px);
+                      margin-bottom: toRem(10px);
+                      >img{
+                        width:toRem(14px);
+                        height:toRem(14px);
+                        display: inline-block;
+                        vertical-align: sub;
+                        margin-right: toRem(2px);
+                      }
+                    }
+                  }
+                  .all-activity{
+                    float: right;
+                    color:#999;
+                    font-size: toRem(11px);
+                    >i{
+                      display: inline-block;
+                      vertical-align: middle;
+                      margin-left: toRem(5px);
+                      width:toRem(6px);
+                      height:toRem(4px);
+                      background: url('../images/youhui_jiantou.png') no-repeat left top;
+                      background-size: toRem(12px) toRem(4px);
+                      &.all-show{
+                        background: url('../images/menu_huodong_arrow.png') no-repeat toRem(-6px) top;
+                        background-size: toRem(12px) toRem(4px);
+                      }
+                    }
+                  }
+                }
+                &:nth-child(3){
+                  border-top:1px solid #f4f4f4;
+                  padding: toRem(13px) 0 toRem(14px) 0;
+                  height:toRem(11px);
+                  line-height: toRem(11px);
+                  >i{
+                    display: inline-block;
+                    width:toRem(12px);
+                    height:toRem(11px);
+                    margin-right: toRem(7px);
+                    background: url('../images/nearby_store_icon.png');
+                    background-size: toRem(12px) toRem(11px);
+                  }
+                  >span{
+                    color:#666;
+                    font-size: toRem(11px);
+                    line-height: toRem(11px);
+                  }
+                  >em {
+                    position: relative;
+                    display: inline-block;
+                    margin-top: toRem(3px);
+                    float: right;
+                    width: toRem(6px);
+                    height: toRem(4px);
+                    background: url('../images/nearby_store_jiantou.png');
+                    background-size: toRem(12px) toRem(4px);
+                    .box{
+                      //display: none;
+                      position: fixed;
+                      top:0;
+                      left:0;
+                      background: #000;
+                      opacity: .5;
+                      width:100%;
+                      height:100%;
+                      z-index: 9999;
+                    }
+                    >i{
+                      position: absolute;
+                      border-left: 5px solid transparent;
+                      border-right: 5px solid transparent;
+                      border-top: 7px solid #fff;
+                      width: 0;
+                      height: 0;
+                      right:0;
+                      bottom:toRem(8px);
+                      z-index: 10000;
+                    }
+                    > div {
+                      //display: none;
+                      background: #fff;
+                      position: absolute;
+                      z-index: 10000;
+                      width:toRem(399px);
+                      right:toRem(-6px);
+                      bottom:toRem(15px);
+                      padding: 0 toRem(20px);
+                      box-sizing: border-box;
+                      border-radius: toRem(2px);
+                      > a {
+                        font-style: normal;
+                        display: inline-block;
+                        width:100%;
+                        color: #333;
+                        font-size: toRem(15px);
+                        padding: toRem(13px) 0 toRem(18px) 0;
+                        border-bottom: 1px solid #f4f4f4;
+                        >span{
+                          float: right;
+                          color:#999;
+                          font-size: toRem(11px);
+                          line-height: toRem(11px);
+                          >em{
+                            font-style: normal;
+                            color:#ff6414;
+                            font-size:toRem(11px);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

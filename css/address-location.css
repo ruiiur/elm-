@@ -89,8 +89,7 @@ input:focus, textarea:focus, select:focus {
         margin: 0 0.25rem; }
   .address-location-content .map-location {
     height: 21.5625rem;
-    width: 100%;
-    background: red; }
+    width: 100%; }
   .address-location-content > ul {
     position: fixed;
     height: 21rem;
@@ -103,6 +102,8 @@ input:focus, textarea:focus, select:focus {
     .address-location-content > ul > li {
       padding: 0.75rem 0 0.75rem 0.3125rem;
       border-bottom: 1px solid #eee; }
+      .address-location-content > ul > li:last-child {
+        border-bottom: none; }
       .address-location-content > ul > li > h2 {
         color: #666;
         font-size: 0.875rem;

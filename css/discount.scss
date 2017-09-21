@@ -1,0 +1,154 @@
+@import "common";
+.discount-content {
+  background: #f5f5f5;
+  height: 100%;
+  overflow: scroll;
+  padding: toRem(12px) toRem(15px) 0 toRem(15px);
+  .effective,.ineffectual{
+    >li{
+      background: #fff;
+      margin-bottom: toRem(12px);
+      &:last-child{
+        margin-bottom: 0;
+      }
+      >a{
+        display: block;
+        position: relative;
+        >div{
+          padding: toRem(12px) toRem(18px) toRem(8px) toRem(18px);
+          border-bottom: 1px dashed #f5f5f5;
+          >img{
+            width:toRem(42px);
+            height:toRem(42px);
+            border-radius: toRem(2px);
+            margin-right: toRem(9px);
+          }
+          >div{
+            display: inline-block;
+            vertical-align: top;
+            width: calc(100% - #{toRem(51px)});
+            >h2{
+              //color:#333;
+              font-size: toRem(14px);
+              line-height: toRem(14px);
+              margin: toRem(5px) 0 toRem(12px) 0;
+              >span{
+                float: right;
+                display: inline-block;
+                vertical-align:top;
+                margin-top: toRem(-11px);
+                font-size: toRem(36px);
+                line-height: toRem(36px);
+                //color:#ff4e45;
+              }
+              >span:before{
+                display: inline-block;
+                content: '\A5';
+                font-size: toRem(27px);
+                line-height: toRem(27px);
+              }
+            }
+            >p{
+              //color:#666;
+              font-size: toRem(11px);
+              line-height: toRem(11px);
+              >span{
+                display: inline-block;
+                float: right;
+              }
+            }
+          }
+        }
+        >p{
+          padding: toRem(8px) toRem(18px) toRem(7px) toRem(18px);
+          color:#999;
+          font-size: toRem(10px);
+        }
+        &:before ,&:after{
+          content: '';
+          position: absolute;
+          top: toRem(61px);
+          width: toRem(5px);
+          height: toRem(10px);
+          border: 1px solid #f5f5f5;
+          background: #f5f5f5;
+        }
+        &:before {
+          left: toRem(-2px);
+          border-radius: 0 toRem(5px) toRem(5px) 0;
+        }
+        &:after {
+          right: toRem(-1px);
+          border-radius: toRem(5px) 0 0 toRem(5px);
+        }
+      }
+    }
+  }
+  .effective{
+     .discount-information{
+       >h2{
+         color:#333;
+         >span{
+           color:#ff4e45;
+         }
+       }
+       >p{
+         color:#666;
+       }
+    }
+  }
+  .ineffectual{
+    margin-bottom: toRem(10px);
+    >li{
+      >a{
+        background: url('../images/youhuiquan_guoqi.png') no-repeat toRem(231px) 0;
+        background-size: toRem(78px) toRem(57px);
+      }
+    }
+    .discount-information{
+      >h2{
+        color:#999;
+        >span{
+          color:#999;
+        }
+      }
+      >p{
+        color:#999;
+      }
+    }
+  }
+  >a{
+    display: block;
+    margin-top: toRem(15px);
+    color:#666;
+    font-size: toRem(15px);
+    height:toRem(53px);
+    line-height: toRem(52px);
+    width:100%;
+    border:1px solid #999;
+    border-radius: toRem(2px);
+    text-align: center;
+  }
+  >div{
+    position: relative;
+    height:toRem(23px);
+    line-height: toRem(23px);
+    >p{
+      height:1px;
+      background: #ddd;
+      margin:toRem(23px) toRem(-4px) 0 toRem(-4px);
+    }
+    >span{
+      position: absolute;
+      display: inline-block;
+      color:#999;
+      top:toRem(-11px);
+      font-size: toRem(11px);
+      width:toRem(88px);
+      background: #f5f5f5;
+      text-align: center;
+      left:50%;
+      margin-left: toRem(-44px);
+    }
+  }
+}

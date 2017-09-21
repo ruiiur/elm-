@@ -23,6 +23,10 @@
   <link rel="stylesheet" href="css/new-address.css">
   <link rel="stylesheet" href="css/search-address.css">
   <link rel="stylesheet" href="css/address-location.css">
+  <link rel="stylesheet" href="css/notice.css">
+  <link rel="stylesheet" href="css/collection.css">
+  <link rel="stylesheet" href="css/discount.css">
+  <link rel="stylesheet" href="css/account.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/framework7.min.js"></script>
   <script src="js/vue.min.js"></script>
@@ -31,6 +35,8 @@
   <script src="js/framework7-vue.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/rem.js"></script>
+  <script src="//webapi.amap.com/ui/1.0/main.js"></script>
+  <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=你的API key"></script>
 </head>
 
 <body>
@@ -43,7 +49,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-address-location toolbar-through></page-address-location>
+        <page-account toolbar-through></page-account>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -967,16 +973,22 @@
       </div>
       <ul>
         <li>
-          <h3><span>0.00</span> <span>元</span></h3>
-          <p>钱包</p>
+            <a href="javascript:;">
+                <h3><span>0.00</span> <span>元</span></h3>
+                <p>钱包</p>
+            </a>
         </li>
         <li>
-          <h3><span>2</span>  <span>个</span></h3>
-          <p>优惠</p>
+            <a href="/discount/">
+                <h3><span>2</span>  <span>个</span></h3>
+                <p>优惠</p>
+            </a>
         </li>
         <li>
-          <h3><span>8029</span> <span>分</span></h3>
-          <p>积分</p>
+            <a href="javascript:;">
+                <h3><span>8029</span> <span>分</span></h3>
+                <p>积分</p>
+            </a>
         </li>
       </ul>
       <div>
@@ -986,7 +998,7 @@
             <i></i>
             <p>收货地址</p>
             <span></span>
-          </a><a href="javascript:;">
+          </a><a href="/collection/">
             <i></i>
             <p>我的收藏</p>
             <span></span>
@@ -1021,7 +1033,7 @@
           <span></span>
           </div>
         <div>
-          <a href="javascript:;">
+          <a href="/notice/">
             <i></i>
             <p>通知</p>
           </a>
@@ -2010,7 +2022,7 @@
                     </div><a href="#" class="searchbar-cancel">Cancel</a>
                 </form>
             </div>
-            <div class="map-location"></div>
+            <div class="map-location" id="container"></div>
             <ul>
                 <li>
                     <h2>文洋大厦</h2>
@@ -2041,6 +2053,344 @@
                     <p>福泉路1033号</p>
                 </li>
             </ul>
+        </div>
+    </f7-page>
+</template>
+
+
+<!--通知中心页-->
+<template id="page-notice">
+    <f7-page navbar-through name="notice">
+        <div class="notice-content">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <span><i></i></span>
+                        <h2>订单通知</h2>
+                        <i></i>
+                    </a>
+                    <ul class="list-block">
+                        <li class="swipeout">
+                            <a class="swipeout-content item-content">
+                                <div>
+                                    <h2>您在古田稻香（建涛店）下的订单正在配送</h2>
+                                    <p>9:30<span>14:30</span></p>
+                                </div>
+                            </a>
+                            <div class="swipeout-actions-right">
+                                <a href="#" class="action1">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span></span>
+                        <h2>系统通知</h2>
+                        <i></i>
+                    </a>
+                    <ul class="list-block">
+                        <li class="swipeout">
+                            <a class="swipeout-content item-content">
+                                <div>
+                                    <h2>您当前的积分为1800，还差200就可以升级为铂金会员，专享...</h2>
+                                    <p>9:30<span>14:30</span></p>
+                                </div>
+                            </a>
+                            <div class="swipeout-actions-right">
+                                <a href="#" class="action1">删除</a>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <a class="swipeout-content item-content">
+                                <div>
+                                    <h2>您当前的积分为1800，还差200就可以升级为铂金会员，专享福利...</h2>
+                                    <p>9:30<span>14:30</span></p>
+                                </div>
+                            </a>
+                            <div class="swipeout-actions-right">
+                                <a href="#" class="action1">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span></span>
+                        <h2>活动通知</h2>
+                    </a>
+                    <ul class="list-block">
+                        <li class="swipeout">
+                            <a class="swipeout-content item-content">
+                                <div>
+                                    <h2>爱茜茜里50减20，意大利健康冰淇淋，享受又享瘦</h2>
+                                    <p>9:30<span>14:30</span></p>
+                                </div>
+                                <i></i>
+                            </a>
+                            <div class="swipeout-actions-right">
+                                <a href="#" class="action1">删除</a>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <a class="swipeout-content item-content">
+                                <div>
+                                    <h2>您当前的积分为1800，还差200就可以升级为铂金会员，专享...</h2>
+                                    <p>9:30<span>14:30</span></p>
+                                </div>
+                                <i></i>
+                            </a>
+                            <div class="swipeout-actions-right">
+                                <a href="#" class="action1">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </f7-page>
+</template>
+
+
+<!--我的收藏页-->
+ <template id="page-collection">
+     <f7-page navbar-through name="collection">
+         <div class="collection-content">
+             <div>
+                 <h2>当前区域商家</h2>
+                 <div>
+                     <ul>
+                         <li>
+                             <f7-link href="/dish/">
+                                 <img src="images/store-logo-1.png">
+                                 <div>
+                                     <div>
+                                         <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                                         <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                                         <div>
+                                             <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                                             <ul><li>1.26km</li><li>21分钟</li></ul>
+                                         </div>
+                                     </div>
+                                     <div>
+                                         <ul @click.stop.prevent="acti">
+                                             <li>
+                                                 <img src="images/huodong_te.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                             <li>
+                                                 <img src="images/huodong_jian.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                             <li v-show="actiShow">
+                                                 <img src="images/huodong_jian.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                             <li v-show="actiShow">
+                                                 <img src="images/huodong_jian.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                         </ul>
+                                         <a class="all-activity" href="javascript:;" @click.stop.prevent="acti">共{{actiNum}}个<i :class="{'all-show':actiShow}"></i></a>
+                                     </div>
+                                     <!--<div>-->
+                                     <!--<i></i>-->
+                                     <!--<span>附近还有两家老爹锅贴</span>-->
+                                     <!--<em></em>-->
+                                     <!--</div>-->
+                                 </div>
+                             </f7-link>
+                         </li>
+                         <li >
+                             <f7-link href="/stores/">
+                                 <img src="images/store-logo-1.png">
+                                 <div>
+                                     <div>
+                                         <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                                         <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                                         <div>
+                                             <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                                             <ul><li>1.26km</li><li>21分钟</li></ul>
+                                         </div>
+                                     </div>
+                                     <div>
+                                         <ul>
+                                             <li >
+                                                 <img src="images/huodong_te.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                             <li>
+                                                 <img src="images/huodong_jian.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                         </ul>
+                                         <a class="all-activity" href="javascript:;">共5个<i></i></a>
+                                     </div>
+                                     <div  @click.stop.prevent="showStores()"  >
+                                         <i></i>
+                                         <span>附近还有两家老爹锅贴</span>
+                                         <em>
+                                             <div v-show="show">
+                                                 <a href="javascript:;">老爹锅贴（上海建涛店）<span>420m / <em>35分钟</em></span></a>
+                                                 <a href="javascript:;">老爹锅贴（上海剑河路店）<span>2.12km / <em>22分钟</em></span></a>
+                                             </div>
+                                             <i v-show="show"></i>
+                                             <em class="box" v-show="show" @touchmove.prevent></em>
+                                         </em>
+                                     </div>
+                                 </div>
+                             </f7-link>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+             <div>
+                 <h2>其他区域商家<span>（超出配送范围）</span></h2>
+                 <div>
+                     <ul>
+                         <li>
+                             <f7-link href="/dish/">
+                                 <img src="images/store-logo-1.png">
+                                 <div>
+                                     <div>
+                                         <h3><span>品牌</span>老爹锅贴<em><i></i><i></i></em></h3>
+                                         <h4><em><i></i></em><span>4.7</span><span>月售5293单</span><span class="delivery">蜂鸟配送</span></h4>
+                                         <div>
+                                             <ul><li>￥25起送</li><li>配送费 ￥5</li></ul>
+                                             <ul><li>1.26km</li><li>21分钟</li></ul>
+                                         </div>
+                                     </div>
+                                     <div>
+                                         <ul>
+                                             <li >
+                                                 <img src="images/huodong_te.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                             <li>
+                                                 <img src="images/huodong_jian.png">
+                                                 在线支付满30元减17，满50减20
+                                             </li>
+                                         </ul>
+                                         <a class="all-activity" href="javascript:;">共5个<i></i></a>
+                                     </div>
+                                     <!--<div>-->
+                                     <!--<i></i>-->
+                                     <!--<span>附近还有两家老爹锅贴</span>-->
+                                     <!--<em></em>-->
+                                     <!--</div>-->
+                                 </div>
+                             </f7-link>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </f7-page>
+ </template>
+
+
+<!--我的优惠页-->
+ <template id="page-discount">
+     <f7-page navbar-through name="discount">
+         <div class="discount-content">
+             <ul class="effective">
+                 <li>
+                     <a href="javascript:;">
+                         <div>
+                             <img src="images/my%20coupon_store%20logo.png"><div class="discount-information">
+                                 <h2>二十五块半（天山路店） <span>5</span></h2>
+                                 <p>2017.07.21-2017.09.21<span>满50可用</span></p>
+                             </div>
+                         </div>
+                         <p>仅限<span>18876542341</span>使用</p>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="javascript:;">
+                         <div>
+                             <img src="images/my%20coupon_store%20logo.png"><div class="discount-information">
+                                 <h2>二十五块半（天山路店） <span>5</span></h2>
+                                 <p>2017.07.21-2017.09.21<span>满50可用</span></p>
+                             </div>
+                         </div>
+                         <p>仅限<span>18876542341</span>使用</p>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="javascript:;">
+                         <div>
+                             <img src="images/my%20coupon_store%20logo.png"><div class="discount-information">
+                                 <h2>二十五块半（天山路店） <span>5</span></h2>
+                                 <p>2017.07.21-2017.09.21<span>满50可用</span></p>
+                             </div>
+                         </div>
+                         <p>仅限<span>18876542341</span>使用</p>
+                     </a>
+                 </li>
+             </ul>
+             <a v-if="viewA" @click.stop.prevent="view">查看无效券</a>
+             <div v-if="ineffectualShow">
+                 <p></p>
+                 <span>已经失效的券</span>
+             </div>
+             <ul class="ineffectual" v-if="ineffectualShow">
+                 <li>
+                     <a href="javascript:;">
+                         <div>
+                             <img src="images/my%20coupon_store%20logo.png"><div class="discount-information">
+                             <h2>二十五块半（天山路店） <span>5</span></h2>
+                             <p>2017.07.21-2017.09.21<span>满50可用</span></p>
+                         </div>
+                         </div>
+                         <p>仅限<span>18876542341</span>使用</p>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="javascript:;">
+                         <div>
+                             <img src="images/my%20coupon_store%20logo.png"><div class="discount-information">
+                             <h2>二十五块半（天山路店） <span>5</span></h2>
+                             <p>2017.07.21-2017.09.21<span>满50可用</span></p>
+                         </div>
+                         </div>
+                         <p>仅限<span>18876542341</span>使用</p>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="javascript:;">
+                         <div>
+                             <img src="images/my%20coupon_store%20logo.png"><div class="discount-information">
+                             <h2>二十五块半（天山路店） <span>5</span></h2>
+                             <p>2017.07.21-2017.09.21<span>满50可用</span></p>
+                         </div>
+                         </div>
+                         <p>仅限<span>18876542341</span>使用</p>
+                     </a>
+                 </li>
+             </ul>
+         </div>
+     </f7-page>
+ </template>
+
+
+<!--账号与安全-->
+<template id="page-account">
+    <f7-page navbar-through name="account">
+        <div class="account-content">
+            <ul>
+                <li>
+                    <a href=""><span>账号与安全</span><i></i></a>
+                </li>
+                <li>
+                    <a href=""><span>通用</span><i></i></a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href=""><span>关于点银宝</span><i></i></a>
+                </li>
+            </ul>
+            <div>退出登录</div>
         </div>
     </f7-page>
 </template>
