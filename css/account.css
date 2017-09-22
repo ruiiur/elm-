@@ -41,17 +41,19 @@ input:focus, textarea:focus, select:focus {
       line-height: 3.125rem; }
       .account-content > ul > li:last-child {
         border-bottom: none; }
-      .account-content > ul > li > a > span {
-        color: #333;
-        font-size: 0.9375rem; }
-      .account-content > ul > li > a > i {
-        display: inline-block;
-        width: 0.5rem;
-        height: 0.8125rem;
-        float: right;
-        margin-top: 1.125rem;
-        background: url("../images/order detail_store_arrow.png") no-repeat left top;
-        background-size: 1rem 0.8125rem; }
+      .account-content > ul > li > a {
+        display: block; }
+        .account-content > ul > li > a > span {
+          color: #333;
+          font-size: 0.9375rem; }
+        .account-content > ul > li > a > i {
+          display: inline-block;
+          width: 0.5rem;
+          height: 0.8125rem;
+          float: right;
+          margin-top: 1.125rem;
+          background: url("../images/order detail_store_arrow.png") no-repeat left top;
+          background-size: 1rem 0.8125rem; }
   .account-content > div {
     background: #fff;
     color: #f33;

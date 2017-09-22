@@ -138,6 +138,7 @@ Vue.component('page-dish', {
                 }
             ],//菜品的规格
             isType:false,//是否显示菜品规格
+            cartShow:false//是否显示购物车列表
         };
     },
     //实时计算
@@ -221,6 +222,9 @@ Vue.component('page-dish', {
         //关闭规格
         typeClose:function(){
             this.isType=!this.isType;
+        },
+        cartFun:function(){
+            this.cartShow=!this.cartShow;
         },
         //计算产品规格的字数
         typeC:function(type){

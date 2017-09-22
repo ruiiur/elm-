@@ -49,7 +49,7 @@
     <f7-view id="main-view" toolbar-through :dynamic-navbar="true" main>
       <!-- Pages -->
       <f7-pages>
-        <page-account toolbar-through></page-account>
+        <page-dish toolbar-through></page-dish>
       </f7-pages>
     </f7-view>
   </f7-views>
@@ -882,7 +882,7 @@
         </div>
       </div>
       <div class="dish-bottom">
-        <div class="shopcart">
+        <div class="shopcart" @click.stop.prevent="cartFun">
           <div class="content">
             <div class="content-left">
               <div class="logo-wrapper" :class="{'highlight':totalCount>0}">
@@ -907,6 +907,45 @@
             </transition>
           </div>
         </div>
+        <div class="shopping-list">
+          <div class="discounts"></div>
+          <p>已满30元，结算减<span>10</span>元</p>
+          <h2 v-show="cartShow">已选商品<span><i></i>清空</span></h2>
+          <ul v-show="cartShow">
+            <li>
+              <div>
+                <h2>蜜汁叉烧肉</h2>
+                <p>蜜汁叉烧肉</p>
+              </div>
+              <div>
+                <strong>97.5</strong>
+                <div>
+                  <a class="reduce" href="javascript:;"></a>
+                  <span >3</span>
+                  <a class="add" href="javascript:;" ></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>椒香鸡腿</h2>
+                <p>椒香鸡腿</p>
+              </div>
+              <div>
+                <strong>8</strong>
+                <div>
+                  <a class="reduce" href="javascript:;"></a>
+                  <span >1</span>
+                  <a class="add" href="javascript:;" ></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="qita" v-show="cartShow">
+            <p>打包盒<span>4</span></p>
+          </div>
+        </div>
+        <div class="shade" v-show="cartShow"></div>
       </div>
       <div class="food-panel" v-show="isPanel">
         <div>
@@ -1025,7 +1064,7 @@
               <i></i>
               <p>服务中心</p>
               <span></span>
-            </a><a href="/setting/">
+            </a><a href="/account/">
             <i></i>
             <p>设置</p>
             <span></span>
@@ -2387,7 +2426,7 @@
             </ul>
             <ul>
                 <li>
-                    <a href=""><span>关于点银宝</span><i></i></a>
+                    <a href="/setting/"><span>关于点银宝</span><i></i></a>
                 </li>
             </ul>
             <div>退出登录</div>

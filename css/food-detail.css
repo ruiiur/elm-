@@ -123,7 +123,7 @@ input:focus, textarea:focus, select:focus {
         transition: all 0.4s linear; }
   .food-detail-content .dish-bottom .discounts {
     background: #fcf5c6;
-    opacity: .8;
+    opacity: .9;
     position: fixed;
     left: 0;
     bottom: 3.3125rem;
