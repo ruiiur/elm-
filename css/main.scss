@@ -72,6 +72,20 @@
   box-sizing: border-box;
   height: toRem(32px);
 }
+.label-switch .checkbox:after {
+  height: toRem(28px);
+  width: toRem(28px);
+  border-radius: toRem(28px);
+  top:toRem(2px);
+  left: toRem(2px);
+}
+.label-switch .checkbox:before {
+  left: toRem(2px);
+  top: toRem(2px);
+  width: toRem(48px);
+  border-radius: toRem(16px);
+  height: toRem(28px);
+}
 .home-tab a.link, .home-tab a.tab-link {
   padding-top: toRem(8px);
   padding-bottom: toRem(5px);
@@ -1316,6 +1330,7 @@
     }
   }
   .dish-search{
+    display: block;
     margin: toRem(10px) toRem(11px) 0  toRem(11px);
     padding: toRem(7px) toRem(10px);
     border-radius: toRem(2px);

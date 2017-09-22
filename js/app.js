@@ -223,6 +223,7 @@ Vue.component('page-dish', {
         typeClose:function(){
             this.isType=!this.isType;
         },
+        //控制购物车列表的显示或隐藏
         cartFun:function(){
             this.cartShow=!this.cartShow;
         },
@@ -409,6 +410,7 @@ Vue.component('page-food-detail', {
             actiShow:false,//是否显示活动
             actiNum:4,//商家活动个数
             isPanel:false,//是否显示大图
+            cartShow:false//是否显示购物车列表
         };
     },
     computed: {
@@ -460,6 +462,10 @@ Vue.component('page-food-detail', {
         //关闭大图
         panelClose:function(){
             this.isPanel=!this.isPanel;
+        },
+        //控制购物车列表的显示或隐藏
+        cartFun:function(){
+            this.cartShow=!this.cartShow;
         },
         //关于购物车小球飞出的动画
         drop:function(el) {
@@ -616,6 +622,7 @@ Vue.component('page-store-search', {
                 }
             ],//菜品的规格
             isType:false,//是否显示菜品规格
+            cartShow:false//控制购物车列表是否显示
         }
     },
     //实时计算
@@ -699,6 +706,10 @@ Vue.component('page-store-search', {
         //关闭规格
         typeClose:function(){
             this.isType=!this.isType;
+        },
+        //控制购物车列表的显示或隐藏
+        cartFun:function(){
+            this.cartShow=!this.cartShow;
         },
         //计算热门搜索的字数
         hotC:function(hot){

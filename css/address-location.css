@@ -92,7 +92,7 @@ input:focus, textarea:focus, select:focus {
     width: 100%; }
   .address-location-content > ul {
     position: fixed;
-    height: 21rem;
+    height: 17rem;
     bottom: 0;
     left: 0;
     width: 100%;

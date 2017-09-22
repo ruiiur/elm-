@@ -90,6 +90,20 @@ input:focus, textarea:focus, select:focus {
   box-sizing: border-box;
   height: 2rem; }
 
+.label-switch .checkbox:after {
+  height: 1.75rem;
+  width: 1.75rem;
+  border-radius: 1.75rem;
+  top: 0.125rem;
+  left: 0.125rem; }
+
+.label-switch .checkbox:before {
+  left: 0.125rem;
+  top: 0.125rem;
+  width: 3rem;
+  border-radius: 1rem;
+  height: 1.75rem; }
+
 .home-tab a.link, .home-tab a.tab-link {
   padding-top: 0.5rem;
   padding-bottom: 0.3125rem; }
@@ -1010,6 +1024,7 @@ input:focus, textarea:focus, select:focus {
         background: #ff8800;
         border: 1px solid #ff8800; }
 .dish-content .dish-search {
+  display: block;
   margin: 0.625rem 0.6875rem 0 0.6875rem;
   padding: 0.4375rem 0.625rem;
   border-radius: 0.125rem;
