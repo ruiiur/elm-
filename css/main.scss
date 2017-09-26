@@ -42,6 +42,9 @@
     height:toRem(45px);
     box-shadow:0 0 toRem(7px) #ccc;
     border-radius: 50%;
+    &.over-index{
+      z-index:0;
+    }
   }
   @keyframes mymove {
     from{right:toRem(10px)}
@@ -222,7 +225,7 @@
             width:toRem(25px);
             height:toRem(17px);
             background: url('../images/dingwei_icon.png') no-repeat center;
-            background-size: toRem(12px) toRem(17px);
+            background-size: toRem(14px) toRem(17px);
           }
           >span{
             display: inline-block;
@@ -248,7 +251,7 @@
         >aside{
           display: inline-block;
           float: right;
-          padding-top: toRem(15px);
+          padding-top: toRem(11px);
           padding-right: toRem(18px);
           >div{
             display: inline-block;
@@ -281,17 +284,22 @@
         text-align: center;
         color:#666;
         font-size: toRem(13px);
-        line-height:toRem(40px);
+        line-height:toRem(42px);
       }
       &:nth-child(3){
         padding: 0 toRem(15px);
+        overflow-x: auto;
+        width: toRem(414px);
+        box-sizing: border-box;
+        height:toRem(19px);
         a{
           font-size:toRem(11px);
           color:#fff;
           display: inline-block;
-          margin-right: toRem(16px);
+          padding-right: toRem(16px);
+          text-align: center;
           &:last-child{
-            margin-right: 0;
+            padding-right: 0;
           }
         }
       }
@@ -399,7 +407,7 @@
                       background: #ffea00;
                       line-height: toRem(10px);
                       width:toRem(30px);
-                      padding: toRem(4px) 0 toRem(3px) 0;
+                      padding: toRem(4px) 0;
                       text-align: center;
                       margin-right: toRem(9px);
                     }
@@ -456,7 +464,7 @@
                         color:#fff;
                         width:toRem(50px);
                         line-height: toRem(10px);
-                        padding: toRem(3px) 0 toRem(2px) 0;
+                        padding: toRem(3px) 0;
                         text-align: center;
                         background: #00a8ff;
                         border-radius: toRem(2px);
@@ -686,11 +694,13 @@
           padding-top: toRem(5px);
          >i{
            display: inline-block;
+           vertical-align: top;
            width:toRem(5px);
            height:toRem(8px);
            background: url('../images/order_all list_arrow.png') no-repeat;
            background-size: toRem(5px) toRem(8px);
            margin-left: toRem(6px);
+           margin-top: toRem(2px);
           }
         }
       }
@@ -721,6 +731,8 @@
               line-height: toRem(16px);
               >i{
                 display: inline-block;
+                vertical-align: top;
+                margin-top: toRem(3px);
                 width:toRem(6px);
                 height:toRem(10px);
                 background: url('../images/order_store_arrow.png') no-repeat;
@@ -925,7 +937,7 @@
           width:25%;
           text-align: center;
           >i{
-            display: block;
+            display: inline-block;
             width:toRem(19px);
             height:toRem(19px);
             //margin: auto;
@@ -1301,7 +1313,7 @@
         color:#333;
         padding-top: toRem(13px);
         padding-bottom: toRem(9px);
-        font-size: toRem(11px);
+        font-size: toRem(13px);
         text-align: center;
         position: relative;
         i{
@@ -1370,10 +1382,11 @@
       display: inline-block;
       vertical-align: top;
       overflow: scroll;
+      box-sizing: border-box;
       >li{
         list-style: none;
         //height:toRem(54px);
-        padding: 0 toRem(14px);
+        padding: 0 toRem(13px);
         //background: #f8f8f8;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -1785,12 +1798,12 @@
         >p{
           color:#333;
           font-size: toRem(14px);
-          >span{
+          >strong{
             color:$main-color;
             font-size: toRem(16px);
             float: right;
           }
-          >span:before{
+          >strong:before{
             font-weight: 400;
             content: "\A5";
             font-size: toRem(10px);
@@ -2201,7 +2214,7 @@
               //line-height: toRem(15px);
               width:toRem(50px);
               border-radius: toRem(2px);
-              padding: toRem(2px) 0;
+              padding: toRem(2px) toRem(1px) toRem(2px) toRem(2px);
               background: #0089ff;
               text-align: center;
             }
@@ -2212,7 +2225,7 @@
               width:toRem(40px);
               border-radius: toRem(2px);
               border:1px solid #a8a8a8;
-              padding-top: toRem(1px);
+              padding: toRem(1px) toRem(2px) toRem(1px) toRem(2px);
               margin: 0 toRem(5px);
             }
             >i{
@@ -2677,6 +2690,23 @@
       }
     }
   }
+  .pay-bottom{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: $main-color;
+    height:toRem(44px);
+    >p{
+      text-align: center;
+      font-size: toRem(15px);
+      color:#fff;
+      line-height: toRem(44px);
+      >span:before{
+        content: '\A5';
+        margin-left: toRem(2px);
+      }
+    }
+  }
 }
 
 
@@ -2779,7 +2809,7 @@
                 display: inline-block;
                 font-size: toRem(9px);
                 font-style: normal;
-                padding: toRem(4px) toRem(6px) toRem(2px) toRem(6px);
+                padding: toRem(3px) toRem(6px) toRem(2px) toRem(6px);
                 line-height: toRem(9px);
                 border-radius: toRem(3px);
                 background: #fff;
@@ -3076,7 +3106,7 @@
       top:0;
       left:0;
       width:100%;
-      height:toRem(67px);
+      height:toRem(80px);
       overflow: hidden;
       >div{
         position: absolute;
@@ -3104,7 +3134,7 @@
     }
     >div{
       &:nth-child(2){
-        height:toRem(67px);
+        height:toRem(80px);
         padding:0 toRem(15px);
         position: absolute;
         top:0;
@@ -3116,7 +3146,7 @@
             width:toRem(84px);
             height:toRem(84px);
             box-shadow:0 0 15px rgba(0,0,0,.2);
-            margin-top: toRem(19px);
+            margin-top: toRem(32px);
             border-radius: toRem(5px);
             margin-right: toRem(11px);
         }
@@ -3124,7 +3154,7 @@
           display: inline-block;
           color:#fff;
           font-size: toRem(19px);
-          margin-top: toRem(30px);
+          margin-top: toRem(43px);
           line-height: toRem(24px);
           >span{
             display: inline-block;

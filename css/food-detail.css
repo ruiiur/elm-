@@ -225,11 +225,11 @@ input:focus, textarea:focus, select:focus {
       .food-detail-content .dish-bottom .shopping-list .qita > p {
         color: #333;
         font-size: 0.875rem; }
-        .food-detail-content .dish-bottom .shopping-list .qita > p > span {
+        .food-detail-content .dish-bottom .shopping-list .qita > p > strong {
           color: #ff8800;
           font-size: 1rem;
           float: right; }
-        .food-detail-content .dish-bottom .shopping-list .qita > p > span:before {
+        .food-detail-content .dish-bottom .shopping-list .qita > p > strong:before {
           font-weight: 400;
           content: "\A5";
           font-size: 0.625rem;

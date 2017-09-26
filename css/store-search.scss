@@ -429,12 +429,12 @@
         >p{
           color:#333;
           font-size: toRem(14px);
-          >span{
+          >strong{
             color:$main-color;
             font-size: toRem(16px);
             float: right;
           }
-          >span:before{
+          >strong:before{
             font-weight: 400;
             content: "\A5";
             font-size: toRem(10px);

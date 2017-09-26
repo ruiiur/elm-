@@ -97,7 +97,7 @@
           <span><i></i><i></i></span>
         </div>
       </div>
-      <f7-swiper init pagination :params="{ loop:true, speed:2500, spaceBetween: 1}" style="min-height:100px;">
+      <f7-swiper init pagination :params="{ loop:true, speed:5000, spaceBetween: 1}" style="min-height:100px;">
         <f7-swiper-slide>
           <img src="images/1..jpg">
         </f7-swiper-slide>
@@ -262,6 +262,9 @@
           </li>
         </ul>
       </div>
+      <div class="pay-bottom">
+        <p>确认支付 <span>34.50</span></p>
+      </div>
     </div>
   </f7-page>
 </template>
@@ -408,6 +411,7 @@
           <li><a href="javascript:;"><i></i>缤纷小食（单点不送）</a></li>
           <li><a href="javascript:;"><i></i>缤纷小食（单点不送）</a></li>
           <li><a href="javascript:;"><i></i>缤纷小食（单点不送）</a></li>
+          <!--<li v-for="(menuItem,index) in menuList" ><a href="javascript:;"><i></i>{{menuItem.category.categoryName}}</a></li>-->
         </ul><div>
           <dl>
             <dt>
@@ -897,13 +901,13 @@
               </a>
             </div>
           </div>
-          <div class="ball-container">
-            <transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">
-              <div class="ball" v-show="ball.show">
-                <div class="inner inner-hook"></div>
-              </div>
-            </transition>
-          </div>
+          <!--<div class="ball-container">-->
+            <!--<transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">-->
+              <!--<div class="ball" v-show="ball.show">-->
+                <!--<div class="inner inner-hook"></div>-->
+              <!--</div>-->
+            <!--</transition>-->
+          <!--</div>-->
         </div>
         <div class="shopping-list">
           <div class="discounts"></div>
@@ -940,7 +944,7 @@
             </li>
           </ul>
           <div class="qita" v-show="cartShow">
-            <p>打包盒<span>4</span></p>
+            <p>打包盒<strong>4</strong></p>
           </div>
         </div>
         <div class="shade" v-show="cartShow" @click.stop.prevent="cartFun"></div>
@@ -1200,6 +1204,8 @@
           <a href="javascript:;">健身餐</a>
           <a href="javascript:;">大红袍</a>
           <a href="javascript:;">麦当劳</a>
+          <a href="javascript:;">麻辣烫</a>
+          <a href="javascript:;">冒菜</a>
         </div>
       </div>
       <f7-swiper init pagination :params="{ loop:true, speed:2500, spaceBetween: 1}" style="min-height:100px;">
@@ -1378,7 +1384,7 @@
         </div>
       </div>
     </div>
-    <a class="shopping-cart" ref="move" href="/shopping-cart/"></a>
+    <a class="shopping-cart" ref="move" href="/shopping-cart/" :class="{'over-index':overActive}"></a>
     <com-toolbar :active="active" :class="{'over-index':overActive}"></com-toolbar>
   </f7-page>
 </template>
@@ -1405,72 +1411,6 @@
 <template id="page-food-detail">
   <f7-page navbar-through  name="food-detail">
     <div class="food-detail-content">
-      <div class="dish-bottom">
-        <div class="shopcart" @click="cartFun">
-          <div class="content">
-            <div class="content-left">
-              <div class="logo-wrapper" :class="{'highlight':totalCount>0}">
-                <div class="num" v-show="totalCount>0" :class="{'double':totalCount>9}">{{totalCount}}</div>
-              </div>
-              <div class="price-wrapper">
-                <div class="price">￥{{totalPrice}}</div>
-                <div class="desc">另需配送费￥{{deliveryPrice}}元</div>
-              </div>
-            </div>
-            <div class="content-right" @click="pay">
-              <a class="pay" :class="payClass" :href="totalPrice >= minPrice?'submit':'#'">
-                {{payDesc}}
-              </a>
-            </div>
-          </div>
-          <div class="ball-container">
-            <transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">
-              <div class="ball" v-show="ball.show">
-                <div class="inner inner-hook"></div>
-              </div>
-            </transition>
-          </div>
-        </div>
-        <div class="shopping-list">
-          <div class="discounts"></div>
-          <p>已满30元，结算减<span>10</span>元</p>
-          <h2 v-show="cartShow">已选商品<span><i></i>清空</span></h2>
-          <ul v-show="cartShow">
-            <li>
-              <div>
-                <h2>蜜汁叉烧肉</h2>
-                <p>蜜汁叉烧肉</p>
-              </div>
-              <div>
-                <strong>97.5</strong>
-                <div>
-                  <a class="reduce" href="javascript:;"></a>
-                  <span >3</span>
-                  <a class="add" href="javascript:;" ></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div>
-                <h2>椒香鸡腿</h2>
-                <p>椒香鸡腿</p>
-              </div>
-              <div>
-                <strong>8</strong>
-                <div>
-                  <a class="reduce" href="javascript:;"></a>
-                  <span >1</span>
-                  <a class="add" href="javascript:;" ></a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="qita" v-show="cartShow">
-            <p>打包盒<span>4</span></p>
-          </div>
-        </div>
-        <div class="shade" v-show="cartShow" @click.stop.prevent="cartFun"></div>
-      </div>
       <div class="food-detail-top">
         <f7-link>
           <div>
@@ -1604,6 +1544,72 @@
         </div>
         <div @click.stop.prevent="panelClose"></div>
       </div>
+      <div class="dish-bottom">
+        <div class="shopcart" @click="cartFun">
+          <div class="content">
+            <div class="content-left">
+              <div class="logo-wrapper" :class="{'highlight':totalCount>0}">
+                <div class="num" v-show="totalCount>0" :class="{'double':totalCount>9}">{{totalCount}}</div>
+              </div>
+              <div class="price-wrapper">
+                <div class="price">￥{{totalPrice}}</div>
+                <div class="desc">另需配送费￥{{deliveryPrice}}元</div>
+              </div>
+            </div>
+            <div class="content-right" @click="pay">
+              <a class="pay" :class="payClass" :href="totalPrice >= minPrice?'submit':'#'">
+                {{payDesc}}
+              </a>
+            </div>
+          </div>
+          <!--<div class="ball-container">-->
+          <!--<transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">-->
+          <!--<div class="ball" v-show="ball.show">-->
+          <!--<div class="inner inner-hook"></div>-->
+          <!--</div>-->
+          <!--</transition>-->
+          <!--</div>-->
+        </div>
+        <div class="shopping-list">
+          <div class="discounts"></div>
+          <p>已满30元，结算减<span>10</span>元</p>
+          <h2 v-show="cartShow">已选商品<span><i></i>清空</span></h2>
+          <ul v-show="cartShow">
+            <li>
+              <div>
+                <h2>蜜汁叉烧肉</h2>
+                <p>蜜汁叉烧肉</p>
+              </div>
+              <div>
+                <strong>97.5</strong>
+                <div>
+                  <a class="reduce" href="javascript:;"></a>
+                  <span >3</span>
+                  <a class="add" href="javascript:;" ></a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>椒香鸡腿</h2>
+                <p>椒香鸡腿</p>
+              </div>
+              <div>
+                <strong>8</strong>
+                <div>
+                  <a class="reduce" href="javascript:;"></a>
+                  <span >1</span>
+                  <a class="add" href="javascript:;" ></a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="qita" v-show="cartShow">
+            <p>打包盒<strong>4</strong></p>
+          </div>
+        </div>
+        <div class="shade" v-show="cartShow" @click.stop.prevent="cartFun"></div>
+      </div>
     </div>
   </f7-page>
 </template>
@@ -1626,6 +1632,78 @@
         </div>
       </div>
       <ul>
+        <li>
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img src="images/menu_foodimage.png"><div>
+            <h2>椒香鸡腿</h2>
+            <h3>椒香鸡腿，美味可口</h3>
+            <h4><span>月售呀130份</span><span>好评率90%</span></h4>
+            <!--<p><span class="recommend">老板推荐</span><span class="surplus">剩8份</span></p>-->
+            <div>
+              <strong>8</strong>
+              <div>
+                <!--<a class="reduce" href="javascript:;"></a>-->
+                <!--<span >0</span>-->
+                <a class="add" href="javascript:;" ></a>
+              </div>
+            </div>
+          </div>
+          </div>
+        </li>
         <li>
           <div>
             <img src="images/menu_foodimage.png"><div>
@@ -1717,13 +1795,13 @@
               </a>
             </div>
           </div>
-          <div class="ball-container">
-            <transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">
-              <div class="ball" v-show="ball.show">
-                <div class="inner inner-hook"></div>
-              </div>
-            </transition>
-          </div>
+          <!--<div class="ball-container">-->
+          <!--<transition name="drop" v-for="ball in balls" :key="ball" @before-enter="beforeEnter" @enter="enter"    @after-enter="afterEnter">-->
+          <!--<div class="ball" v-show="ball.show">-->
+          <!--<div class="inner inner-hook"></div>-->
+          <!--</div>-->
+          <!--</transition>-->
+          <!--</div>-->
         </div>
         <div class="shopping-list">
           <div class="discounts"></div>
@@ -1760,7 +1838,7 @@
             </li>
           </ul>
           <div class="qita" v-show="cartShow">
-            <p>打包盒<span>4</span></p>
+            <p>打包盒<strong>4</strong></p>
           </div>
         </div>
         <div class="shade" v-show="cartShow" @click.stop.prevent="cartFun"></div>
@@ -1876,7 +1954,7 @@
       <ul>
         <li>
           <div>
-            <a href="">
+            <a href="/dish/">
               <img src="images/get%20coupon_store.png">
               <div>
                 <h2>二十五块半（天山西路店）</h2>
@@ -2136,11 +2214,13 @@
                     <span>上海</span>
                     <em></em>
                 </div>
-                <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
+                <f7-link :href="/search-address/">
+                  <form data-search-list=".list-block-search" data-search-in=".item-title" class="searchbar searchbar-init">
                     <div class="searchbar-input">
-                        <input type="search" placeholder="搜索" value="文洋"><a href="#" class="searchbar-clear"></a>
+                      <input type="search" placeholder="搜索" value="文洋"><a href="#" class="searchbar-clear"></a>
                     </div><a href="#" class="searchbar-cancel">Cancel</a>
-                </form>
+                  </form>
+                </f7-link>
             </div>
             <div class="map-location" id="container"></div>
             <ul>

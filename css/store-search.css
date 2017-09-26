@@ -369,11 +369,11 @@ input:focus, textarea:focus, select:focus {
       .store-search-content .dish-bottom .shopping-list .qita > p {
         color: #333;
         font-size: 0.875rem; }
-        .store-search-content .dish-bottom .shopping-list .qita > p > span {
+        .store-search-content .dish-bottom .shopping-list .qita > p > strong {
           color: #ff8800;
           font-size: 1rem;
           float: right; }
-        .store-search-content .dish-bottom .shopping-list .qita > p > span:before {
+        .store-search-content .dish-bottom .shopping-list .qita > p > strong:before {
           font-weight: 400;
           content: "\A5";
           font-size: 0.625rem;
