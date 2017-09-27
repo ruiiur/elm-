@@ -113,7 +113,7 @@ input:focus, textarea:focus, select:focus {
     color: #ff8800; }
   .home-tab a.link i, .home-tab a.tab-link i {
     width: 1.5rem;
-    height: 1.5rem; }
+    height: 1.5rem !important; }
   .home-tab a.link:nth-child(1) i, .home-tab a.tab-link:nth-child(1) i {
     background: url("../images/common_tab_icon.png") no-repeat -1.5rem top;
     background-size: 200%; }
@@ -238,18 +238,22 @@ input:focus, textarea:focus, select:focus {
     line-height: 2.625rem; }
   .home-content .main-header > div:nth-child(3) {
     padding: 0 0.9375rem;
-    overflow-x: auto;
     width: 25.875rem;
-    box-sizing: border-box;
-    height: 1.1875rem; }
-    .home-content .main-header > div:nth-child(3) a {
-      font-size: 0.6875rem;
-      color: #fff;
-      display: inline-block;
-      padding-right: 1rem;
-      text-align: center; }
-      .home-content .main-header > div:nth-child(3) a:last-child {
-        padding-right: 0; }
+    overflow: hidden;
+    height: 1.1875rem;
+    box-sizing: border-box; }
+    .home-content .main-header > div:nth-child(3) > div {
+      height: 100%;
+      overflow-x: scroll;
+      white-space: nowrap; }
+      .home-content .main-header > div:nth-child(3) > div > a {
+        font-size: 0.6875rem;
+        color: #fff;
+        display: inline-block;
+        padding-right: 1rem;
+        text-align: center; }
+        .home-content .main-header > div:nth-child(3) > div > a:last-child {
+          padding-right: 0; }
 .home-content .swiper-slide {
   position: relative;
   z-index: 99; }

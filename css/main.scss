@@ -99,8 +99,9 @@
   }
   i{
     width:toRem(24px);
-    height:toRem(24px);
+    height:toRem(24px) !important;
     //margin-left:toRem(8px);
+    //height:toRem(343px);
   }
   &:nth-child(1){
     i{
@@ -288,18 +289,23 @@
       }
       &:nth-child(3){
         padding: 0 toRem(15px);
-        overflow-x: auto;
         width: toRem(414px);
-        box-sizing: border-box;
+        overflow: hidden;
         height:toRem(19px);
-        a{
-          font-size:toRem(11px);
-          color:#fff;
-          display: inline-block;
-          padding-right: toRem(16px);
-          text-align: center;
-          &:last-child{
-            padding-right: 0;
+        box-sizing: border-box;
+        >div{
+          height:100%;
+          overflow-x: scroll;
+          white-space:nowrap;
+          >a{
+            font-size:toRem(11px);
+            color:#fff;
+            display: inline-block;
+            padding-right: toRem(16px);
+            text-align: center;
+            &:last-child{
+              padding-right: 0;
+            }
           }
         }
       }

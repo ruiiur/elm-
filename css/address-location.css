@@ -28,6 +28,10 @@ input:focus, textarea:focus, select:focus {
   background: #f5f5f5;
   height: 100%;
   overflow: scroll; }
+  .address-location-content .amap-logo {
+    display: none; }
+  .address-location-content .amap-copyright {
+    z-index: -1; }
   .address-location-content > div {
     background: #fff; }
     .address-location-content > div:nth-child(1) .searchbar {

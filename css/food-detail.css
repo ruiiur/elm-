@@ -31,12 +31,14 @@ input:focus, textarea:focus, select:focus {
   padding-bottom: 3.3125rem;
   box-sizing: border-box; }
   .food-detail-content .dish-bottom .shopcart {
-    position: fixed;
-    left: 0;
+    position: fixed !important;
+    left: 0 !important;
     bottom: 0;
-    z-index: 101;
+    z-index: 901;
     width: 100%;
     height: 3.3125rem; }
+    .food-detail-content .dish-bottom .shopcart.bot {
+      bottom: 5px; }
     .food-detail-content .dish-bottom .shopcart .content {
       display: flex;
       background: #505052;

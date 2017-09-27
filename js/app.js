@@ -1,5 +1,7 @@
 // Init F7 Vue Plugin
-Vue.use(Framework7Vue);
+ Vue.use(Framework7Vue);
+// let myApp = new Framework7();
+
 
 // Init Page Components
 //平台首页底部导航
@@ -603,10 +605,14 @@ Vue.component('page-coupon-center', {
     },
     methods:{
        getCoupon:function(){
+           if(this.active){
+               window.f7.mainView.router.load({url:'/dish/'});
+           }
            this.active=true;
-           this.couponText='去使用';
+           console.log(window.f7.mainView.router);
        }
-    }
+    },
+
 })
 
 //平台购物车页
@@ -686,7 +692,9 @@ Vue.component('page-address-location', {
     methods: {
         loadmap:function(){
             const map = new AMap.Map('container', {
-                zoom: 9
+                resizeEnable: true,
+                zoom: 9,
+                center: [116.480983, 40.0958],
             });
         }
     }

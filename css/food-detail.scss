@@ -7,12 +7,15 @@
   box-sizing: border-box;
   .dish-bottom {
     .shopcart {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      z-index: 101;
+      position: fixed !important;
+      left: 0 !important;
+      bottom: 0 ;
+      z-index: 901;
       width: 100%;
       height: toRem(53px);
+      &.bot{
+        bottom:5px;
+      }
       .content {
         display: flex;
         background: #505052;
