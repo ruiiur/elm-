@@ -1449,10 +1449,14 @@
       overflow: scroll;
       >dl{
         >dt{
+          position: -webkit-sticky;
+          position: sticky;
+          top: 0;
           margin-left: toRem(12px);
-          padding: toRem(14px) toRem(12px) toRem(8px) 0;
+          padding: toRem(14px) toRem(12px) toRem(9px) 0;
           line-height: toRem(14px);
           border-bottom: 1px solid #eee;
+          background: #fff;
           >strong{
             color:#666;
             font-size: toRem(12px);

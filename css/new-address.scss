@@ -21,7 +21,8 @@
       }
       >input{
         height: toRem(46px);
-        line-height: toRem(30px);
+        //line-height: toRem(30px);
+        line-height: normal;
         border: none;
         font-size: toRem(15px);
         min-width: toRem(290px);
@@ -41,13 +42,14 @@
           >input{
             width: 100%;
             height: toRem(46px);
-            line-height: toRem(30px);
+            line-height: normal;
             border: none;
             font-size: toRem(15px);
             border-bottom: 1px solid #eee;
             //padding: toRem(15px) 0;
             display: inline-block;
             border-radius: 0;
+            //margin-top: toRem(3px);
           }
           >div{
             line-height: toRem(48px);
@@ -85,8 +87,9 @@
           }
           >input{
             height: toRem(46px);
-            line-height: toRem(30px);
+            //line-height: toRem(30px);
             font-size: toRem(15px);
+            line-height: normal;
             min-width: toRem(290px);
             //padding: toRem(14px) 0 toRem(15px) 0;
             display: inline-block;

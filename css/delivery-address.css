@@ -48,7 +48,7 @@ input:focus, textarea:focus, select:focus {
           line-height: 0.875rem; }
           .delivery-address-content > ul > li > div > p > i {
             margin: 0 2.5rem 0 0.625rem; }
-      .delivery-address-content > ul > li > i {
+      .delivery-address-content > ul > li > a {
         display: inline-block;
         margin-top: 1.5rem;
         float: right;

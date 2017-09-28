@@ -1114,10 +1114,14 @@ input:focus, textarea:focus, select:focus {
     width: calc(100% - 80px);
     overflow: scroll; }
     .dish-content .dish-main > div > dl > dt {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
       margin-left: 0.75rem;
-      padding: 0.875rem 0.75rem 0.5rem 0;
+      padding: 0.875rem 0.75rem 0.5625rem 0;
       line-height: 0.875rem;
-      border-bottom: 1px solid #eee; }
+      border-bottom: 1px solid #eee;
+      background: #fff; }
       .dish-content .dish-main > div > dl > dt > strong {
         color: #666;
         font-size: 0.75rem;

@@ -693,9 +693,30 @@ Vue.component('page-address-location', {
         loadmap:function(){
             const map = new AMap.Map('container', {
                 resizeEnable: true,
-                zoom: 9,
-                center: [116.480983, 40.0958],
+                zoom:11,
+                center: [116.397428, 39.90923],
+                // mapStyle: 'amap://styles/地图样式ID'//样式URL
             });
+            AMap.plugin(['AMap.ToolBar','AMap.Scale','AMap.Geolocation','AMap.MapType','AMap.MouseTool'],
+                function(){
+                    // map.addControl(new AMap.ToolBar());
+
+                    // map.addControl(new AMap.Scale());
+
+                    // map.addControl(new AMap.OverView({isOpen:true}));
+                    map.addControl(new AMap.Geolocation());
+
+                    // map.addControl(new AMap.MapType());
+
+                    // map.addControl(new AMap.MouseTool());
+                });
+            // let marker = new AMap.Marker({
+            //     position:[116.397428, 39.90923]
+            // });
+            // marker.markOnAMAP({
+            //     position: marker.getPosition(),
+            //     name:'首开广场'//name属性在移动端有效
+            // })
         }
     }
 })

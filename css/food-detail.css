@@ -27,224 +27,9 @@ input:focus, textarea:focus, select:focus {
 .food-detail-content {
   background: #f5f5f5;
   height: 100%;
-  overflow: scroll;
+  overflow: auto;
   padding-bottom: 3.3125rem;
   box-sizing: border-box; }
-  .food-detail-content .dish-bottom .shopcart {
-    position: fixed !important;
-    left: 0 !important;
-    bottom: 0;
-    z-index: 901;
-    width: 100%;
-    height: 3.3125rem; }
-    .food-detail-content .dish-bottom .shopcart.bot {
-      bottom: 5px; }
-    .food-detail-content .dish-bottom .shopcart .content {
-      display: flex;
-      background: #505052;
-      font-size: 0;
-      color: #fff; }
-      .food-detail-content .dish-bottom .shopcart .content .content-left {
-        flex: 1; }
-        .food-detail-content .dish-bottom .shopcart .content .content-left .logo-wrapper {
-          display: inline-block;
-          vertical-align: top;
-          position: relative;
-          bottom: 1.25rem;
-          margin: 0 0.75rem;
-          width: 3.8125rem;
-          height: 3.8125rem;
-          box-sizing: border-box;
-          border-radius: 50%;
-          background: #141d27;
-          background: url("../images/menu_shoppingcart_icon_a.png") no-repeat;
-          background-size: 3.8125rem; }
-          .food-detail-content .dish-bottom .shopcart .content .content-left .logo-wrapper.highlight {
-            background: url("../images/menu_shoppingcart_icon_s.png") no-repeat;
-            background-size: 3.8125rem; }
-          .food-detail-content .dish-bottom .shopcart .content .content-left .logo-wrapper .num {
-            position: absolute;
-            top: 0.3125rem;
-            right: 0.125rem;
-            width: 1.0625rem;
-            height: 1.0625rem;
-            line-height: 1.1875rem;
-            text-align: center;
-            border-radius: 50%;
-            font-size: 0.6875rem;
-            font-weight: 700;
-            color: #fff;
-            background: #ff5500; }
-            .food-detail-content .dish-bottom .shopcart .content .content-left .logo-wrapper .num.double {
-              width: 25px;
-              border-radius: 40%; }
-        .food-detail-content .dish-bottom .shopcart .content .content-left .price-wrapper {
-          display: inline-block;
-          vertical-align: top; }
-          .food-detail-content .dish-bottom .shopcart .content .content-left .price-wrapper .price {
-            color: #fff;
-            font-size: 1.1875rem;
-            line-height: 1.1875rem;
-            margin: 0.625rem 0 0.3125rem 0; }
-          .food-detail-content .dish-bottom .shopcart .content .content-left .price-wrapper .desc {
-            color: #fff;
-            font-size: 0.6875rem;
-            line-height: 0.6875rem; }
-      .food-detail-content .dish-bottom .shopcart .content .content-right {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 3.3125rem; }
-        .food-detail-content .dish-bottom .shopcart .content .content-right .pay {
-          display: inline-block;
-          height: 3.3125rem;
-          line-height: 3.3125rem;
-          color: #fff;
-          font-size: 1rem;
-          background: #535356;
-          text-align: center;
-          padding: 0 0.9375rem;
-          min-width: 5.375rem; }
-          .food-detail-content .dish-bottom .shopcart .content .content-right .pay.not-enough {
-            background: #535356;
-            color: #fff; }
-          .food-detail-content .dish-bottom .shopcart .content .content-right .pay.enough {
-            background: #ff8800;
-            color: #fff; }
-    .food-detail-content .dish-bottom .shopcart .ball-container .ball {
-      position: fixed;
-      left: 32px;
-      bottom: 22px;
-      z-index: 200;
-      transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41); }
-      .food-detail-content .dish-bottom .shopcart .ball-container .ball .inner {
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        background: #00a0dc;
-        transition: all 0.4s linear; }
-  .food-detail-content .dish-bottom .shopping-list {
-    position: fixed;
-    left: 0;
-    bottom: 3.3125rem;
-    z-index: 100;
-    width: 100%; }
-    .food-detail-content .dish-bottom .shopping-list .discounts {
-      display: block;
-      background: #fcf5c6;
-      opacity: .9;
-      height: 1.75rem; }
-    .food-detail-content .dish-bottom .shopping-list > p {
-      position: absolute;
-      text-align: center;
-      left: 0;
-      top: 0.5625rem;
-      z-index: 50;
-      width: 100%;
-      font-size: 0.6875rem;
-      color: #333;
-      line-height: 0.6875rem; }
-      .food-detail-content .dish-bottom .shopping-list > p > span {
-        color: #ff5339; }
-    .food-detail-content .dish-bottom .shopping-list > h2 {
-      background: #eee;
-      color: #666;
-      font-size: 0.9375rem;
-      height: 2.5rem;
-      line-height: 2.5rem;
-      padding: 0 0.9375rem 0 0.6875rem;
-      border-left: 0.25rem solid #ffc233;
-      box-sizing: border-box; }
-      .food-detail-content .dish-bottom .shopping-list > h2 > span {
-        display: inline-block;
-        float: right;
-        font-size: 0.75rem; }
-        .food-detail-content .dish-bottom .shopping-list > h2 > span > i {
-          display: inline-block;
-          margin-right: 0.375rem;
-          width: 0.6875rem;
-          height: 0.75rem;
-          background: url("../images/delete_icon.png") no-repeat;
-          background-size: 0.6875rem 0.75rem; }
-    .food-detail-content .dish-bottom .shopping-list > ul {
-      background: #fff; }
-      .food-detail-content .dish-bottom .shopping-list > ul > li {
-        margin-left: 0.9375rem;
-        border-bottom: 1px solid #eee;
-        height: 4.25rem;
-        padding: 1.125rem 0.9375rem 0 0;
-        box-sizing: border-box; }
-        .food-detail-content .dish-bottom .shopping-list > ul > li > div {
-          display: inline-block; }
-          .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(1) > h2 {
-            color: #333;
-            font-size: 0.875rem;
-            line-height: 0.875rem;
-            margin-bottom: 0.5rem; }
-          .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(1) > p {
-            font-size: 0.625rem;
-            color: #999;
-            line-height: 0.625rem; }
-          .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) {
-            float: right;
-            margin-top: 0.3125rem; }
-            .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > strong {
-              display: inline-block;
-              color: #ff8800;
-              font-size: 1rem;
-              margin-top: 0.125rem; }
-            .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > strong:before {
-              font-weight: 400;
-              content: "\A5";
-              font-size: 0.625rem;
-              display: inline-block; }
-            .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div {
-              display: inline-block;
-              float: right;
-              margin-left: 0.9375rem; }
-              .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div > a {
-                display: inline-block;
-                vertical-align: top;
-                width: 1.375rem;
-                height: 1.375rem; }
-              .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div .reduce {
-                background: url("../images/menu_subtract.png") no-repeat;
-                background-size: 1.375rem; }
-              .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div .add {
-                background: url("../images/menu_add.png") no-repeat;
-                background-size: 1.375rem; }
-              .food-detail-content .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div > span {
-                color: #666;
-                font-size: 0.875rem;
-                display: inline-block;
-                line-height: 0.875rem;
-                margin: 0.3125rem 0.625rem 0 0.625rem; }
-    .food-detail-content .dish-bottom .shopping-list .qita {
-      background: #fff;
-      height: 4.25rem;
-      padding: 1.4375rem 6.9375rem 0 0.9375rem;
-      box-sizing: border-box; }
-      .food-detail-content .dish-bottom .shopping-list .qita > p {
-        color: #333;
-        font-size: 0.875rem; }
-        .food-detail-content .dish-bottom .shopping-list .qita > p > strong {
-          color: #ff8800;
-          font-size: 1rem;
-          float: right; }
-        .food-detail-content .dish-bottom .shopping-list .qita > p > strong:before {
-          font-weight: 400;
-          content: "\A5";
-          font-size: 0.625rem;
-          display: inline-block; }
-  .food-detail-content .dish-bottom .shade {
-    position: fixed;
-    left: 0;
-    bottom: 3.3125rem;
-    z-index: 99;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    opacity: .5; }
   .food-detail-content .food-detail-top {
     background: #fff;
     background: #fff;
@@ -627,5 +412,220 @@ input:focus, textarea:focus, select:focus {
         top: 0;
         left: 0;
         z-index: 1000; }
+
+.dish-bottom .shopcart {
+  position: fixed;
+  left: 0 !important;
+  bottom: 0;
+  z-index: 901;
+  width: 100%;
+  height: 3.3125rem;
+  -webkit-overflow-scrolling: touch; }
+  .dish-bottom .shopcart.bot {
+    bottom: 5px; }
+  .dish-bottom .shopcart .content {
+    display: flex;
+    background: #505052;
+    font-size: 0;
+    color: #fff; }
+    .dish-bottom .shopcart .content .content-left .logo-wrapper {
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      bottom: 1.25rem;
+      margin: 0 0.75rem;
+      width: 3.8125rem;
+      height: 3.8125rem;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background: #141d27;
+      background: url("../images/menu_shoppingcart_icon_a.png") no-repeat;
+      background-size: 3.8125rem; }
+      .dish-bottom .shopcart .content .content-left .logo-wrapper.highlight {
+        background: url("../images/menu_shoppingcart_icon_s.png") no-repeat;
+        background-size: 3.8125rem; }
+      .dish-bottom .shopcart .content .content-left .logo-wrapper .num {
+        position: absolute;
+        top: 0.3125rem;
+        right: 0.125rem;
+        width: 1.0625rem;
+        height: 1.0625rem;
+        line-height: 1.1875rem;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 0.6875rem;
+        font-weight: 700;
+        color: #fff;
+        background: #ff5500; }
+        .dish-bottom .shopcart .content .content-left .logo-wrapper .num.double {
+          width: 25px;
+          border-radius: 40%; }
+    .dish-bottom .shopcart .content .content-left .price-wrapper {
+      display: inline-block;
+      vertical-align: top; }
+      .dish-bottom .shopcart .content .content-left .price-wrapper .price {
+        color: #fff;
+        font-size: 1.1875rem;
+        line-height: 1.1875rem;
+        margin: 0.625rem 0 0.3125rem 0; }
+      .dish-bottom .shopcart .content .content-left .price-wrapper .desc {
+        color: #fff;
+        font-size: 0.6875rem;
+        line-height: 0.6875rem; }
+    .dish-bottom .shopcart .content .content-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 3.3125rem; }
+      .dish-bottom .shopcart .content .content-right .pay {
+        display: inline-block;
+        height: 3.3125rem;
+        line-height: 3.3125rem;
+        color: #fff;
+        font-size: 1rem;
+        background: #535356;
+        text-align: center;
+        padding: 0 0.9375rem;
+        min-width: 5.375rem; }
+        .dish-bottom .shopcart .content .content-right .pay.not-enough {
+          background: #535356;
+          color: #fff; }
+        .dish-bottom .shopcart .content .content-right .pay.enough {
+          background: #ff8800;
+          color: #fff; }
+  .dish-bottom .shopcart .ball-container .ball {
+    position: fixed;
+    left: 32px;
+    bottom: 22px;
+    z-index: 200;
+    transition: all 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41); }
+    .dish-bottom .shopcart .ball-container .ball .inner {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #00a0dc;
+      transition: all 0.4s linear; }
+.dish-bottom .shopping-list {
+  position: fixed;
+  left: 0;
+  bottom: 3.3125rem;
+  z-index: 100;
+  width: 100%; }
+  .dish-bottom .shopping-list .discounts {
+    display: block;
+    background: #fcf5c6;
+    opacity: .9;
+    height: 1.75rem; }
+  .dish-bottom .shopping-list > p {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 0.5625rem;
+    z-index: 50;
+    width: 100%;
+    font-size: 0.6875rem;
+    color: #333;
+    line-height: 0.6875rem; }
+    .dish-bottom .shopping-list > p > span {
+      color: #ff5339; }
+  .dish-bottom .shopping-list > h2 {
+    background: #eee;
+    color: #666;
+    font-size: 0.9375rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 0.9375rem 0 0.6875rem;
+    border-left: 0.25rem solid #ffc233;
+    box-sizing: border-box; }
+    .dish-bottom .shopping-list > h2 > span {
+      display: inline-block;
+      float: right;
+      font-size: 0.75rem; }
+      .dish-bottom .shopping-list > h2 > span > i {
+        display: inline-block;
+        margin-right: 0.375rem;
+        width: 0.6875rem;
+        height: 0.75rem;
+        background: url("../images/delete_icon.png") no-repeat;
+        background-size: 0.6875rem 0.75rem; }
+  .dish-bottom .shopping-list > ul {
+    background: #fff; }
+    .dish-bottom .shopping-list > ul > li {
+      margin-left: 0.9375rem;
+      border-bottom: 1px solid #eee;
+      height: 4.25rem;
+      padding: 1.125rem 0.9375rem 0 0;
+      box-sizing: border-box; }
+      .dish-bottom .shopping-list > ul > li > div {
+        display: inline-block; }
+        .dish-bottom .shopping-list > ul > li > div:nth-child(1) > h2 {
+          color: #333;
+          font-size: 0.875rem;
+          line-height: 0.875rem;
+          margin-bottom: 0.5rem; }
+        .dish-bottom .shopping-list > ul > li > div:nth-child(1) > p {
+          font-size: 0.625rem;
+          color: #999;
+          line-height: 0.625rem; }
+        .dish-bottom .shopping-list > ul > li > div:nth-child(2) {
+          float: right;
+          margin-top: 0.3125rem; }
+          .dish-bottom .shopping-list > ul > li > div:nth-child(2) > strong {
+            display: inline-block;
+            color: #ff8800;
+            font-size: 1rem;
+            margin-top: 0.125rem; }
+          .dish-bottom .shopping-list > ul > li > div:nth-child(2) > strong:before {
+            font-weight: 400;
+            content: "\A5";
+            font-size: 0.625rem;
+            display: inline-block; }
+          .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div {
+            display: inline-block;
+            float: right;
+            margin-left: 0.9375rem; }
+            .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div > a {
+              display: inline-block;
+              vertical-align: top;
+              width: 1.375rem;
+              height: 1.375rem; }
+            .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div .reduce {
+              background: url("../images/menu_subtract.png") no-repeat;
+              background-size: 1.375rem; }
+            .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div .add {
+              background: url("../images/menu_add.png") no-repeat;
+              background-size: 1.375rem; }
+            .dish-bottom .shopping-list > ul > li > div:nth-child(2) > div > span {
+              color: #666;
+              font-size: 0.875rem;
+              display: inline-block;
+              line-height: 0.875rem;
+              margin: 0.3125rem 0.625rem 0 0.625rem; }
+  .dish-bottom .shopping-list .qita {
+    background: #fff;
+    height: 4.25rem;
+    padding: 1.4375rem 6.9375rem 0 0.9375rem;
+    box-sizing: border-box; }
+    .dish-bottom .shopping-list .qita > p {
+      color: #333;
+      font-size: 0.875rem; }
+      .dish-bottom .shopping-list .qita > p > strong {
+        color: #ff8800;
+        font-size: 1rem;
+        float: right; }
+      .dish-bottom .shopping-list .qita > p > strong:before {
+        font-weight: 400;
+        content: "\A5";
+        font-size: 0.625rem;
+        display: inline-block; }
+.dish-bottom .shade {
+  position: fixed;
+  left: 0;
+  bottom: 3.3125rem;
+  z-index: 99;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: .5; }
 
 /*# sourceMappingURL=food-detail.css.map */

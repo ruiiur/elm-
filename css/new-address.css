@@ -44,7 +44,7 @@ input:focus, textarea:focus, select:focus {
         width: 4.875rem; }
       .new-address-content > ul > li > input {
         height: 2.875rem;
-        line-height: 1.875rem;
+        line-height: normal;
         border: none;
         font-size: 0.9375rem;
         min-width: 18.125rem;
@@ -60,7 +60,7 @@ input:focus, textarea:focus, select:focus {
         .new-address-content > ul > li:nth-child(1) > div > input {
           width: 100%;
           height: 2.875rem;
-          line-height: 1.875rem;
+          line-height: normal;
           border: none;
           font-size: 0.9375rem;
           border-bottom: 1px solid #eee;
@@ -94,8 +94,8 @@ input:focus, textarea:focus, select:focus {
           background-size: 1rem 0.8125rem; }
         .new-address-content > ul > li:nth-child(3) > a > input {
           height: 2.875rem;
-          line-height: 1.875rem;
           font-size: 0.9375rem;
+          line-height: normal;
           min-width: 18.125rem;
           display: inline-block;
           border: none; }
